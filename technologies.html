@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technologies - Solvevare</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/favicon.png">
+  <style>
+    .technologies-hero {
+      padding-top: 150px;
+      padding-bottom: 100px;
+      background: linear-gradient(to bottom, #000, #050509);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .technologies-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 50% 50%, rgba(0, 188, 212, 0.1), transparent 70%);
+    }
+
+    .technologies-hero h1 {
+      font-size: 4rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .technologies-hero p {
+      font-size: 1.2rem;
+      color: var(--text-gray);
+      max-width: 700px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .all-technologies {
+      background: linear-gradient(to bottom, #050509, #071022, #0b0e12);
+      padding: 6rem 2rem;
+    }
+
+    .technologies-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .technology-card {
+      background: linear-gradient(135deg, rgba(30, 136, 229, 0.1), rgba(0, 188, 212, 0.05));
+      border: 1px solid rgba(0, 188, 212, 0.2);
+      border-radius: 12px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    .technology-card:hover {
+      border-color: rgba(0, 188, 212, 0.6);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 188, 212, 0.1);
+    }
+
+    .tech-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, var(--sv-blue), var(--sv-cyan));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+    }
+
+    .technology-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      color: white;
+    }
+
+    .technology-card p {
+      color: var(--text-gray);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .tech-category {
+      display: inline-block;
+      background: rgba(0, 188, 212, 0.1);
+      color: var(--sv-cyan);
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      margin-top: 1rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      .technologies-hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .technologies-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/favicon.png" alt="Solvevare Logo">
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="industries.html">Industries</a></li>
+        <li><a href="technologies.html">Technologies</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <button class="btn-primary">Book a Meet</button>
+      <button class="mobile-menu-btn">☰</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="technologies-hero">
+    <div class="container">
+      <h1>
+        Tech Stack We <span class="gradient-text">Use</span>
+      </h1>
+      <p>Leveraging cutting-edge technologies to build scalable, robust, and future-proof solutions.</p>
+    </div>
+  </section>
+
+  <!-- All Technologies Section -->
+  <section class="all-technologies">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Technology Arsenal</h2>
+        <p>We work with the latest frameworks, platforms, and tools to deliver excellence</p>
+      </div>
+
+      <div class="technologies-grid">
+        <!-- Frontend -->
+        <div class="technology-card">
+          <div class="tech-icon">
+            <svg width="30" height="30" fill="white" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11z"/>
+            </svg>
+          </div>
+          <h3>React JS</h3>
+          <p>Power your web app with a fast, interactive, and scalable frontend. Designed for seamless user experiences.</p>
+          <span class="tech-category">Frontend</span>
+        </div>
+
+        <!-- Flutter -->
+        <div class="technology-card">
+          <div class="tech-icon">
+            <svg width="30" height="30" fill="white" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/>
+            </svg>
+          </div>
+          <h3>Flutter</h3>
+          <p>Build beautiful, natively compiled applications for mobile, web, and desktop from a single codebase.</p>
+          <span class="tech-category">Frontend</span>
+        </div>
+
+        <!-- Python Django -->
+        <div class="technology-card">
+          <div class="tech-icon">
+            <svg width="30" height="30" fill="white" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/>
+            </svg>
+          </div>
+          <h3>Python (Django)</h3>
+          <p>Rapid web development with Python's powerful Django framework for scalable applications.</p>
+          <span class="tech-category">Backend</span>
+        </div>
+
+        <!-- Node.js -->
+        <div class="technology-card">
+          <div class="tech-icon">
+            <svg width="30" height="30" fill="white" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/>
+            </svg>
+          </div>
+          <h3>Node.Js</h3>
+          <p>Server-side JavaScript runtime for building fast, scalable network applications and APIs.</p>
+          <span class="tech-category">Backend</span>
+        </div>
+
+        <!-- .NET -->
+        <div class="technology-card">
+          <div class="tech-icon">
+            <svg width="30" height="30" fill="white" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/>
+            </svg>
+          </div>
+          <h3>.NET</h3>
+          <p>Comprehensive framework for building modern, cloud-enabled applications across platforms.</p>
+          <span class="tech-category">Backend</span>
+        </div>
+
+        <!-- React Native -->
+        <div class="technology-card">
+          <div class="tech-icon">
+            <svg width="30" height="30" fill="white" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/>
+            </svg>
+          </div>
+          <h3>React Native</h3>
+          <p>Create native mobile apps for iOS and Android using React with shared code across platforms.</p>
+          <span class="tech-category">Frontend</span>
+        </div>
+
+        <!-- AWS -->
+        <div class="technology-card">
+          <div class="tech-icon">
+            <svg width="30" height="30" fill="white" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/>
+            </svg>
+          </div>
+          <h3>AWS</h3>
+          <p>Amazon Web Services - Comprehensive cloud computing with scalable infrastructure and services.</p>
+          <span class="tech-category">Cloud</span>
+        </div>
+
+        <!-- Azure -->
+        <div class="technology-card">
+          <div class="tech-icon">
+            <svg width="30" height="30" fill="white" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/>
+            </svg>
+          </div>
+          <h3>Azure</h3>
+          <p>Microsoft Azure - Enterprise-grade cloud platform for building and managing applications.</p>
+          <span class="tech-category">Cloud</span>
+        </div>
+
+        <!-- GCP -->
+        <div class="technology-card">
+          <div class="tech-icon">
+            <svg width="30" height="30" fill="white" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/>
+            </svg>
+          </div>
+          <h3>GCP</h3>
+          <p>Google Cloud Platform - Advanced cloud infrastructure and services for modern applications.</p>
+          <span class="tech-category">Cloud</span>
+        </div>
+
+        <!-- Data Science -->
+        <div class="technology-card">
+          <div class="tech-icon">
+            <svg width="30" height="30" fill="white" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/>
+            </svg>
+          </div>
+          <h3>Data Science</h3>
+          <p>Transform raw data into actionable insights with advanced analytics, statistical modeling, and visualization.</p>
+          <span class="tech-category">AI/ML</span>
+        </div>
+
+        <!-- Machine Learning -->
+        <div class="technology-card">
+          <div class="tech-icon">
+            <svg width="30" height="30" fill="white" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/>
+            </svg>
+          </div>
+          <h3>Machine Learning</h3>
+          <p>Build intelligent systems that learn from data to make predictions and automate decisions.</p>
+          <span class="tech-category">AI/ML</span>
+        </div>
+
+        <!-- Blockchain -->
+        <div class="technology-card">
+          <div class="tech-icon">
+            <svg width="30" height="30" fill="white" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/>
+            </svg>
+          </div>
+          <h3>Blockchain</h3>
+          <p>Decentralized ledger technology for secure, transparent transactions and smart contracts.</p>
+          <span class="tech-category">Blockchain</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>Solve<span style="color: var(--sv-cyan);">vare</span></h4>
+        <p>Transforming ideas into exceptional digital experiences through innovation and strategy.</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="industries.html">Industries</a>
+        <a href="technologies.html">Technologies</a>
+      </div>
+
+      <div class="footer-section">
+        <h4>Services</h4>
+        <p>Web Development</p>
+        <p>App Development</p>
+        <p>UI/UX Design</p>
+        <p>Cloud Solutions</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Connect</h4>
+        <p>+61 (480) 008-657</p>
+        <p>+1 (661) 548-4013</p>
+        <p>info@solvevare.com</p>
+        
+        <div class="social-links">
+          <a href="https://x.com/solvevare" class="social-link">𝕏</a>
+          <a href="https://pk.linkedin.com/company/solve-vare" class="social-link">in</a>
+          <a href="https://github.com/solvevare-org" class="social-link">⚡</a>
+          <a href="https://www.instagram.com/solvevare/" class="social-link">📷</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Solvevare. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-service.html">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

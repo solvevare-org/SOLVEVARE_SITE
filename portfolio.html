@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Portfolio - Solvevare</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/favicon.png">
+  <style>
+    .portfolio-hero {
+      padding-top: 150px;
+      padding-bottom: 100px;
+      background: linear-gradient(to bottom, #000, #07090d);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .portfolio-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 50% 50%, rgba(156, 39, 176, 0.1), transparent 70%);
+    }
+
+    .portfolio-hero h1 {
+      font-size: 4rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .portfolio-hero p {
+      font-size: 1.2rem;
+      color: var(--text-gray);
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .all-portfolio {
+      background: linear-gradient(to bottom, #07090d, #0B1220, #000);
+      padding: 6rem 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .portfolio-hero h1 {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/favicon.png" alt="Solvevare Logo">
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <button class="btn-primary">Book a Meet</button>
+      <button class="mobile-menu-btn">☰</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="portfolio-hero">
+    <div class="container">
+      <h1>
+        Discover Our <span class="gradient-text">Portfolio of Success</span>
+      </h1>
+      <p>Explore our latest projects and innovative digital solutions</p>
+      <button class="btn-primary">View Projects</button>
+    </div>
+  </section>
+
+  <!-- All Portfolio Section -->
+  <section class="all-portfolio">
+    <div class="container">
+      <div class="section-header">
+        <h2>Featured <span class="gradient-text">Projects</span></h2>
+        <p>A showcase of our work across various industries and technologies</p>
+      </div>
+
+      <div class="portfolio-grid">
+        <!-- Project 1 -->
+        <div class="portfolio-card">
+          <div class="portfolio-image">
+            <img src="assets/Screenshot 2025-12-15 203923.png" alt="Ticketing System">
+            <div class="portfolio-overlay"></div>
+            <div class="portfolio-badge">Web Application</div>
+          </div>
+          <div class="portfolio-content">
+            <h3>Ticketing System</h3>
+            <p>A Web app for managing support or service tickets. These types of systems let users create, track, update, and resolve support requests.</p>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="portfolio-card">
+          <div class="portfolio-image">
+            <img src="assets/Screenshot 2025-12-15 213248.png" alt="NORIGHTWAY">
+            <div class="portfolio-overlay"></div>
+            <div class="portfolio-badge">E-Commerce</div>
+          </div>
+          <div class="portfolio-content">
+            <h3>NORIGHTWAY</h3>
+            <p>A modern web project focused on showcasing unconventional thinking through a minimalist design and strong brand identity.</p>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="portfolio-card">
+          <div class="portfolio-image">
+            <img src="assets/Screenshot 2025-12-15 225523.png" alt="Chem Publishers">
+            <div class="portfolio-overlay"></div>
+            <div class="portfolio-badge">Publishing</div>
+          </div>
+          <div class="portfolio-content">
+            <h3>Chem Publishers</h3>
+            <p>A digital publishing platform delivering high-quality chemistry and scientific research content.</p>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="portfolio-card">
+          <div class="portfolio-image">
+            <img src="assets/Screenshot 2025-12-15 233204.png" alt="JB Bespoke">
+            <div class="portfolio-overlay"></div>
+            <div class="portfolio-badge">Business Website</div>
+          </div>
+          <div class="portfolio-content">
+            <h3>JB Bespoke Craft</h3>
+            <p>A handcrafted carpentry business showcase site built for a bespoke woodworking brand.</p>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="portfolio-card">
+          <div class="portfolio-image">
+            <img src="assets/Screenshot 2025-12-15 233700.png" alt="Urgent Vet">
+            <div class="portfolio-overlay"></div>
+            <div class="portfolio-badge">Marketing</div>
+          </div>
+          <div class="portfolio-content">
+            <h3>Urgent Vet Marketing</h3>
+            <p>A marketing-focused website designed to help emergency veterinary clinics attract more local clients.</p>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="portfolio-card">
+          <div class="portfolio-image">
+            <img src="assets/Screenshot 2025-12-16 005831.png" alt="Hen Haus">
+            <div class="portfolio-overlay"></div>
+            <div class="portfolio-badge">Marketplace</div>
+          </div>
+          <div class="portfolio-content">
+            <h3>Hen Haus</h3>
+            <p>A platform connecting homeowners with skilled local professionals for home improvement projects.</p>
+          </div>
+        </div>
+
+        <!-- Project 7 -->
+        <div class="portfolio-card">
+          <div class="portfolio-image">
+            <img src="assets/Screenshot 2025-12-16 012240.png" alt="Fairway">
+            <div class="portfolio-overlay"></div>
+            <div class="portfolio-badge">Real Estate</div>
+          </div>
+          <div class="portfolio-content">
+            <h3>Fairway Multifamily</h3>
+            <p>A real estate investment firm committed to expanding quality affordable housing across the U.S.</p>
+          </div>
+        </div>
+
+        <!-- Project 8 -->
+        <div class="portfolio-card">
+          <div class="portfolio-image">
+            <img src="assets/Screenshot 2025-12-16 013929.png" alt="LeadSavvy">
+            <div class="portfolio-overlay"></div>
+            <div class="portfolio-badge">AI Platform</div>
+          </div>
+          <div class="portfolio-content">
+            <h3>LeadSavvy AI</h3>
+            <p>An AI-driven CRM platform combining lead generation, email marketing, and landing page creation.</p>
+          </div>
+        </div>
+
+        <!-- Project 9 -->
+        <div class="portfolio-card">
+          <div class="portfolio-image">
+            <img src="assets/screencapture-ims-ft-vercel-app-2025-12-17-01_32_55.png" alt="IMS-FT">
+            <div class="portfolio-overlay"></div>
+            <div class="portfolio-badge">Management System</div>
+          </div>
+          <div class="portfolio-content">
+            <h3>IMS-FT</h3>
+            <p>A web application for managing inventory, tracking sales, and handling basic financials for small businesses.</p>
+          </div>
+        </div>
+
+        <!-- Project 10 -->
+        <div class="portfolio-card">
+          <div class="portfolio-image">
+            <img src="assets/screencapture-tradie-ladie-ft-vercel-app-2025-12-17-01_39_48.png" alt="Tradie-Ladie">
+            <div class="portfolio-overlay"></div>
+            <div class="portfolio-badge">Marketplace</div>
+          </div>
+          <div class="portfolio-content">
+            <h3>Tradie-Ladie FT</h3>
+            <p>A digital platform to connect homeowners with local tradies for home improvement projects.</p>
+          </div>
+        </div>
+
+        <!-- Project 11 -->
+        <div class="portfolio-card">
+          <div class="portfolio-image">
+            <img src="assets/screencapture-the-tech-effect-podcast-steel-vercel-app-2025-12-17-01_44_24.png" alt="Tech Effect">
+            <div class="portfolio-overlay"></div>
+            <div class="portfolio-badge">Podcast</div>
+          </div>
+          <div class="portfolio-content">
+            <h3>The Tech Effect Podcast</h3>
+            <p>A modern podcast website designed to showcase episodes, hosts, and technology-focused discussions.</p>
+          </div>
+        </div>
+
+        <!-- Project 12 -->
+        <div class="portfolio-card">
+          <div class="portfolio-image">
+            <img src="assets/screencapture-thryve-sync-vercel-app-2025-12-17-01_52_46.png" alt="Thryve Sync">
+            <div class="portfolio-overlay"></div>
+            <div class="portfolio-badge">Business Automation</div>
+          </div>
+          <div class="portfolio-content">
+            <h3>Thryve Sync</h3>
+            <p>A centralized platform to synchronize business operations, data, and workflows across teams.</p>
+          </div>
+        </div>
+
+        <!-- Project 13 -->
+        <div class="portfolio-card">
+          <div class="portfolio-image">
+            <img src="assets/screencapture-fcbconnect-vercel-app-admin-dashboard-2025-12-17-01_59_25.png" alt="FCB Connect">
+            <div class="portfolio-overlay"></div>
+            <div class="portfolio-badge">Admin Dashboard</div>
+          </div>
+          <div class="portfolio-content">
+            <h3>FCB Connect</h3>
+            <p>A centralized admin dashboard for managing users, data, and operations within the FCB Connect platform.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <div class="testimonials-container">
+      <div class="section-header">
+        <h2>Don't take our word for it.</h2>
+        <p>Over 100+ people trust us.</p>
+      </div>
+
+      <div class="testimonial-slider"></div>
+
+      <div class="slider-controls">
+        <button class="slider-btn prev-btn">
+          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+          </svg>
+        </button>
+        <button class="slider-btn next-btn">
+          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>Solve<span style="color: var(--sv-cyan);">vare</span></h4>
+        <p>Transforming ideas into exceptional digital experiences through innovation and strategy.</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-section">
+        <h4>Services</h4>
+        <p>Web Development</p>
+        <p>App Development</p>
+        <p>UI/UX Design</p>
+        <p>Cloud Solutions</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Connect</h4>
+        <p>+61 (480) 008-657</p>
+        <p>+1 (661) 548-4013</p>
+        <p>info@solvevare.com</p>
+        
+        <div class="social-links">
+          <a href="https://x.com/solvevare" class="social-link">𝕏</a>
+          <a href="https://pk.linkedin.com/company/solve-vare" class="social-link">in</a>
+          <a href="https://github.com/solvevare-org" class="social-link">⚡</a>
+          <a href="https://www.instagram.com/solvevare/" class="social-link">📷</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Solvevare. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

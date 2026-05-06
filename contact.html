@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Solvevare</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/favicon.png">
+  <style>
+    .contact-hero {
+      padding-top: 150px;
+      padding-bottom: 100px;
+      background: linear-gradient(to bottom, #000, #0a1628);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 50% 50%, rgba(0, 188, 212, 0.1), transparent 70%);
+    }
+
+    .contact-hero h1 {
+      font-size: 4rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-hero p {
+      font-size: 1.2rem;
+      color: var(--text-gray);
+      max-width: 700px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .faq-section {
+      background: linear-gradient(to bottom, #020617, #0a1628);
+      padding: 6rem 2rem;
+    }
+
+    .faq-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: linear-gradient(135deg, rgba(31, 41, 55, 0.5), rgba(17, 24, 39, 0.5));
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      margin-bottom: 1rem;
+      overflow: hidden;
+      transition: all 0.3s;
+    }
+
+    .faq-item:hover {
+      border-color: rgba(0, 188, 212, 0.3);
+    }
+
+    .faq-question {
+      width: 100%;
+      padding: 1.5rem;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 500;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.3s;
+    }
+
+    .faq-question:hover {
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .faq-icon {
+      font-size: 1.5rem;
+      transition: transform 0.3s;
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      padding: 0 1.5rem;
+      color: var(--text-gray);
+      line-height: 1.6;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 500px;
+      padding: 0 1.5rem 1.5rem;
+    }
+
+    .location-section {
+      background: linear-gradient(to bottom, #0a1628, #0d1b2a);
+      padding: 6rem 2rem;
+    }
+
+    .location-grid {
+      max-width: 900px;
+      margin: 3rem auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .location-card {
+      background: rgba(30, 41, 59, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 2rem;
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+      transition: all 0.3s;
+    }
+
+    .location-card:hover {
+      border-color: var(--sv-cyan);
+      background: rgba(30, 41, 59, 0.7);
+    }
+
+    .location-icon {
+      width: 50px;
+      height: 50px;
+      background: rgba(0, 188, 212, 0.1);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1.5rem;
+    }
+
+    .location-info h4 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .location-info p {
+      color: var(--text-gray);
+      line-height: 1.6;
+    }
+
+    .location-info a {
+      color: var(--sv-cyan);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .location-info a:hover {
+      color: var(--sv-blue);
+    }
+
+    @media (max-width: 768px) {
+      .contact-hero h1 {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/favicon.png" alt="Solvevare Logo">
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <button class="btn-primary">Book a Meet</button>
+      <button class="mobile-menu-btn">☰</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="contact-hero">
+    <div class="container">
+      <h1>
+        Let's Build Something <span class="gradient-text">Amazing Together</span>
+      </h1>
+      <p>Ready to transform your ideas into reality? Get in touch with our team today.</p>
+    </div>
+  </section>
+
+  <!-- Trusted By Section -->
+  <section class="trusted-by">
+    <div class="container">
+      <h3>Trusted by Industry Leaders</h3>
+      
+      <div class="logos-container">
+      <div class="logos-container">
+        <div class="logos-scroll">
+          <!-- First set of logos -->
+          <div class="logo-item">
+            <img src="assets/logos/AWS_logo.png" alt="AWS">
+          </div>
+          <div class="logo-item">
+            <img src="assets/logos/Cloudflare_logo.png" alt="Cloudflare">
+          </div>
+          <div class="logo-item">
+            <img src="assets/logos/googlecloud_logo.png" alt="Google Cloud" style="transform: scale(2);">
+          </div>
+          <div class="logo-item">
+            <img src="assets/logos/Azure_logo.png" alt="Azure" style="transform: scale(1.5);">
+          </div>
+          <div class="logo-item">
+            <img src="assets/logos/Supabase.png" alt="Supabase" style="transform: scale(1.8);">
+          </div>
+          <div class="logo-item">
+            <img src="assets/logos/Firebase_logo.png" alt="Firebase">
+          </div>
+          <!-- Duplicate set for infinite scroll -->
+          <div class="logo-item">
+            <img src="assets/logos/AWS_logo.png" alt="AWS">
+          </div>
+          <div class="logo-item">
+            <img src="assets/logos/Cloudflare_logo.png" alt="Cloudflare">
+          </div>
+          <div class="logo-item">
+            <img src="assets/logos/googlecloud_logo.png" alt="Google Cloud" style="transform: scale(2);">
+          </div>
+          <div class="logo-item">
+            <img src="assets/logos/Azure_logo.png" alt="Azure" style="transform: scale(1.5);">
+          </div>
+          <div class="logo-item">
+            <img src="assets/logos/Supabase.png" alt="Supabase" style="transform: scale(1.8);">
+          </div>
+          <div class="logo-item">
+            <img src="assets/logos/Firebase_logo.png" alt="Firebase">
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="contact">
+    <div class="contact-container">
+      <div class="contact-info">
+        <h2>
+          Let's Build Your<br>
+          <span class="gradient-text">Perfect Solution</span>
+        </h2>
+        <p>
+          Ready to craft your perfect software? Our team is here to help you build the solution of your dreams. From custom development to expert advice, we've got you covered.
+        </p>
+
+        <div class="contact-features">
+          <div class="contact-feature">
+            <span>✓</span>
+            <span>Custom Build Consultation</span>
+          </div>
+          <div class="contact-feature">
+            <span>✓</span>
+            <span>Expert Technical Support</span>
+          </div>
+          <div class="contact-feature">
+            <span>✓</span>
+            <span>Premium Solutions & Services</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <h3>Get In Touch</h3>
+        <p>Ready to start your next IT project? Fill out the form below and our engineers will contact you.</p>
+
+        <form id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" id="name" placeholder="Name" required>
+            </div>
+            <div class="form-group">
+              <input type="tel" id="phone" placeholder="Phone" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <input type="email" id="email" placeholder="Email" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <select id="source" required>
+                <option value="">How did you find us?</option>
+                <option value="search">Search Engine</option>
+                <option value="social">Social Media</option>
+                <option value="referral">Referral</option>
+                <option value="advertisement">Advertisement</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <select id="interest" required>
+                <option value="">What interests you?</option>
+                <option value="web">Web Development</option>
+                <option value="app">App Development</option>
+                <option value="desktop">Desktop Development</option>
+                <option value="cloud">Cloud Solutions</option>
+                <option value="network">Networking & Infrastructure</option>
+                <option value="database">Database Solutions</option>
+                <option value="design">Brand Design</option>
+                <option value="custom">Custom Software</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <textarea id="message" placeholder="Tell us about your project..." required></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="faq-container">
+      <div class="section-header">
+        <h2>Got questions? We've <span class="gradient-text">got answers!</span></h2>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How do you approach business growth?</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            We take a data-driven approach to business growth, combining market research, competitive analysis, and proven strategies tailored to your specific industry and goals.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What services do you offer?</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            We provide a comprehensive range of services, including business consultation, digital marketing, conversion rate optimization, branding, and tailored strategies to drive growth.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Can you guarantee results?</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            While we cannot guarantee specific outcomes, we use proven methodologies and track record of success. We focus on measurable KPIs and provide transparent reporting throughout our engagement.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What is the onboarding process like?</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            Our onboarding process is streamlined and efficient. We start with a discovery call, followed by a detailed assessment, proposal presentation, and kickoff meeting to ensure alignment from day one.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How do you ensure timely delivery?</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            We use agile project management methodologies with clear milestones, regular check-ins, and transparent communication. Our team is committed to meeting deadlines while maintaining quality standards.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What sets you apart from other agencies?</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            Our unique combination of industry expertise, data-driven strategies, personalized service, and proven track record of delivering measurable results sets us apart. We focus on long-term partnerships, not just projects.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location Section -->
+  <section class="location-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Visit Our <span class="gradient-text">Office</span></h2>
+      </div>
+
+      <div class="location-grid">
+        <div class="location-card">
+          <div class="location-icon">📍</div>
+          <div class="location-info">
+            <h4>Address</h4>
+            <p>150 E B St Lbby #1810 Casper, WY 82601 USA</p>
+            <p>Vincent St, Marrickville NSW 2204, Australia</p>
+            <p>16 Birch Ln, Red Lake, ON POV 2C0, Canada</p>
+          </div>
+        </div>
+
+        <div class="location-card">
+          <div class="location-icon">📞</div>
+          <div class="location-info">
+            <h4>Phone</h4>
+            <p><a href="tel:+16615484013">+1 (661) 548-4013</a></p>
+            <p><a href="tel:+61480008657">+61 480 008 657</a></p>
+            <p><a href="tel:+18078086185">+1 (807) 808-6185</a></p>
+          </div>
+        </div>
+
+        <div class="location-card">
+          <div class="location-icon">📧</div>
+          <div class="location-info">
+            <h4>Email</h4>
+            <p><a href="mailto:info@solvevare.com">info@solvevare.com</a></p>
+          </div>
+        </div>
+
+        <div class="location-card">
+          <div class="location-icon">🕐</div>
+          <div class="location-info">
+            <h4>Business Hours</h4>
+            <p>Monday - Friday: 5:00 PM - 5:00 AM</p>
+            <p>Saturday - Sunday: Closed</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>Solve<span style="color: var(--sv-cyan);">vare</span></h4>
+        <p>Transforming ideas into exceptional digital experiences through innovation and strategy.</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-section">
+        <h4>Services</h4>
+        <p>Web Development</p>
+        <p>App Development</p>
+        <p>UI/UX Design</p>
+        <p>Cloud Solutions</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Connect</h4>
+        <p>+61 (480) 008-657</p>
+        <p>+1 (661) 548-4013</p>
+        <p>info@solvevare.com</p>
+        
+        <div class="social-links">
+          <a href="https://x.com/solvevare" class="social-link">𝕏</a>
+          <a href="https://pk.linkedin.com/company/solve-vare" class="social-link">in</a>
+          <a href="https://github.com/solvevare-org" class="social-link">⚡</a>
+          <a href="https://www.instagram.com/solvevare/" class="social-link">📷</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Solvevare. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script>
+    // FAQ Toggle
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const faqItem = button.parentElement;
+        const isActive = faqItem.classList.contains('active');
+        
+        // Close all FAQs
+        document.querySelectorAll('.faq-item').forEach(item => {
+          item.classList.remove('active');
+        });
+        
+        // Open clicked FAQ if it wasn't active
+        if (!isActive) {
+          faqItem.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

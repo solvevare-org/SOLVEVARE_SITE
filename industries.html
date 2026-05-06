@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Industries - Solvevare</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/favicon.png">
+  <style>
+    .industries-hero {
+      padding-top: 150px;
+      padding-bottom: 100px;
+      background: linear-gradient(to bottom, #000, #050509);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .industries-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 50% 50%, rgba(0, 188, 212, 0.1), transparent 70%);
+    }
+
+    .industries-hero h1 {
+      font-size: 4rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .industries-hero p {
+      font-size: 1.2rem;
+      color: var(--text-gray);
+      max-width: 700px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .all-industries {
+      background: linear-gradient(to bottom, #050509, #071022, #0b0e12);
+      padding: 6rem 2rem;
+    }
+
+    .industries-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .industry-card {
+      background: linear-gradient(135deg, rgba(30, 136, 229, 0.1), rgba(0, 188, 212, 0.05));
+      border: 1px solid rgba(0, 188, 212, 0.2);
+      border-radius: 12px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .industry-card:hover {
+      border-color: rgba(0, 188, 212, 0.6);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 188, 212, 0.1);
+    }
+
+    .industry-icon {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, var(--sv-blue), var(--sv-cyan));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    .industry-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: white;
+    }
+
+    .industry-card p {
+      color: var(--text-gray);
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .industry-services-list {
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(0, 188, 212, 0.1);
+    }
+
+    .industry-services-list li {
+      color: var(--text-gray);
+      font-size: 0.85rem;
+      margin-bottom: 0.5rem;
+      list-style: none;
+      padding-left: 1rem;
+      position: relative;
+    }
+
+    .industry-services-list li:before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--sv-cyan);
+    }
+
+    @media (max-width: 768px) {
+      .industries-hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .industries-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/favicon.png" alt="Solvevare Logo">
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="industries.html">Industries</a></li>
+        <li><a href="technologies.html">Technologies</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <button class="btn-primary">Book a Meet</button>
+      <button class="mobile-menu-btn">☰</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="industries-hero">
+    <div class="container">
+      <h1>
+        Industries We <span class="gradient-text">Serve</span>
+      </h1>
+      <p>Specialized solutions tailored to your industry's unique challenges and opportunities.</p>
+    </div>
+  </section>
+
+  <!-- All Industries Section -->
+  <section class="all-industries">
+    <div class="container">
+      <div class="section-header">
+        <h2>Expertise Across Sectors</h2>
+        <p>We deliver industry-specific solutions with deep domain knowledge and proven expertise</p>
+      </div>
+
+      <div class="industries-grid">
+        <!-- Healthcare -->
+        <div class="industry-card">
+          <div class="industry-icon">
+            <svg width="30" height="30" fill="white" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
+            </svg>
+          </div>
+          <h3>Healthcare</h3>
+          <p>Custom healthcare software, telemedicine, and medical device solutions.</p>
+          <ul class="industry-services-list">
+            <li>Custom Healthcare Software Development</li>
+            <li>Telemedicine App Development</li>
+            <li>Medical Device Software</li>
+            <li>Healthcare Consulting</li>
+          </ul>
+        </div>
+
+        <!-- Education -->
+        <div class="industry-card">
+          <div class="industry-icon">
+            <svg width="30" height="30" fill="white" viewBox="0 0 24 24">
+              <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6.18L23 9 12 3zM5 9.08L12 12.7l7-3.62V9.08L12 12.7 5 9.08z"/>
+            </svg>
+          </div>
+          <h3>Education</h3>
+          <p>Learning management systems and educational platforms for modern learning.</p>
+          <ul class="industry-services-list">
+            <li>Learning Management Systems</li>
+            <li>E-Learning Platforms</li>
+            <li>Virtual Classroom Solutions</li>
+            <li>Educational Analytics</li>
+          </ul>
+        </div>
+
+        <!-- Real Estate -->
+        <div class="industry-card">
+          <div class="industry-icon">
+            <svg width="30" height="30" fill="white" viewBox="0 0 24 24">
+              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+            </svg>
+          </div>
+          <h3>Real Estate</h3>
+          <p>Property management and real estate platforms with advanced features.</p>
+          <ul class="industry-services-list">
+            <li>Property Management Software</li>
+            <li>Real Estate CRM Solutions</li>
+            <li>Virtual Property Tours</li>
+            <li>Real Estate Analytics</li>
+          </ul>
+        </div>
+
+        <!-- Blockchain -->
+        <div class="industry-card">
+          <div class="industry-icon">
+            <svg width="30" height="30" fill="white" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+          </div>
+          <h3>Blockchain</h3>
+          <p>Blockchain development, smart contracts, and DeFi platform solutions.</p>
+          <ul class="industry-services-list">
+            <li>Blockchain Development</li>
+            <li>Smart Contract Development</li>
+            <li>DeFi Platform Development</li>
+            <li>NFT Marketplace Development</li>
+          </ul>
+        </div>
+
+        <!-- Fintech -->
+        <div class="industry-card">
+          <div class="industry-icon">
+            <svg width="30" height="30" fill="white" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15h4v4h-4zm0-5h4v4h-4zm-5 5h4v4H5zm0-5h4v4H5zm0-5h4v4H5zm5-5h4v4h-4zm5 0h4v4h-4z"/>
+            </svg>
+          </div>
+          <h3>Fintech</h3>
+          <p>Payment processing, banking software, and financial platforms.</p>
+          <ul class="industry-services-list">
+            <li>Payment Processing Solutions</li>
+            <li>Banking Software Development</li>
+            <li>Financial Analytics Platforms</li>
+            <li>Cryptocurrency Exchange Development</li>
+          </ul>
+        </div>
+
+        <!-- Logistics -->
+        <div class="industry-card">
+          <div class="industry-icon">
+            <svg width="30" height="30" fill="white" viewBox="0 0 24 24">
+              <path d="M18 18.5a1.5 1.5 0 01-1.5-1.5 1.5 1.5 0 011.5-1.5 1.5 1.5 0 011.5 1.5 1.5 1.5 0 01-1.5 1.5m1.5-9l1.96 2.5H17V9.5m-11 9a1.5 1.5 0 01-1.5-1.5 1.5 1.5 0 011.5-1.5 1.5 1.5 0 011.5 1.5 1.5 1.5 0 01-1.5 1.5M5 6h3v4H5m15 6h-5v-4h7l-2 4z"/>
+            </svg>
+          </div>
+          <h3>Logistics</h3>
+          <p>Supply chain management and fleet tracking solutions.</p>
+          <ul class="industry-services-list">
+            <li>Supply Chain Management Systems</li>
+            <li>Fleet Management Software</li>
+            <li>Warehouse Management Systems</li>
+            <li>Logistics Analytics</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>Solve<span style="color: var(--sv-cyan);">vare</span></h4>
+        <p>Transforming ideas into exceptional digital experiences through innovation and strategy.</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="industries.html">Industries</a>
+        <a href="technologies.html">Technologies</a>
+      </div>
+
+      <div class="footer-section">
+        <h4>Services</h4>
+        <p>Web Development</p>
+        <p>App Development</p>
+        <p>UI/UX Design</p>
+        <p>Cloud Solutions</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Connect</h4>
+        <p>+61 (480) 008-657</p>
+        <p>+1 (661) 548-4013</p>
+        <p>info@solvevare.com</p>
+        
+        <div class="social-links">
+          <a href="https://x.com/solvevare" class="social-link">𝕏</a>
+          <a href="https://pk.linkedin.com/company/solve-vare" class="social-link">in</a>
+          <a href="https://github.com/solvevare-org" class="social-link">⚡</a>
+          <a href="https://www.instagram.com/solvevare/" class="social-link">📷</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Solvevare. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-service.html">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

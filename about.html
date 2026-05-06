@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Solvevare</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/favicon.png">
+  <style>
+    .about-hero {
+      padding-top: 120px;
+      padding-bottom: 80px;
+      background: linear-gradient(to bottom, #000, #0a0e14);
+      text-align: center;
+    }
+
+    .about-hero h1 {
+      font-size: 4rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-hero p {
+      font-size: 1.3rem;
+      color: var(--text-gray);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .story-section {
+      background: #0a0e14;
+      padding: 6rem 2rem;
+    }
+
+    .story-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .story-images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .story-images img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 16px;
+    }
+
+    .story-images .col-1 {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .story-images .col-2 {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      padding-top: 3rem;
+    }
+
+    .process-section {
+      background: #000;
+      padding: 6rem 2rem;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 3rem auto 0;
+    }
+
+    .process-card {
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.6), rgba(17, 24, 39, 0.6));
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 2.5rem;
+      transition: all 0.3s;
+    }
+
+    .process-card:hover {
+      border-color: var(--sv-cyan);
+      transform: translateY(-5px);
+    }
+
+    .process-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, var(--sv-cyan), var(--sv-blue));
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+    }
+
+    .process-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .process-card p {
+      color: var(--text-gray);
+      line-height: 1.6;
+    }
+
+    .brand-section {
+      background: linear-gradient(135deg, #050509, rgba(0, 188, 212, 0.05), rgba(156, 39, 176, 0.05));
+      padding: 8rem 2rem;
+      text-align: center;
+    }
+
+    .brand-section h1 {
+      font-size: 6rem;
+      background: linear-gradient(90deg, var(--sv-cyan), var(--sv-blue), var(--sv-purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 2rem;
+    }
+
+    .brand-section p {
+      font-size: 1.5rem;
+      color: var(--text-gray);
+      max-width: 900px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    @media (max-width: 768px) {
+      .story-container,
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .brand-section h1 {
+        font-size: 3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/favicon.png" alt="Solvevare Logo">
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <button class="btn-primary">Book a Meet</button>
+      <button class="mobile-menu-btn">☰</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="about-hero">
+    <div class="container">
+      <h1>Empowering Creativity Everywhere</h1>
+      <p>We're a team of passionate innovators dedicated to transforming ideas into exceptional digital experiences</p>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="about">
+    <div class="about-container">
+      <div class="about-content">
+        <h2>
+          Proven Track Record of<br>
+          <span class="gradient-text">Excellence</span>
+        </h2>
+        <p>
+          Over 15 years of experience delivering exceptional results. With 500+ projects completed, 
+          200+ satisfied clients, and a 98% satisfaction rate, we're committed to excellence in every engagement.
+        </p>
+        <button class="btn-primary">Talk to an Expert</button>
+      </div>
+
+      <div class="stats-card">
+        <div class="stat-item">
+          <h3>500+</h3>
+          <p>Projects</p>
+        </div>
+        <div class="stat-item">
+          <h3>200+</h3>
+          <p>Clients</p>
+        </div>
+        <div class="stat-item">
+          <h3>98%</h3>
+          <p>Satisfaction</p>
+        </div>
+        <div class="stat-item">
+          <h3>10+</h3>
+          <p>Years</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="process-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>How to start <span class="gradient-text">your journey</span></h2>
+        <p>Four simple steps to transform your vision into reality</p>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-card">
+          <div class="process-icon">📤</div>
+          <h3>Share Your Vision</h3>
+          <p>Tell us about your project goals, challenges, and what success looks like for you</p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-icon">💰</div>
+          <h3>Get a Custom Quote</h3>
+          <p>Receive a tailored proposal with transparent pricing and clear deliverables</p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-icon">🌐</div>
+          <h3>Build & Launch</h3>
+          <p>Watch your idea come to life with our agile development and seamless deployment</p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-icon">📈</div>
+          <h3>Grow & Scale</h3>
+          <p>Succeed with continuous optimization, support, and strategic growth initiatives</p>
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <button class="btn-primary">Start Your Project</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story Section -->
+  <section class="story-section">
+    <div class="story-container">
+      <div>
+        <h2>What is the story of <span class="gradient-text">Solvevare?</span></h2>
+        <p style="color: var(--text-gray); font-size: 1.1rem; line-height: 1.8; margin-top: 1.5rem;">
+          Solvevare began with a simple yet powerful mission: to bridge the gap between innovative ideas and exceptional digital solutions. Founded by a team of passionate technologists and creatives, we set out to create a company that truly understands the challenges businesses face in the digital age.
+        </p>
+        <p style="color: var(--text-gray); font-size: 1.1rem; line-height: 1.8; margin-top: 1rem;">
+          Today, we're proud to partner with forward-thinking companies around the world, helping them transform their visions into reality through cutting-edge technology, thoughtful design, and unwavering commitment to excellence.
+        </p>
+      </div>
+
+      <div class="story-images">
+        <div class="col-1">
+          <img src="https://images.pexels.com/photos/1194420/pexels-photo-1194420.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Team collaboration">
+          <img src="https://images.pexels.com/photos/1183992/pexels-photo-1183992.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Innovation">
+        </div>
+        <div class="col-2">
+          <img src="https://images.pexels.com/photos/1839919/pexels-photo-1839919.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Technology">
+          <img src="https://images.pexels.com/photos/1145434/pexels-photo-1145434.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Design">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brand Section -->
+  <section class="brand-section">
+    <div class="container">
+      <h1>Solvevare</h1>
+      <p>
+        Empowering digital excellence everywhere. Join hundreds of businesses transforming their ideas into reality with innovative solutions.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>Solve<span style="color: var(--sv-cyan);">vare</span></h4>
+        <p>Transforming ideas into exceptional digital experiences through innovation and strategy.</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-section">
+        <h4>Services</h4>
+        <p>Web Development</p>
+        <p>App Development</p>
+        <p>UI/UX Design</p>
+        <p>Cloud Solutions</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Connect</h4>
+        <p>+61 (480) 008-657</p>
+        <p>+1 (661) 548-4013</p>
+        <p>info@solvevare.com</p>
+        
+        <div class="social-links">
+          <a href="https://x.com/solvevare" class="social-link">𝕏</a>
+          <a href="https://pk.linkedin.com/company/solve-vare" class="social-link">in</a>
+          <a href="https://github.com/solvevare-org" class="social-link">⚡</a>
+          <a href="https://www.instagram.com/solvevare/" class="social-link">📷</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Solvevare. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

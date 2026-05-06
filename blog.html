@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Solvevare</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/favicon.png">
+  <style>
+    .blog-hero {
+      padding-top: 150px;
+      padding-bottom: 100px;
+      background: linear-gradient(to bottom, #000, #050509);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .blog-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 50% 50%, rgba(0, 188, 212, 0.1), transparent 70%);
+    }
+
+    .blog-hero h1 {
+      font-size: 4rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .blog-hero p {
+      font-size: 1.2rem;
+      color: var(--text-gray);
+      max-width: 700px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .blog-section {
+      background: linear-gradient(to bottom, #050509, #071022, #0b0e12);
+      padding: 6rem 2rem;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .blog-card {
+      background: linear-gradient(135deg, rgba(30, 136, 229, 0.1), rgba(0, 188, 212, 0.05));
+      border: 1px solid rgba(0, 188, 212, 0.2);
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .blog-card:hover {
+      border-color: rgba(0, 188, 212, 0.6);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 188, 212, 0.1);
+    }
+
+    .blog-card-image {
+      width: 100%;
+      height: 200px;
+      background: linear-gradient(135deg, rgba(30, 136, 229, 0.2), rgba(156, 39, 176, 0.2));
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .blog-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      color: white;
+    }
+
+    .blog-card p {
+      color: var(--text-gray);
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+      flex-grow: 1;
+    }
+
+    .blog-card-link {
+      color: var(--sv-cyan);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+      align-self: flex-start;
+    }
+
+    .blog-card-link:hover {
+      color: var(--sv-purple);
+    }
+
+    @media (max-width: 768px) {
+      .blog-hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/favicon.png" alt="Solvevare Logo">
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <button class="btn-primary">Book a Meet</button>
+      <button class="mobile-menu-btn">☰</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="blog-hero">
+    <div class="container">
+      <h1>
+        Our <span class="gradient-text">Blog</span>
+      </h1>
+      <p>Stay updated with the latest insights, trends, and stories from our team.</p>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section class="blog-section">
+    <div class="container">
+      <div class="blog-grid">
+        <!-- Blog Post 1 -->
+        <div class="blog-card">
+          <div class="blog-card-image"></div>
+          <h3>Blog Post Title 1</h3>
+          <p>Short description of the blog post content...</p>
+          <a href="#" class="blog-card-link">Read More →</a>
+        </div>
+
+        <!-- Blog Post 2 -->
+        <div class="blog-card">
+          <div class="blog-card-image"></div>
+          <h3>Blog Post Title 2</h3>
+          <p>Short description of the blog post content...</p>
+          <a href="#" class="blog-card-link">Read More →</a>
+        </div>
+
+        <!-- Blog Post 3 -->
+        <div class="blog-card">
+          <div class="blog-card-image"></div>
+          <h3>Blog Post Title 3</h3>
+          <p>Short description of the blog post content...</p>
+          <a href="#" class="blog-card-link">Read More →</a>
+        </div>
+
+        <!-- Blog Post 4 -->
+        <div class="blog-card">
+          <div class="blog-card-image"></div>
+          <h3>Blog Post Title 4</h3>
+          <p>Short description of the blog post content...</p>
+          <a href="#" class="blog-card-link">Read More →</a>
+        </div>
+
+        <!-- Blog Post 5 -->
+        <div class="blog-card">
+          <div class="blog-card-image"></div>
+          <h3>Blog Post Title 5</h3>
+          <p>Short description of the blog post content...</p>
+          <a href="#" class="blog-card-link">Read More →</a>
+        </div>
+
+        <!-- Blog Post 6 -->
+        <div class="blog-card">
+          <div class="blog-card-image"></div>
+          <h3>Blog Post Title 6</h3>
+          <p>Short description of the blog post content...</p>
+          <a href="#" class="blog-card-link">Read More →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>Solve<span style="color: var(--sv-cyan);">vare</span></h4>
+        <p>Transforming ideas into exceptional digital experiences through innovation and strategy.</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-section">
+        <h4>Services</h4>
+        <p>Web Development</p>
+        <p>App Development</p>
+        <p>UI/UX Design</p>
+        <p>Cloud Solutions</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Connect</h4>
+        <p>+61 (480) 008-657</p>
+        <p>+1 (661) 548-4013</p>
+        <p>info@solvevare.com</p>
+        
+        <div class="social-links">
+          <a href="https://x.com/solvevare" class="social-link">𝕏</a>
+          <a href="https://pk.linkedin.com/company/solve-vare" class="social-link">in</a>
+          <a href="https://github.com/solvevare-org" class="social-link">⚡</a>
+          <a href="https://www.instagram.com/solvevare/" class="social-link">📷</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Solvevare. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-service.html">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

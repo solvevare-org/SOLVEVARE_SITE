@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solvevare - Transform Your Ideas Into Digital Success</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/favicon.png">
+  <script src="js/navigation.js" defer></script>
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <!-- Navigation with Mega Menus -->
+  <nav>
+    <div class="nav-container">
+      <!-- Left Navigation Links (Desktop) -->
+      <div class="nav-left">
+        <!-- Home with Dropdown -->
+        <a href="index.html" class="nav-link" data-dropdown="home">
+          Home
+        </a>
+
+        <!-- Services with Dropdown -->
+        <a href="services.html" class="nav-link" data-dropdown="services">
+          Services <span>›</span>
+        </a>
+
+        <!-- Industries -->
+        <a href="#" class="nav-link" data-dropdown="industries">
+          Industries <span>›</span>
+        </a>
+
+        <!-- Technologies -->
+        <a href="#" class="nav-link" data-dropdown="technologies">
+          Technologies <span>›</span>
+        </a>
+
+        <!-- Portfolio -->
+        <a href="portfolio.html" class="nav-link">
+          Portfolio
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button class="mobile-menu-btn" aria-label="Toggle menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <use href="#icon-menu"></use>
+        </svg>
+      </button>
+
+      <!-- Center Logo -->
+      <a href="index.html" class="nav-logo">
+        <img src="assets/favicon.png" alt="Solvevare Logo">
+      </a>
+
+      <!-- Right Actions -->
+      <div class="nav-right">
+        <button class="btn-donate" onclick="window.location.href='contact.html'">
+          Book a meet
+        </button>
+      </div>
+    </div>
+
+    <!-- Home Mega Menu -->
+    <div class="mega-menu" id="home-mega-menu">
+      <div class="mega-menu-container">
+        <div class="home-mega-grid">
+          <!-- Left Column - Description -->
+          <div>
+            <p class="home-mega-desc">
+              In our company, we're not just IT professionals. We foster a flexible, forward-thinking environment to meet client needs, earn trust, and grow expertise.
+            </p>
+          </div>
+
+          <!-- Middle Column - Links -->
+          <div class="home-mega-links">
+            <div>
+              <a href="about.html" class="home-mega-link">About Us</a>
+              <a href="contact.html" class="home-mega-link">Contacts</a>
+            </div>
+            <div>
+              <a href="#" class="home-mega-link">Blog</a>
+            </div>
+          </div>
+
+          <!-- Right Column - Testimonial -->
+          <div>
+            <div class="testimonial-card">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" style="color: #94a3b8; margin-bottom: 1rem;">
+                <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z" fill="currentColor" />
+                <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z" fill="currentColor" />
+              </svg>
+              <p class="testimonial-quote">
+                "They deliver what they promise, and I can't say that about other companies I've worked with."
+              </p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">EH</div>
+                <div>
+                  <div class="testimonial-name">Eran Harel</div>
+                  <div class="testimonial-role">CTO of Bos-Dimex</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Services Mega Menu -->
+    <div class="mega-menu" id="services-mega-menu">
+      <div class="mega-menu-container">
+        <div class="services-mega-grid">
+          <!-- Left Column - Services List -->
+          <div>
+            <div class="services-list-header">
+              <span class="services-list-icon">
+                <svg width="22" height="22" fill="none" viewBox="0 0 24 24">
+                  <rect x="3" y="3" width="18" height="18" rx="4" fill="#00E6FB" fill-opacity="0.15" />
+                  <path d="M8 8h8v8H8V8z" fill="#00E6FB" />
+                </svg>
+              </span>
+              All Services
+            </div>
+            <div class="services-grid">
+              <a href="services.html" class="service-link">Web Development</a>
+              <a href="services.html" class="service-link">App Development</a>
+              <a href="services.html" class="service-link">Desktop & Cross-Platform Apps</a>
+              <a href="services.html" class="service-link">Cloud & DevOps</a>
+              <a href="services.html" class="service-link">Networking & Infrastructure</a>
+              <a href="services.html" class="service-link">Database & Data Engineering</a>
+              <a href="services.html" class="service-link">Product & UX Design</a>
+              <a href="services.html" class="service-link">Custom Software & Integrations</a>
+              <a href="services.html" class="service-link">Automation & Integration</a>
+            </div>
+          </div>
+
+          <!-- Right Column - Partnership Card -->
+          <div class="partnership-card">
+            <p class="partnership-header">Our Partnerships</p>
+            
+            <div class="partnership-title">
+              <div class="microsoft-logo">
+                <span style="background: #F25022; width: 12px; height: 12px;"></span>
+                <span style="background: #7FBA00; width: 12px; height: 12px;"></span>
+                <span style="background: #00A4EF; width: 12px; height: 12px;"></span>
+                <span style="background: #FFB900; width: 12px; height: 12px;"></span>
+              </div>
+              <span class="partnership-name">Microsoft</span>
+            </div>
+
+            <ul class="partnership-list">
+              <li class="partnership-item">
+                <span>AI Business Solutions</span>
+                <span>→</span>
+              </li>
+              <li class="partnership-item">
+                <span>Cloud & AI Platforms</span>
+                <span>→</span>
+              </li>
+              <li class="partnership-item">
+                <span>Security (Azure)</span>
+                <span>→</span>
+              </li>
+            </ul>
+
+            <div class="partnership-footer">
+              <span class="partnership-label">Cloud & AI ecosystem</span>
+              <div class="partnership-tags">
+                <span class="partnership-tag">Google Cloud</span>
+                <span class="partnership-tag aws">AWS</span>
+                <span class="partnership-tag">Databricks</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Industries Mega Menu -->
+    <div class="mega-menu" id="industries-mega-menu">
+      <div class="mega-menu-container">
+        <div class="industries-mega-grid">
+          <!-- Left Column - Industries List -->
+          <div class="industries-list">
+            <button class="industry-item active" data-industry="healthcare">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 11h-4v4h-4v-4H6v-4h4V6h4v4h4v4z"/>
+              </svg>
+              <span>Healthcare</span>
+            </button>
+            <button class="industry-item" data-industry="education">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/>
+              </svg>
+              <span>Education</span>
+            </button>
+            <button class="industry-item" data-industry="realestate">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+              </svg>
+              <span>Real Estate</span>
+            </button>
+            <button class="industry-item" data-industry="blockchain">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3zm-1 16.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+              </svg>
+              <span>Blockchain</span>
+            </button>
+            <button class="industry-item" data-industry="fintech">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/>
+              </svg>
+              <span>Fintech</span>
+            </button>
+            <button class="industry-item" data-industry="logistics">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/>
+              </svg>
+              <span>Logistics</span>
+            </button>
+          </div>
+
+          <!-- Middle Column - Services for Selected Industry -->
+          <div class="industry-services">
+            <h3 class="industry-services-title">Healthcare Services</h3>
+            <ul class="industry-services-list">
+              <li>
+                <a href="#" class="industry-service-link">Custom Healthcare Software Development</a>
+                <p class="industry-service-desc">Build electronic health records (EHR), clinician portals, and tailored clinical workflows that comply with healthcare regulations.</p>
+              </li>
+              <li>
+                <a href="#" class="industry-service-link">Telemedicine App Development</a>
+                <p class="industry-service-desc">Secure video consultations, appointment booking, and messaging for remote patient care.</p>
+              </li>
+              <li>
+                <a href="#" class="industry-service-link">mHealth App Development</a>
+                <p class="industry-service-desc">Patient-facing mobile apps for monitoring, engagement, and medication reminders.</p>
+              </li>
+              <li>
+                <a href="#" class="industry-service-link">Medical Device Software Development</a>
+                <p class="industry-service-desc">Embedded and companion software design with regulatory readiness for medical devices.</p>
+              </li>
+              <li>
+                <a href="#" class="industry-service-link">Healthcare Application Development</a>
+                <p class="industry-service-desc">Custom web and mobile solutions for insurers, providers and patients focused on usability and security.</p>
+              </li>
+              <li>
+                <a href="#" class="industry-service-link">Healthcare Consulting</a>
+                <p class="industry-service-desc">Clinical workflow analysis, integration strategy and compliance advisory for health IT projects.</p>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Right Column - Case Study -->
+          <div class="industry-case-study">
+            <h3 class="case-study-title">Web App for Printing Customized 3D Models for Surgery Supply</h3>
+            <p class="case-study-desc">Responsive web app for managing 3D printing workflow via 3D viewer.</p>
+            <div class="case-study-image">
+              <img src="assets/Screenshot 2025-12-15 203923.png" alt="Healthcare Case Study">
+            </div>
+            <a href="#" class="case-study-link">
+              View Case Study
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Technologies Mega Menu -->
+    <div class="mega-menu" id="technologies-mega-menu">
+      <div class="mega-menu-container">
+        <div class="technologies-mega-grid">
+          <!-- Left Column - All Technologies -->
+          <div class="technologies-list">
+            <h3 class="technologies-title">All Technologies</h3>
+            <div class="technologies-grid">
+              <button class="technology-item active" data-tech="react">
+                React JS
+              </button>
+              <button class="technology-item" data-tech="flutter">
+                Flutter
+              </button>
+              <button class="technology-item" data-tech="python">
+                Python (Django)
+              </button>
+              <button class="technology-item" data-tech="node">
+                Node.Js
+              </button>
+              <button class="technology-item" data-tech="dotnet">
+                .NET
+              </button>
+              <button class="technology-item" data-tech="reactnative">
+                React Native
+              </button>
+              <button class="technology-item" data-tech="aws">
+                AWS
+              </button>
+              <button class="technology-item" data-tech="azure">
+                Azure
+              </button>
+              <button class="technology-item" data-tech="gcp">
+                GCP
+              </button>
+              <button class="technology-item" data-tech="datascience">
+                Data Science
+              </button>
+              <button class="technology-item" data-tech="ml">
+                Machine Learning
+              </button>
+              <button class="technology-item" data-tech="blockchain">
+                Blockchain
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Column - Featured Technology Card -->
+          <div class="technology-featured">
+            <div class="tech-card">
+              <div class="tech-card-header">
+                <h3 class="tech-card-title">React Native</h3>
+                <div class="tech-icon">
+                  <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/>
+                  </svg>
+                </div>
+              </div>
+              <p class="tech-card-desc">
+                Create native mobile apps for iOS and Android using React. Share code across platforms.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+      <div class="mobile-menu-content">
+        <div class="mobile-menu-item">
+          <a href="index.html" class="mobile-menu-link">Home</a>
+        </div>
+        <div class="mobile-menu-item">
+          <a href="services.html" class="mobile-menu-link">Services</a>
+        </div>
+        <div class="mobile-menu-item">
+          <a href="portfolio.html" class="mobile-menu-link">Portfolio</a>
+        </div>
+        <div class="mobile-menu-item">
+          <a href="about.html" class="mobile-menu-link">About</a>
+        </div>
+        <div class="mobile-menu-item">
+          <a href="contact.html" class="mobile-menu-link">Contact</a>
+        </div>
+        <div class="mobile-menu-item">
+          <button class="btn-donate" style="display: block; width: 100%; margin-top: 1rem;" onclick="window.location.href='contact.html'">
+            Book a meet
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SVG Icons -->
+  <svg style="display: none;">
+    <symbol id="icon-menu" viewBox="0 0 24 24">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </symbol>
+    <symbol id="icon-x" viewBox="0 0 24 24">
+      <line x1="18" y1="6" x2="6" y2="18"></line>
+      <line x1="6" y1="6" x2="18" y2="18"></line>
+    </symbol>
+  </svg>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-video-container">
+      <video class="hero-video" autoplay muted playsinline>
+        <source src="assets/Diagonal_Tile_Animation_Abstract_flowing_metallic_shapes_with_neon_blue_-JXeluF1.mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay"></div>
+      
+      <div class="hero-content">
+        <p class="hero-badge">Available for Work</p>
+        <h1>
+          Transform your ideas<br>
+          into digital success<br>
+          with us!
+        </h1>
+        <p>
+          We're your partner in product design, website creation,<br>
+          and branding for every stage of your business.
+        </p>
+        <a href="portfolio.html" class="btn-primary">
+          <span class="btn-icon-wrapper">
+            <svg viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="btn-icon" width="10">
+              <path d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z" fill="currentColor"></path>
+            </svg>
+            <svg viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="btn-icon-copy" width="10">
+              <path d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z" fill="currentColor"></path>
+            </svg>
+          </span>
+          Our Work
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trusted By Section -->
+  <section class="trusted-by">
+    <div class="container">
+      <h3>Trusted by Industry Leaders</h3>
+      
+      <div class="logos-container">
+        <div class="logos-scroll">
+          <!-- First set of logos -->
+          <div class="logo-item">
+            <img src="assets/logos/AWS_logo.png" alt="AWS">
+          </div>
+          <div class="logo-item">
+            <img src="assets/logos/Cloudflare_logo.png" alt="Cloudflare">
+          </div>
+          <div class="logo-item">
+            <img src="assets/logos/googlecloud_logo.png" alt="Google Cloud" style="transform: scale(2);">
+          </div>
+          <div class="logo-item">
+            <img src="assets/logos/Azure_logo.png" alt="Azure" style="transform: scale(1.5);">
+          </div>
+          <div class="logo-item">
+            <img src="assets/logos/Supabase.png" alt="Supabase" style="transform: scale(1.8);">
+          </div>
+          <div class="logo-item">
+            <img src="assets/logos/Firebase_logo.png" alt="Firebase">
+          </div>
+          <!-- Duplicate set for infinite scroll -->
+          <div class="logo-item">
+            <img src="assets/logos/AWS_logo.png" alt="AWS">
+          </div>
+          <div class="logo-item">
+            <img src="assets/logos/Cloudflare_logo.png" alt="Cloudflare">
+          </div>
+          <div class="logo-item">
+            <img src="assets/logos/googlecloud_logo.png" alt="Google Cloud" style="transform: scale(2);">
+          </div>
+          <div class="logo-item">
+            <img src="assets/logos/Azure_logo.png" alt="Azure" style="transform: scale(1.5);">
+          </div>
+          <div class="logo-item">
+            <img src="assets/logos/Supabase.png" alt="Supabase" style="transform: scale(1.8);">
+          </div>
+          <div class="logo-item">
+            <img src="assets/logos/Firebase_logo.png" alt="Firebase">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services">
+    <div class="container">
+      <div class="section-header">
+        <h2>See Our all Services</h2>
+        <p>We help teams accelerate digital transformation with end-to-end IT services — web & mobile engineering, cloud migration & DevOps, data systems, and secure infrastructure so you can innovate faster.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="30" height="30" fill="white" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+            </svg>
+          </div>
+          <h3>Web Development</h3>
+          <p>Responsive, production-grade web applications and SPAs built with modern frameworks. We deliver performance optimization, accessibility, and secure APIs for reliable production systems.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="30" height="30" fill="white" viewBox="0 0 24 24">
+              <path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/>
+            </svg>
+          </div>
+          <h3>App Development</h3>
+          <p>Native and cross-platform mobile apps — from discovery to deployment. We focus on performant, maintainable architectures, offline-first UX, and platform native integrations.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="30" height="30" fill="white" viewBox="0 0 24 24">
+              <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4c-1.48 0-2.85.43-4.01 1.17l1.46 1.46C10.21 6.23 11.08 6 12 6c3.04 0 5.5 2.46 5.5 5.5v.5H19c1.66 0 3 1.34 3 3s-1.34 3-3 3H6c-2.21 0-4-1.79-4-4s1.79-4 4-4h.71C7.37 7.69 9.48 6 12 6v2c-1.82 0-3.41.88-4.41 2.24C6.94 10.1 6.48 10 6 10c-1.66 0-3 1.34-3 3s1.34 3 3 3h13c1.1 0 2-.9 2-2s-.9-2-2-2h-2.5v-.5c0-2.49-1.51-4.63-3.65-5.54z"/>
+            </svg>
+          </div>
+          <h3>Cloud & DevOps</h3>
+          <p>Cloud architecture, migration, and DevOps: infrastructure as code, CI/CD pipelines, containerization, and cost optimization across AWS, Azure, and GCP.</p>
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <a href="services.html" class="btn-primary">View All Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Preview Section -->
+  <section class="about">
+    <div class="about-container">
+      <div class="about-content">
+        <h2>
+          We Transform<br>
+          <span class="gradient-text">Ideas Into Reality</span>
+        </h2>
+        <p>
+          At Solvevare, we believe in the power of innovation to solve complex challenges.
+          Our team of experts combines strategic thinking with technical excellence to
+          deliver solutions that not only meet but exceed expectations.
+        </p>
+
+        <div class="about-features">
+          <div class="feature-item">
+            <div class="feature-icon">🎯</div>
+            <div>
+              <h3>Mission-Driven</h3>
+              <p>Every project is an opportunity to make a meaningful impact</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon">👥</div>
+            <div>
+              <h3>Collaborative</h3>
+              <p>Your vision combined with our expertise creates magic</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon">💡</div>
+            <div>
+              <h3>Innovative</h3>
+              <p>Cutting-edge solutions that keep you ahead of the curve</p>
+            </div>
+          </div>
+        </div>
+
+        <a href="about.html" class="btn-primary">Learn More About Us</a>
+      </div>
+
+      <div class="stats-card">
+        <div class="stat-item">
+          <h3>500+</h3>
+          <p>Projects</p>
+        </div>
+        <div class="stat-item">
+          <h3>200+</h3>
+          <p>Clients</p>
+        </div>
+        <div class="stat-item">
+          <h3>98%</h3>
+          <p>Satisfaction</p>
+        </div>
+        <div class="stat-item">
+          <h3>10+</h3>
+          <p>Years</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Preview Section -->
+  <section class="portfolio">
+    <div class="container">
+      <div class="section-header">
+        <h2>Featured <span class="gradient-text">Projects</span></h2>
+        <p>A showcase of our latest projects and innovative solutions</p>
+      </div>
+
+      <div class="portfolio-grid">
+        <div class="portfolio-card">
+          <div class="portfolio-image">
+            <img src="assets/Screenshot 2025-12-15 203923.png" alt="Ticketing System">
+            <div class="portfolio-overlay"></div>
+            <div class="portfolio-badge">Web Application</div>
+          </div>
+          <div class="portfolio-content">
+            <h3>Ticketing System</h3>
+            <p>A Web app for managing support or service tickets. These types of systems let users create, track, update, and resolve support requests.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card">
+          <div class="portfolio-image">
+            <img src="assets/Screenshot 2025-12-15 213248.png" alt="NORIGHTWAY">
+            <div class="portfolio-overlay"></div>
+            <div class="portfolio-badge">E-Commerce Platform</div>
+          </div>
+          <div class="portfolio-content">
+            <h3>NORIGHTWAY</h3>
+            <p>A modern web project focused on showcasing unconventional thinking through a minimalist design and strong brand identity.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card">
+          <div class="portfolio-image">
+            <img src="assets/Screenshot 2025-12-15 225523.png" alt="Chem Publishers">
+            <div class="portfolio-overlay"></div>
+            <div class="portfolio-badge">Publishing Platform</div>
+          </div>
+          <div class="portfolio-content">
+            <h3>Chem Publishers</h3>
+            <p>A digital publishing platform delivering high-quality chemistry and scientific research content.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <a href="portfolio.html" class="btn-primary">View All Projects</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <div class="testimonials-container">
+      <div class="section-header">
+        <span class="testimonials-badge">Testimonials</span>
+        <h2>Don't take our word for it.</h2>
+        <p class="testimonials-subtitle">Over 100+ people trust us.</p>
+      </div>
+
+      <div class="testimonial-slider"></div>
+
+      <div class="slider-controls">
+        <button class="slider-btn prev-btn">
+          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+          </svg>
+        </button>
+        <button class="slider-btn next-btn">
+          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Preview Section -->
+  <section class="contact">
+    <div class="contact-container">
+      <div class="contact-info">
+        <h2>
+          Let's Build Your<br>
+          <span class="gradient-text">Perfect Solution</span>
+        </h2>
+        <p>
+          Ready to transform your ideas into reality? Our team is here to help you build the solution of your dreams.
+        </p>
+
+        <div class="contact-features">
+          <div class="contact-feature">
+            <span>📧</span>
+            <span>info@solvevare.com</span>
+          </div>
+          <div class="contact-feature">
+            <span>📞</span>
+            <span>+1 (661) 548-4013</span>
+          </div>
+          <div class="contact-feature">
+            <span>📍</span>
+            <span>150 E B St Lbby #1810 Casper, WY 82601 USA</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <h3>Get In Touch</h3>
+        <p>Fill out the form below and our team will contact you soon.</p>
+
+        <form id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" id="name" placeholder="Name" required>
+            </div>
+            <div class="form-group">
+              <input type="tel" id="phone" placeholder="Phone" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <input type="email" id="email" placeholder="Email" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <select id="source" required>
+                <option value="">How did you find us?</option>
+                <option value="search">Search Engine</option>
+                <option value="social">Social Media</option>
+                <option value="referral">Referral</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <select id="interest" required>
+                <option value="">What interests you?</option>
+                <option value="web">Web Development</option>
+                <option value="app">App Development</option>
+                <option value="cloud">Cloud Solutions</option>
+                <option value="design">Brand Design</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <textarea id="message" placeholder="Tell us about your project..." required></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>Solve<span style="color: var(--sv-cyan);">vare</span></h4>
+        <p>Transforming ideas into exceptional digital experiences through innovation and strategy.</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-section">
+        <h4>Services</h4>
+        <p>Web Development</p>
+        <p>App Development</p>
+        <p>UI/UX Design</p>
+        <p>Cloud Solutions</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Connect</h4>
+        <p>+61 (480) 008-657</p>
+        <p>+1 (661) 548-4013</p>
+        <p>info@solvevare.com</p>
+        
+        <div class="social-links">
+          <a href="https://x.com/solvevare" class="social-link">𝕏</a>
+          <a href="https://pk.linkedin.com/company/solve-vare" class="social-link">in</a>
+          <a href="https://github.com/solvevare-org" class="social-link">⚡</a>
+          <a href="https://www.instagram.com/solvevare/" class="social-link">📷</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Solvevare. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/navigation.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

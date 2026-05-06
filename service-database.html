@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Database & Data Engineering - Solvevare</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/favicon.png">
+  <style>
+    .service-detail-hero { padding-top: 150px; padding-bottom: 100px; background: linear-gradient(to bottom, #000, #050509); position: relative; overflow: hidden; }
+    .service-detail-hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 50% 50%, rgba(0, 188, 212, 0.1), transparent 70%); }
+    .service-hero-content { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; position: relative; z-index: 1; max-width: 1400px; margin: 0 auto; padding: 0 2rem; }
+    .service-hero-text h1 { font-size: 3.5rem; margin-bottom: 1.5rem; }
+    .service-hero-text p { font-size: 1.1rem; color: var(--text-gray); margin-bottom: 2rem; line-height: 1.8; }
+    .service-details-section { background: linear-gradient(to bottom, #050509, #071022, #0b0e12); padding: 6rem 2rem; }
+    .service-benefits { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 1400px; margin: 2rem auto; }
+    .benefit-card { background: linear-gradient(135deg, rgba(30, 136, 229, 0.1), rgba(0, 188, 212, 0.05)); border: 1px solid rgba(0, 188, 212, 0.2); border-radius: 12px; padding: 1.5rem; }
+    .benefit-card h3 { color: var(--sv-cyan); margin-bottom: 0.5rem; }
+    .benefit-card p { color: var(--text-gray); }
+    @media (max-width: 768px) { .service-hero-content { grid-template-columns: 1fr; } .service-hero-text h1 { font-size: 2.2rem; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo"><img src="assets/favicon.png" alt="Solvevare Logo"></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="industries.html">Industries</a></li>
+        <li><a href="technologies.html">Technologies</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="btn-primary">Book a Meet</button>
+      <button class="mobile-menu-btn">☰</button>
+    </div>
+  </nav>
+
+  <section class="service-detail-hero">
+    <div class="service-hero-content">
+      <div class="service-hero-text">
+        <h1><span class="gradient-text">Database & Data Engineering</span></h1>
+        <p>Database design, performance tuning, data pipelines, replication strategies for SQL and NoSQL systems.</p>
+        <button class="btn-primary">Get Started</button>
+      </div>
+      <div class="service-hero-image">
+        <div style="width: 100%; height: 400px; background: linear-gradient(135deg, rgba(0, 188, 212, 0.2), rgba(156, 39, 176, 0.2)); border-radius: 12px;"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="service-details-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Data Solutions That Scale</h2>
+        <p>Reliable database and data engineering expertise</p>
+      </div>
+      <div class="service-benefits">
+        <div class="benefit-card">
+          <h3>Database Design</h3>
+          <p>Optimized schema design for performance and reliability.</p>
+        </div>
+        <div class="benefit-card">
+          <h3>Performance Tuning</h3>
+          <p>Query optimization and index strategies.</p>
+        </div>
+        <div class="benefit-card">
+          <h3>Data Pipelines</h3>
+          <p>ETL and data workflow automation.</p>
+        </div>
+        <div class="benefit-card">
+          <h3>Replication & Backups</h3>
+          <p>Data redundancy and disaster recovery strategies.</p>
+        </div>
+        <div class="benefit-card">
+          <h3>SQL & NoSQL</h3>
+          <p>Expertise in PostgreSQL, MySQL, MongoDB, and more.</p>
+        </div>
+        <div class="benefit-card">
+          <h3>Analytics</h3>
+          <p>Data warehousing and business intelligence solutions.</p>
+        </div>
+      </div>
+      <div style="margin-top: 4rem; text-align: center;">
+        <h2 style="margin-bottom: 2rem;">Database Technologies</h2>
+        <p style="color: var(--text-gray); margin-bottom: 1rem;">PostgreSQL • MySQL • MongoDB • Redis • Cassandra • Elasticsearch</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: linear-gradient(135deg, rgba(0, 188, 212, 0.1), rgba(156, 39, 176, 0.1)); padding: 4rem 2rem; text-align: center;">
+    <div class="container">
+      <h2 style="margin-bottom: 1rem;">Optimize Your Data Infrastructure</h2>
+      <p style="color: var(--text-gray); margin-bottom: 2rem;">Let's build scalable and reliable database solutions for your application.</p>
+      <button class="btn-primary">Book a Consultation</button>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>Solve<span style="color: var(--sv-cyan);">vare</span></h4>
+        <p>Transforming ideas into exceptional digital experiences through innovation and strategy.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="industries.html">Industries</a>
+      </div>
+      <div class="footer-section">
+        <h4>Services</h4>
+        <p>Web Development</p>
+        <p>App Development</p>
+        <p>Cloud Solutions</p>
+      </div>
+      <div class="footer-section">
+        <h4>Connect</h4>
+        <p>+61 (480) 008-657</p>
+        <p>+1 (661) 548-4013</p>
+        <p>info@solvevare.com</p>
+        <div class="social-links">
+          <a href="https://x.com/solvevare" class="social-link">𝕏</a>
+          <a href="https://pk.linkedin.com/company/solve-vare" class="social-link">in</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Solvevare. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-service.html">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
