@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technology Details - Test Links</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #0a0a0a;
+      color: #fff;
+    }
+    h1 {
+      color: #00e6fb;
+      margin-bottom: 30px;
+    }
+    .tech-list {
+      list-style: none;
+      padding: 0;
+    }
+    .tech-item {
+      margin-bottom: 15px;
+    }
+    .tech-link {
+      display: block;
+      padding: 15px 20px;
+      background: linear-gradient(135deg, rgba(30, 136, 229, 0.2), rgba(156, 39, 176, 0.2));
+      border: 1px solid rgba(0, 230, 251, 0.3);
+      border-radius: 8px;
+      color: #fff;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    .tech-link:hover {
+      background: linear-gradient(135deg, rgba(30, 136, 229, 0.4), rgba(156, 39, 176, 0.4));
+      border-color: #00e6fb;
+      transform: translateX(5px);
+    }
+    .tech-name {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    .tech-url {
+      font-size: 14px;
+      color: #94a3b8;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <h1>🚀 Technology Details Pages - Test Links</h1>
+  <p style="color: #94a3b8; margin-bottom: 30px;">
+    Click on any technology below to test the dynamic data loading:
+  </p>
+  
+  <ul class="tech-list">
+    <li class="tech-item">
+      <a href="technology-details.html?tech=react" class="tech-link">
+        <div class="tech-name">⚛️ React JS</div>
+        <div class="tech-url">technology-details.html?tech=react</div>
+      </a>
+    </li>
+    
+    <li class="tech-item">
+      <a href="technology-details.html?tech=flutter" class="tech-link">
+        <div class="tech-name">📱 Flutter</div>
+        <div class="tech-url">technology-details.html?tech=flutter</div>
+      </a>
+    </li>
+    
+    <li class="tech-item">
+      <a href="technology-details.html?tech=python" class="tech-link">
+        <div class="tech-name">🐍 Python (Django)</div>
+        <div class="tech-url">technology-details.html?tech=python</div>
+      </a>
+    </li>
+    
+    <li class="tech-item">
+      <a href="technology-details.html?tech=node" class="tech-link">
+        <div class="tech-name">🟢 Node.js</div>
+        <div class="tech-url">technology-details.html?tech=node</div>
+      </a>
+    </li>
+    
+    <li class="tech-item">
+      <a href="technology-details.html?tech=dotnet" class="tech-link">
+        <div class="tech-name">🔷 .NET</div>
+        <div class="tech-url">technology-details.html?tech=dotnet</div>
+      </a>
+    </li>
+    
+    <li class="tech-item">
+      <a href="technology-details.html?tech=reactnative" class="tech-link">
+        <div class="tech-name">📲 React Native</div>
+        <div class="tech-url">technology-details.html?tech=reactnative</div>
+      </a>
+    </li>
+    
+    <li class="tech-item">
+      <a href="technology-details.html?tech=aws" class="tech-link">
+        <div class="tech-name">☁️ AWS</div>
+        <div class="tech-url">technology-details.html?tech=aws</div>
+      </a>
+    </li>
+    
+    <li class="tech-item">
+      <a href="technology-details.html?tech=azure" class="tech-link">
+        <div class="tech-name">☁️ Azure</div>
+        <div class="tech-url">technology-details.html?tech=azure</div>
+      </a>
+    </li>
+    
+    <li class="tech-item">
+      <a href="technology-details.html?tech=gcp" class="tech-link">
+        <div class="tech-name">☁️ Google Cloud Platform</div>
+        <div class="tech-url">technology-details.html?tech=gcp</div>
+      </a>
+    </li>
+    
+    <li class="tech-item">
+      <a href="technology-details.html?tech=datascience" class="tech-link">
+        <div class="tech-name">📊 Data Science</div>
+        <div class="tech-url">technology-details.html?tech=datascience</div>
+      </a>
+    </li>
+    
+    <li class="tech-item">
+      <a href="technology-details.html?tech=ml" class="tech-link">
+        <div class="tech-name">🤖 Machine Learning</div>
+        <div class="tech-url">technology-details.html?tech=ml</div>
+      </a>
+    </li>
+    
+    <li class="tech-item">
+      <a href="technology-details.html?tech=blockchain" class="tech-link">
+        <div class="tech-name">⛓️ Blockchain</div>
+        <div class="tech-url">technology-details.html?tech=blockchain</div>
+      </a>
+    </li>
+  </ul>
+
+  <div style="margin-top: 40px; padding: 20px; background: rgba(255, 193, 7, 0.1); border: 1px solid rgba(255, 193, 7, 0.3); border-radius: 8px;">
+    <h3 style="color: #ffc107; margin-top: 0;">📝 How it works:</h3>
+    <ol style="color: #cbd5e1; line-height: 1.8;">
+      <li>URL parameter <code style="background: rgba(0,0,0,0.3); padding: 2px 6px; border-radius: 3px;">?tech=TECH_ID</code> determines which technology to show</li>
+      <li>JavaScript reads the URL parameter using <code style="background: rgba(0,0,0,0.3); padding: 2px 6px; border-radius: 3px;">URLSearchParams</code></li>
+      <li>Data is fetched from <code style="background: rgba(0,0,0,0.3); padding: 2px 6px; border-radius: 3px;">technologyDetailsData.js</code></li>
+      <li>All content is dynamically rendered based on the selected technology</li>
+    </ol>
+  </div>
+</body>
+</html>

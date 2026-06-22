@@ -29,109 +29,66 @@ navItems.forEach(link => {
   }
 });
 
-// Testimonials Slider
-let currentTestimonial = 0;
-const testimonials = [
-  {
-    message: "This product has completely transformed how we work. The intuitive design and powerful features have made our team more productive than ever before.",
-    name: "Sarah Mitchell",
-    role: "Product Manager at TechCorp",
-    avatar: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop"
-  },
-  {
-    message: "I've tried countless solutions, but nothing comes close to this. The customer support is exceptional, and the results speak for themselves. Highly recommended!",
-    name: "Marcus Johnson",
-    role: "CEO at StartupHub",
-    avatar: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop"
-  },
-  {
-    message: "The level of expertise and dedication shown by the team is unparalleled. They didn't just meet our expectations; they redefined them.",
-    name: "Thomas Wright",
-    role: "Head of Operations at Global Logistics",
-    avatar: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop"
-  },
-  {
-    message: "Outstanding experience from start to finish. The attention to detail and commitment to excellence is evident in every interaction. This is the gold standard.",
-    name: "Emily Chen",
-    role: "Creative Director at DesignLab",
-    avatar: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop"
-  },
-  {
-    message: "Working with this platform has been a game-changer for our scalability. The architecture is solid, and the support team is always one step ahead.",
-    name: "Olivia Martinez",
-    role: "Technical Lead at InnovateSoft",
-    avatar: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop"
+// Testimonials Carousel - Exact match to React version
+let activeTestimonialIndex = 1; // Start with second card (Marcus Johnson)
+const totalTestimonials = 5;
+
+function getCardPosition(index) {
+  let diff = index - activeTestimonialIndex;
+  
+  // Normalize the difference to handle circular array
+  if (diff > totalTestimonials / 2) {
+    diff -= totalTestimonials;
+  } else if (diff < -totalTestimonials / 2) {
+    diff += totalTestimonials;
   }
-];
-
-function initTestimonials() {
-  const slider = document.querySelector('.testimonial-slider');
-  if (!slider) return;
-
-  // Create testimonial cards
-  testimonials.forEach((testimonial, index) => {
-    const card = document.createElement('div');
-    card.className = 'testimonial-card';
-    card.innerHTML = `
-      <p class="testimonial-text">"${testimonial.message}"</p>
-      <div class="testimonial-author">
-        <img src="${testimonial.avatar}" alt="${testimonial.name}" class="author-avatar">
-        <div class="author-info">
-          <h4>${testimonial.name}</h4>
-          <p>${testimonial.role}</p>
-        </div>
-        <div class="testimonial-rating">
-          <span class="star">★</span>
-          <span class="star">★</span>
-          <span class="star">★</span>
-          <span class="star">★</span>
-          <span class="star">★</span>
-        </div>
-      </div>
-    `;
-    slider.appendChild(card);
-  });
-
-  updateTestimonials();
+  
+  if (diff === 0) return 'active';
+  if (diff === 1) return 'right';
+  if (diff === -1) return 'left';
+  return 'hidden';
 }
 
-function updateTestimonials() {
+function updateTestimonialPositions() {
   const cards = document.querySelectorAll('.testimonial-card');
   cards.forEach((card, index) => {
-    card.classList.remove('active', 'left', 'right', 'hidden');
+    const position = getCardPosition(index);
+    card.setAttribute('data-position', position);
     
-    if (index === currentTestimonial) {
+    // Update active class
+    if (position === 'active') {
       card.classList.add('active');
-    } else if (index === (currentTestimonial - 1 + testimonials.length) % testimonials.length) {
-      card.classList.add('left');
-    } else if (index === (currentTestimonial + 1) % testimonials.length) {
-      card.classList.add('right');
     } else {
-      card.classList.add('hidden');
+      card.classList.remove('active');
     }
   });
 }
 
-function nextTestimonial() {
-  currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-  updateTestimonials();
+function handlePreviousTestimonial() {
+  activeTestimonialIndex = (activeTestimonialIndex === 0) 
+    ? totalTestimonials - 1 
+    : activeTestimonialIndex - 1;
+  updateTestimonialPositions();
 }
 
-function prevTestimonial() {
-  currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
-  updateTestimonials();
+function handleNextTestimonial() {
+  activeTestimonialIndex = (activeTestimonialIndex === totalTestimonials - 1) 
+    ? 0 
+    : activeTestimonialIndex + 1;
+  updateTestimonialPositions();
 }
 
-// Testimonial Controls
-document.addEventListener('DOMContentLoaded', () => {
-  initTestimonials();
+// Initialize testimonials on page load
+function initTestimonials() {
+  const prevBtn = document.querySelector('.testimonials .prev-btn');
+  const nextBtn = document.querySelector('.testimonials .next-btn');
 
-  const prevBtn = document.querySelector('.prev-btn');
-  const nextBtn = document.querySelector('.next-btn');
-
-  if (prevBtn) prevBtn.addEventListener('click', prevTestimonial);
-  if (nextBtn) nextBtn.addEventListener('click', nextTestimonial);
-});
+  if (prevBtn) prevBtn.addEventListener('click', handlePreviousTestimonial);
+  if (nextBtn) nextBtn.addEventListener('click', handleNextTestimonial);
+  
+  // Set initial positions
+  updateTestimonialPositions();
+}
 
 // Contact Form Handling
 const contactForm = document.getElementById('contactForm');
@@ -244,9 +201,34 @@ function initLogoScroll() {
   });
 }
 
-// Initialize logo scroll on page load
+// Initialize on page load
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initLogoScroll);
+  document.addEventListener('DOMContentLoaded', () => {
+    initLogoScroll();
+    initTestimonials();
+    initServiceCardRouting();
+  });
 } else {
   initLogoScroll();
+  initTestimonials();
+  initServiceCardRouting();
+}
+
+// Service Card Routing - Click to navigate to service detail pages
+function initServiceCardRouting() {
+  const serviceCards = document.querySelectorAll('.services-page-grid .service-card');
+  
+  serviceCards.forEach((card, index) => {
+    card.addEventListener('click', () => {
+      window.location.href = `service/detail.html?id=${index + 1}`;
+    });
+  });
+}
+
+// Mobile Dropdown Toggle - For mobile menu
+function toggleMobileDropdown(dropdownId) {
+  const dropdown = document.getElementById(dropdownId);
+  if (dropdown) {
+    dropdown.classList.toggle('active');
+  }
 }

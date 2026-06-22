@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Details - Solvevare</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/project-details.css">
+  <link rel="icon" href="assets/favicon.png">
+  <script src="js/projectDetailsData.js"></script>
+   <script src="js/project-details.js" defer></script>
+    <script src="js/industriesData.js"></script>
+  <script src="js/technologiesData.js"></script>
+  <script src="js/navbar-loader.js"></script>
+  <script src="js/navigation.js" defer></script>
+ <script src="js/locations-nav.js"></script>
+</head>
+
+<body>
+  <nav>
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="index.html" class="nav-link" id="HOME" data-dropdown="home">
+          Home
+        </a>
+        <a href="services.html" class="nav-link" data-dropdown="services">
+          Services <span>›</span>
+        </a>
+        <a href="industries.html" class="nav-link" data-dropdown="industries">
+          Industries <span>›</span>
+        </a>
+        <a href="technologies.html" class="nav-link" data-dropdown="technologies">
+          Technologies <span>›</span>
+        </a>
+        <a href="portfolio.html" class="nav-link">
+          Portfolio
+        </a>
+      </div>
+
+      <button class="mobile-menu-btn" aria-label="Toggle menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <use href="#icon-menu"></use>
+        </svg>
+      </button>
+
+      <a href="index.html" class="nav-logo">
+        <img src="assets/favicon.png" alt="Solvevare Logo">
+      </a>
+
+      <div class="nav-right">
+        <a href="location.html" class="nav-link" data-dropdown="locations" style="margin-right:0.5rem;">
+          Locations <span>&#x203a;</span>
+        </a>
+        <button class="btn-donate" onclick="window.location.href='contact.html'">
+          Book a meet
+        </button>
+      </div>
+    </div>
+
+    <div class="mega-menu" id="locations-mega-menu">
+      <div class="mega-menu-container">
+        <div class="locations-mega-grid">
+          <div>
+            <p class="locations-mega-title">Browse by State</p>
+            <div class="locations-states-grid" id="nav-states-grid"></div>
+          </div>
+          <div class="locations-cta">
+            <p class="locations-cta-title">We Serve Across the United States</p>
+            <p class="locations-cta-desc">Find expert software development, cloud solutions, and digital transformation services in your city. Click any state to jump directly to it.</p>
+            <a href="location.html" class="locations-cta-btn">View All Locations &#8594;</a>
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="mega-menu" id="home-mega-menu">
+      <div class="mega-menu-container">
+        <div class="home-mega-grid">
+          <div>
+            <p class="home-mega-desc">
+              In our company, we're not just IT professionals. We foster a flexible, forward-thinking environment to
+              meet client needs, earn trust, and grow expertise.
+            </p>
+          </div>
+          <div class="home-mega-links-wrapper">
+            <div class="home-mega-links-column">
+              <a href="about.html" class="home-mega-link">About Us</a>
+              <a href="contact.html" class="home-mega-link">Contacts</a>
+            </div>
+            <div class="home-mega-links-column">
+              <a href="blog.html" class="home-mega-link">Blog</a>
+            </div>
+          </div>
+          <div>
+            <div class="testimonial-card">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z" />
+                <path
+                  d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z" />
+              </svg>
+              <p class="testimonial-quote">
+                "They deliver what they promise, and I can't say that about other companies I've worked with."
+              </p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">EH</div>
+                <div>
+                  <div class="testimonial-name">Eran Harel</div>
+                  <div class="testimonial-role">CTO of Bos-Dimex</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mega-menu" id="services-mega-menu">
+      <div class="mega-menu-container">
+        <div class="services-mega-grid">
+          <div>
+            <div class="services-list-header">
+              <span class="services-list-icon">
+                <svg width="22" height="22" fill="none" viewBox="0 0 24 24">
+                  <rect x="3" y="3" width="18" height="18" rx="4" fill="#00E6FB" fill-opacity="0.15" />
+                  <path d="M8 8h8v8H8V8z" fill="#00E6FB" />
+                </svg>
+              </span>
+              All Services
+            </div>
+            <div class="services-grid">
+              <a href="service/detail.html?id=1" class="service-link">Web Development</a>
+              <a href="service/detail.html?id=2" class="service-link">App Development</a>
+              <a href="service/detail.html?id=3" class="service-link">Desktop & Cross-Platform Apps</a>
+              <a href="service/detail.html?id=4" class="service-link">Cloud & DevOps</a>
+              <a href="service/detail.html?id=5" class="service-link">Networking & Infrastructure</a>
+              <a href="service/detail.html?id=6" class="service-link">Database & Data Engineering</a>
+              <a href="service/detail.html?id=7" class="service-link">Product & UX Design</a>
+              <a href="service/detail.html?id=8" class="service-link">Custom Software & Integrations</a>
+              <a href="service/detail.html?id=9" class="service-link">Automation & Integration</a>
+            </div>
+          </div>
+          <div class="partnership-card">
+            <p class="partnership-header">Our Partnerships</p>
+            <div class="partnership-title">
+              <div class="microsoft-logo">
+                <span style="background: #F25022; width: 12px; height: 12px;"></span>
+                <span style="background: #7FBA00; width: 12px; height: 12px;"></span>
+                <span style="background: #00A4EF; width: 12px; height: 12px;"></span>
+                <span style="background: #FFB900; width: 12px; height: 12px;"></span>
+              </div>
+              <span class="partnership-name">Microsoft</span>
+            </div>
+            <ul class="partnership-list">
+              <li class="partnership-item">
+                <span>AI Business Solutions</span>
+                <span>→</span>
+              </li>
+              <li class="partnership-item">
+                <span>Cloud & AI Platforms</span>
+                <span>→</span>
+              </li>
+              <li class="partnership-item">
+                <span>Security (Azure)</span>
+                <span>→</span>
+              </li>
+            </ul>
+            <div class="partnership-footer">
+              <span class="partnership-label">Cloud & AI ecosystem</span>
+              <div class="partnership-tags">
+                <span class="partnership-tag">Google Cloud</span>
+                <span class="partnership-tag aws">AWS</span>
+                <span class="partnership-tag">Databricks</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mega-menu" id="industries-mega-menu">
+      <div class="mega-menu-container">
+        <div class="industries-mega-grid">
+          <div class="industries-list">
+            <button class="industry-item active" data-industry="healthcare">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              <span>Healthcare</span>
+            </button>
+            <button class="industry-item" data-industry="education">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+              <span>Education</span>
+            </button>
+            <button class="industry-item" data-industry="real-estate">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+              <span>Real Estate</span>
+            </button>
+            <button class="industry-item" data-industry="blockchain">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+              <span>Blockchain</span>
+            </button>
+            <button class="industry-item" data-industry="fintech">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+              <span>Fintech</span>
+            </button>
+            <button class="industry-item" data-industry="logistics">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M1 3h15v13H1z"></path><path d="M16 8h4l3 3v5h-7V8z"></path><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+              <span>Logistics</span>
+            </button>
+          </div>
+
+          <div class="industry-services">
+            <h3 class="industry-services-title" id="industry-services-title">Healthcare Services</h3>
+            <ul class="industry-services-list" id="industry-services-list">
+              <li>
+                <a href="industry-details.html?id=healthcare" class="industry-service-link">Custom Healthcare Software Development</a>
+                <p class="industry-service-desc">Build electronic health records, clinician portals, and tailored clinical workflows.</p>
+              </li>
+              <li>
+                <a href="industry-details.html?id=healthcare" class="industry-service-link">Telemedicine App Development</a>
+                <p class="industry-service-desc">Secure video consultations, appointment booking, and messaging for remote patient care.</p>
+              </li>
+              <li>
+                <a href="industry-details.html?id=healthcare" class="industry-service-link">mHealth App Development</a>
+                <p class="industry-service-desc">Patient-facing mobile apps for monitoring, engagement, and medication reminders.</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="industry-case-study">
+            <h3 class="case-study-title">Web App for Printing Customized 3D Models for Surgery Supply</h3>
+            <p class="case-study-desc">Responsive web app for managing 3D printing workflow via 3D viewer.</p>
+            <div class="case-study-image">
+              <img src="assets/Screenshot 2025-12-15 203923.png" alt="Healthcare Case Study">
+            </div>
+            <a href="#" class="case-study-link">View Case Study <span>→</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mega-menu" id="technologies-mega-menu">
+      <div class="mega-menu-container">
+        <div class="technologies-mega-grid">
+          <div class="technologies-list">
+            <h3 class="technologies-title">All Technologies</h3>
+            <div class="technologies-grid">
+              <button class="technology-item active" data-tech="react"><a href="technology-details.html?tech=react">React JS</a></button>
+              <button class="technology-item" data-tech="flutter"><a href="technology-details.html?tech=flutter">Flutter</a></button>
+              <button class="technology-item" data-tech="python"><a href="technology-details.html?tech=python">Python (Django)</a></button>
+              <button class="technology-item" data-tech="node"><a href="technology-details.html?tech=node">Node.Js</a></button>
+              <button class="technology-item" data-tech="dotnet"><a href="technology-details.html?tech=dotnet">.NET</a></button>
+              <button class="technology-item" data-tech="reactnative"><a href="technology-details.html?tech=reactnative">React Native</a></button>
+              <button class="technology-item" data-tech="aws"><a href="technology-details.html?tech=aws">AWS</a></button>
+              <button class="technology-item" data-tech="azure"><a href="technology-details.html?tech=azure">Azure</a></button>
+              <button class="technology-item" data-tech="gcp"><a href="technology-details.html?tech=gcp">GCP</a></button>
+              <button class="technology-item" data-tech="datascience"><a href="technology-details.html?tech=datascience">Data Science</a></button>
+              <button class="technology-item" data-tech="ml"><a href="technology-details.html?tech=ml">Machine Learning</a></button>
+              <button class="technology-item" data-tech="blockchain"><a href="technology-details.html?tech=blockchain">Blockchain</a></button>
+            </div>
+          </div>
+          <div class="technology-featured">
+            <div class="tech-card">
+              <div class="tech-card-header">
+                <h3 class="tech-card-title">React JS</h3>
+                <div class="tech-icon">
+                  <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+                </div>
+              </div>
+              <p class="tech-card-desc">Power your web app with a fast, interactive, and scalable frontend. Designed for seamless user experiences and business growth.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mobile-menu">
+      <div class="mobile-menu-content">
+        <div class="mobile-menu-item">
+          <button class="mobile-menu-link mobile-dropdown-toggle" onclick="toggleMobileDropdown('home-mobile')">
+            Home <span>›</span>
+          </button>
+          <div class="mobile-dropdown" id="home-mobile">
+            <a href="about.html" class="mobile-dropdown-link">About Us</a>
+            <a href="#" class="mobile-dropdown-link">Benefits</a>
+            <a href="#" class="mobile-dropdown-link">Vacancies</a>
+            <a href="#" class="mobile-dropdown-link">Client Reviews</a>
+            <a href="blog.html" class="mobile-dropdown-link">Blog</a>
+            <a href="contact.html" class="mobile-dropdown-link">Contacts</a>
+          </div>
+        </div>
+        <div class="mobile-menu-item">
+          <button class="mobile-menu-link mobile-dropdown-toggle" onclick="toggleMobileDropdown('services-mobile')">
+            Services <span>›</span>
+          </button>
+          <div class="mobile-dropdown" id="services-mobile">
+            <a href="services.html?id=1" class="mobile-dropdown-link">Web Development</a>
+            <a href="services.html?id=2" class="mobile-dropdown-link">App Development</a>
+            <a href="services.html?id=3" class="mobile-dropdown-link">Desktop & Cross-Platform Apps</a>
+            <a href="services.html?id=4" class="mobile-dropdown-link">Cloud & DevOps</a>
+            <a href="services.html?id=5" class="mobile-dropdown-link">Networking & Infrastructure</a>
+            <a href="services.html?id=6" class="mobile-dropdown-link">Database & Data Engineering</a>
+            <a href="services.html?id=7" class="mobile-dropdown-link">Product & UX Design</a>
+            <a href="services.html?id=8" class="mobile-dropdown-link">Custom Software & Integrations</a>
+            <a href="services.html?id=9" class="mobile-dropdown-link">Automation & Integration</a>
+          </div>
+        </div>
+        <div class="mobile-menu-item">
+          <button class="mobile-menu-link mobile-dropdown-toggle" onclick="toggleMobileDropdown('industries-mobile')">
+            Industries <span>›</span>
+          </button>
+          <div class="mobile-dropdown" id="industries-mobile">
+            <a href="industries.html?id=healthcare" class="mobile-dropdown-link">Healthcare</a>
+            <a href="industries.html?id=education" class="mobile-dropdown-link">Education</a>
+            <a href="industries.html?id=real-estate" class="mobile-dropdown-link">Real Estate</a>
+            <a href="industries.html?id=blockchain" class="mobile-dropdown-link">Blockchain</a>
+            <a href="industries.html?id=fintech" class="mobile-dropdown-link">Fintech</a>
+            <a href="industries.html?id=logistics" class="mobile-dropdown-link">Logistics</a>
+          </div>
+        </div>
+        <div class="mobile-menu-item">
+          <button class="mobile-menu-link mobile-dropdown-toggle" onclick="toggleMobileDropdown('technologies-mobile')">
+            Technologies <span>›</span>
+          </button>
+          <div class="mobile-dropdown" id="technologies-mobile">
+            <a href="technology-details.html?tech=react" class="mobile-dropdown-link">React JS</a>
+            <a href="technology-details.html?tech=flutter" class="mobile-dropdown-link">Flutter</a>
+            <a href="technology-details.html?tech=python" class="mobile-dropdown-link">Python (Django)</a>
+            <a href="technology-details.html?tech=node" class="mobile-dropdown-link">Node.Js</a>
+            <a href="technology-details.html?tech=dotnet" class="mobile-dropdown-link">.NET</a>
+            <a href="technology-details.html?tech=reactnative" class="mobile-dropdown-link">React Native</a>
+            <a href="technology-details.html?tech=aws" class="mobile-dropdown-link">AWS</a>
+            <a href="technology-details.html?tech=azure" class="mobile-dropdown-link">Azure</a>
+            <a href="technology-details.html?tech=gcp" class="mobile-dropdown-link">GCP</a>
+            <a href="technology-details.html?tech=datascience" class="mobile-dropdown-link">Data Science</a>
+            <a href="technology-details.html?tech=ml" class="mobile-dropdown-link">Machine Learning</a>
+            <a href="technology-details.html?tech=blockchain" class="mobile-dropdown-link">Blockchain</a>
+          </div>
+        </div>
+        <div class="mobile-menu-item">
+          <a href="portfolio.html" class="mobile-menu-link">Portfolio</a>
+        </div>
+        <div class="mobile-menu-item">
+          <button class="btn-donate" style="display: block; width: 100%; margin-top: 1rem;" onclick="window.location.href='contact.html'">
+            Book a meet
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- Main Content -->
+  <div class="project-details-wrapper">
+    <!-- Hero Section -->
+    <section class="project-hero" id="project-hero">
+      <div class="project-hero-bg">
+        <img id="hero-image" src="" alt="" class="hero-bg-image">
+        <div id="hero-gradient" class="hero-gradient-overlay"></div>
+        <div class="hero-dark-overlay"></div>
+      </div>
+
+      <div class="project-hero-content">
+        <a href="portfolio.html" class="back-button animate-fade-left">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          Back to Portfolio
+        </a>
+
+        <div class="project-header animate-fade-up">
+          <div class="project-category-badge">
+            <span id="project-category"></span>
+          </div>
+          <h1 class="project-title" id="project-title"></h1>
+          <p class="project-description" id="project-description"></p>
+
+          <div class="project-meta">
+            <div class="meta-item">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+              <span>Client: <strong id="project-client"></strong></span>
+            </div>
+            <div class="meta-item">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              <span><strong id="project-date"></strong></span>
+            </div>
+            <div class="meta-item">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+                <line x1="7" y1="7" x2="7.01" y2="7"></line>
+              </svg>
+              <span>Duration: <strong id="project-duration"></strong></span>
+            </div>
+          </div>
+
+          <a id="project-website-link" href="#" target="_blank" rel="noopener noreferrer" class="project-cta-button">
+            Visit Website
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Details Section -->
+    <section class="project-details-section">
+      <div class="project-details-container">
+        <div class="project-details-grid">
+          <!-- Main Content -->
+          <div class="project-main-content">
+            <!-- Overview -->
+            <div class="content-block animate-fade-up">
+              <h2 class="content-heading">
+                Project <span class="gradient-text">Overview</span>
+              </h2>
+              <p class="content-text" id="project-full-description"></p>
+            </div>
+
+            <!-- Challenges -->
+            <div class="content-block animate-fade-up">
+              <h3 class="content-subheading">Challenges</h3>
+              <ul class="content-list" id="project-challenges"></ul>
+            </div>
+
+            <!-- Solutions -->
+            <div class="content-block animate-fade-up">
+              <h3 class="content-subheading">Solutions</h3>
+              <ul class="content-list solutions-list" id="project-solutions"></ul>
+            </div>
+
+            <!-- Results -->
+            <div class="content-block animate-fade-up">
+              <h3 class="content-subheading">Results & Impact</h3>
+              <div class="results-grid" id="project-results"></div>
+            </div>
+
+            <!-- Gallery -->
+            <div class="content-block animate-fade-up">
+              <h3 class="content-subheading">Project Gallery</h3>
+              <div class="project-gallery" id="project-gallery"></div>
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <div class="project-sidebar">
+            <div class="sidebar-sticky">
+              <!-- Technologies -->
+              <div class="sidebar-card animate-fade-right">
+                <div class="sidebar-card-header">
+                  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                  <h3 class="sidebar-card-title">Technologies</h3>
+                </div>
+                <div class="technologies-list" id="project-technologies"></div>
+              </div>
+
+              <!-- Project Info -->
+              <div class="sidebar-card animate-fade-right stagger-2">
+                <h3 class="sidebar-card-title">Project Info</h3>
+                <div class="project-info-list">
+                  <div class="info-item">
+                    <p class="info-label">Client</p>
+                    <p class="info-value" id="sidebar-client"></p>
+                  </div>
+                  <div class="info-item">
+                    <p class="info-label">Date</p>
+                    <p class="info-value" id="sidebar-date"></p>
+                  </div>
+                  <div class="info-item">
+                    <p class="info-label">Duration</p>
+                    <p class="info-value" id="sidebar-duration"></p>
+                  </div>
+                  <div class="info-item">
+                    <p class="info-label">Role</p>
+                    <p class="info-value" id="sidebar-role"></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CTA Card -->
+              <div class="sidebar-cta-card animate-fade-right stagger-3">
+                <h3 class="cta-card-title">Like what you see?</h3>
+                <p class="cta-card-text">Let's discuss how we can help bring your vision to life.</p>
+                <a href="contact.html" class="cta-card-button">Get in Touch</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Next/Previous Navigation -->
+    <section class="project-navigation">
+      <div class="project-nav-container">
+        <a id="prev-project-link" href="#" class="nav-project-button prev-button">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          <span>Previous Project</span>
+        </a>
+        <a id="next-project-link" href="#" class="nav-project-button next-button">
+          <span>Next Project</span>
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+ <footer>
+    <div class="footer-main">
+      <div class="footer-grid">
+        <!-- Column 1: Brand -->
+        <div class="footer-column">
+          <h4 class="footer-brand">Solve<span style="color: #00e6fb;">vare</span></h4>
+          <p class="footer-desc">Transforming ideas into exceptional digital experiences through innovation and
+            strategy.</p>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-column">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Services -->
+        <div class="footer-column">
+          <h4 class="footer-heading">Services</h4>
+          <ul class="footer-list">
+            <li><a href="service/detail.html?id=1">Web Development</a></li>
+            <li><a href="service/detail.html?id=2">App Development</a></li>
+            <li><a href="service/detail.html?id=7">UI/UX Design</a></li>
+            <li><a href="service/detail.html?id=4">Cloud & DevOps</a></li>
+
+            <!-- <a href="">SEO & Marketing</a> -->
+          </ul>
+        </div>
+
+        <!-- Column 4: Connect -->
+        <div class="footer-column">
+          <h4 class="footer-heading">Connect</h4>
+          <div class="footer-contact">
+            <p>+61 (480) 008-657</p>
+            <p>+1 (661) 548-4013</p>
+            <p>+1 (807) 808-6185</p>
+            <p>info@solvevare.com</p>
+          </div>
+          <div class="footer-social">
+            <a href="https://x.com/solvevare" class="social-icon">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+            </a>
+            <a href="https://pk.linkedin.com/company/solve-vare" class="social-icon">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+            </a>
+            <a href="https://github.com/solvevare-org" class="social-icon">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/solvevare/" class="social-icon">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 5: Locations -->
+        <div class="footer-column">
+          <h4 class="footer-heading">Locations</h4>
+          <ul class="footer-locations">
+            <li>
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Vincent St, Marrickville NSW 2204, Australia</span>
+            </li>
+            <li>
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>150 E B St Lbby #1810 Casper, WY 82601 USA</span>
+            </li>
+            <li>
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>16 Birch Ln, Red Lake, ON POV 2C0, Canada</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <p>© 2026 Solvevare. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

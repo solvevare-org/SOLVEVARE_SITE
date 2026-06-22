@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technology Pages Test - Solvevare</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #050509 0%, #050815 50%, #030712 100%);
+      color: #fff;
+      min-height: 100vh;
+      padding: 4rem 2rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #00e6fb 0%, #1E88E5 50%, #9C27B0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    p {
+      font-size: 1.25rem;
+      color: #94a3b8;
+      margin-bottom: 3rem;
+    }
+
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .tech-card {
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(20px);
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: block;
+    }
+
+    .tech-card:hover {
+      transform: translateY(-8px);
+      background: rgba(255, 255, 255, 0.08);
+      box-shadow: 0 20px 60px rgba(0, 230, 251, 0.2);
+      border-color: rgba(0, 230, 251, 0.3);
+    }
+
+    .tech-card h3 {
+      font-size: 1.5rem;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    .tech-card p {
+      font-size: 1rem;
+      color: #cbd5e1;
+      margin-bottom: 1rem;
+    }
+
+    .tech-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #00e6fb;
+      font-weight: 600;
+      font-size: 0.875rem;
+    }
+
+    .tech-link svg {
+      width: 16px;
+      height: 16px;
+      transition: transform 0.3s ease;
+    }
+
+    .tech-card:hover .tech-link svg {
+      transform: translateX(4px);
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: rgba(0, 230, 251, 0.1);
+      border: 1px solid rgba(0, 230, 251, 0.3);
+      border-radius: 50px;
+      color: #00e6fb;
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+
+    .status {
+      margin-top: 3rem;
+      padding: 2rem;
+      background: rgba(0, 230, 251, 0.1);
+      border-radius: 16px;
+      border: 1px solid rgba(0, 230, 251, 0.3);
+    }
+
+    .status h2 {
+      font-size: 1.5rem;
+      color: #00e6fb;
+      margin-bottom: 1rem;
+    }
+
+    .status ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .status li {
+      padding: 0.5rem 0;
+      color: #cbd5e1;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .status li::before {
+      content: '✓';
+      color: #00e6fb;
+      font-weight: bold;
+      font-size: 1.25rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <span class="badge">Test Page</span>
+    <h1>Technology Details Pages</h1>
+    <p>Click any technology below to view its dynamic details page</p>
+
+    <div class="tech-grid">
+      <!-- Frontend -->
+      <a href="technology-details.html?tech=react" class="tech-card">
+        <h3>React JS</h3>
+        <p>Build fast, interactive user interfaces with component-based architecture.</p>
+        <span class="tech-link">
+          View Details
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </span>
+      </a>
+
+      <!-- Mobile -->
+      <a href="technology-details.html?tech=flutter" class="tech-card">
+        <h3>Flutter</h3>
+        <p>Beautiful native apps from a single codebase for iOS, Android, and web.</p>
+        <span class="tech-link">
+          View Details
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </span>
+      </a>
+
+      <a href="technology-details.html?tech=reactnative" class="tech-card">
+        <h3>React Native</h3>
+        <p>Native mobile apps for iOS and Android using React and JavaScript.</p>
+        <span class="tech-link">
+          View Details
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </span>
+      </a>
+
+      <!-- Backend -->
+      <a href="technology-details.html?tech=python" class="tech-card">
+        <h3>Python (Django)</h3>
+        <p>Rapid development with clean, pragmatic design for robust backend systems.</p>
+        <span class="tech-link">
+          View Details
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </span>
+      </a>
+
+      <a href="technology-details.html?tech=node" class="tech-card">
+        <h3>Node.js</h3>
+        <p>Scalable network applications with JavaScript runtime and event-driven architecture.</p>
+        <span class="tech-link">
+          View Details
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </span>
+      </a>
+
+      <a href="technology-details.html?tech=dotnet" class="tech-card">
+        <h3>.NET</h3>
+        <p>Enterprise-grade applications with Microsoft's cross-platform framework.</p>
+        <span class="tech-link">
+          View Details
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </span>
+      </a>
+
+      <!-- Cloud -->
+      <a href="technology-details.html?tech=aws" class="tech-card">
+        <h3>AWS</h3>
+        <p>Cloud computing with Amazon Web Services for scalable infrastructure.</p>
+        <span class="tech-link">
+          View Details
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </span>
+      </a>
+
+      <a href="technology-details.html?tech=azure" class="tech-card">
+        <h3>Azure</h3>
+        <p>Microsoft cloud for modern applications with hybrid cloud capabilities.</p>
+        <span class="tech-link">
+          View Details
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </span>
+      </a>
+
+      <a href="technology-details.html?tech=gcp" class="tech-card">
+        <h3>GCP</h3>
+        <p>Google Cloud Platform for innovation with advanced data analytics and ML.</p>
+        <span class="tech-link">
+          View Details
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </span>
+      </a>
+
+      <!-- AI/ML -->
+      <a href="technology-details.html?tech=datascience" class="tech-card">
+        <h3>Data Science</h3>
+        <p>Extract insights from your data with statistical methods and algorithms.</p>
+        <span class="tech-link">
+          View Details
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </span>
+      </a>
+
+      <a href="technology-details.html?tech=ml" class="tech-card">
+        <h3>Machine Learning</h3>
+        <p>Build intelligent systems that learn from data and make predictions.</p>
+        <span class="tech-link">
+          View Details
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </span>
+      </a>
+
+      <!-- Blockchain -->
+      <a href="technology-details.html?tech=blockchain" class="tech-card">
+        <h3>Blockchain</h3>
+        <p>Decentralized, secure, transparent distributed ledger technology.</p>
+        <span class="tech-link">
+          View Details
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </span>
+      </a>
+    </div>
+
+    <div class="status">
+      <h2>✓ Implementation Complete</h2>
+      <ul>
+        <li>12 dynamic technology pages created</li>
+        <li>Premium glassmorphism UI design</li>
+        <li>Smooth scroll animations</li>
+        <li>Fully responsive layout</li>
+        <li>FAQ accordion functionality</li>
+        <li>SEO optimized with dynamic titles</li>
+        <li>Production-ready code</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

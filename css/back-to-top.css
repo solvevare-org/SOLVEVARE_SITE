@@ -1,0 +1,76 @@
+/* ==========================================
+   BACK TO TOP BUTTON
+   ========================================== */
+
+.back-to-top {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(1.5rem);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.back-to-top-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #1E88E5, #9C27B0);
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 230, 251, 0.3);
+  transition: all 0.2s ease;
+  width: 48px;
+  height: 48px;
+}
+
+.back-to-top-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(0, 230, 251, 0.5);
+}
+
+.back-to-top-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 230, 251, 0.4);
+}
+
+.back-to-top-icon {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .back-to-top {
+    right: 1rem;
+    bottom: 1rem;
+  }
+
+  .back-to-top-btn {
+    width: 44px;
+    height: 44px;
+    padding: 0.625rem;
+  }
+
+  .back-to-top-icon {
+    width: 18px;
+    height: 18px;
+  }
+}
