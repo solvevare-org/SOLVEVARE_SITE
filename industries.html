@@ -45,9 +45,12 @@
         </a>
       </div>
 
-      <button class="mobile-menu-btn" aria-label="Toggle menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <use href="#icon-menu"></use>
+      <button class="mobile-menu-btn" aria-label="Toggle menu" id="mobile-menu-btn">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="18" x2="21" y2="18" />
         </svg>
       </button>
 
@@ -74,11 +77,12 @@
           </div>
           <div class="locations-cta">
             <p class="locations-cta-title">We Serve Across the United States</p>
-            <p class="locations-cta-desc">Find expert software development, cloud solutions, and digital transformation services in your city. Click any state to jump directly to it.</p>
+            <p class="locations-cta-desc">Find expert software development, cloud solutions, and digital transformation
+              services in your city. Click any state to jump directly to it.</p>
             <a href="location.html" class="locations-cta-btn">View All Locations &#8594;</a>
           </div>
 
-          
+
         </div>
       </div>
     </div>
@@ -193,27 +197,57 @@
         <div class="industries-mega-grid">
           <div class="industries-list">
             <button class="industry-item active" data-industry="healthcare">
-              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" viewBox="0 0 24 24">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                </path>
+              </svg>
               <span>Healthcare</span>
             </button>
             <button class="industry-item" data-industry="education">
-              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg>
               <span>Education</span>
             </button>
             <button class="industry-item" data-industry="real-estate">
-              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
               <span>Real Estate</span>
             </button>
             <button class="industry-item" data-industry="blockchain">
-              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" viewBox="0 0 24 24">
+                <path
+                  d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                </path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              </svg>
               <span>Blockchain</span>
             </button>
             <button class="industry-item" data-industry="fintech">
-              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" viewBox="0 0 24 24">
+                <line x1="12" y1="1" x2="12" y2="23"></line>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
               <span>Fintech</span>
             </button>
             <button class="industry-item" data-industry="logistics">
-              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M1 3h15v13H1z"></path><path d="M16 8h4l3 3v5h-7V8z"></path><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M1 3h15v13H1z"></path>
+                <path d="M16 8h4l3 3v5h-7V8z"></path>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
               <span>Logistics</span>
             </button>
           </div>
@@ -222,16 +256,21 @@
             <h3 class="industry-services-title" id="industry-services-title">Healthcare Services</h3>
             <ul class="industry-services-list" id="industry-services-list">
               <li>
-                <a href="industry-details.html?id=healthcare" class="industry-service-link">Custom Healthcare Software Development</a>
-                <p class="industry-service-desc">Build electronic health records, clinician portals, and tailored clinical workflows.</p>
+                <a href="industry-details.html?id=healthcare" class="industry-service-link">Custom Healthcare Software
+                  Development</a>
+                <p class="industry-service-desc">Build electronic health records, clinician portals, and tailored
+                  clinical workflows.</p>
               </li>
               <li>
-                <a href="industry-details.html?id=healthcare" class="industry-service-link">Telemedicine App Development</a>
-                <p class="industry-service-desc">Secure video consultations, appointment booking, and messaging for remote patient care.</p>
+                <a href="industry-details.html?id=healthcare" class="industry-service-link">Telemedicine App
+                  Development</a>
+                <p class="industry-service-desc">Secure video consultations, appointment booking, and messaging for
+                  remote patient care.</p>
               </li>
               <li>
                 <a href="industry-details.html?id=healthcare" class="industry-service-link">mHealth App Development</a>
-                <p class="industry-service-desc">Patient-facing mobile apps for monitoring, engagement, and medication reminders.</p>
+                <p class="industry-service-desc">Patient-facing mobile apps for monitoring, engagement, and medication
+                  reminders.</p>
               </li>
             </ul>
           </div>
@@ -254,18 +293,30 @@
           <div class="technologies-list">
             <h3 class="technologies-title">All Technologies</h3>
             <div class="technologies-grid">
-              <button class="technology-item active" data-tech="react"><a href="technology-details.html?tech=react">React JS</a></button>
-              <button class="technology-item" data-tech="flutter"><a href="technology-details.html?tech=flutter">Flutter</a></button>
-              <button class="technology-item" data-tech="python"><a href="technology-details.html?tech=python">Python (Django)</a></button>
-              <button class="technology-item" data-tech="node"><a href="technology-details.html?tech=node">Node.Js</a></button>
-              <button class="technology-item" data-tech="dotnet"><a href="technology-details.html?tech=dotnet">.NET</a></button>
-              <button class="technology-item" data-tech="reactnative"><a href="technology-details.html?tech=reactnative">React Native</a></button>
-              <button class="technology-item" data-tech="aws"><a href="technology-details.html?tech=aws">AWS</a></button>
-              <button class="technology-item" data-tech="azure"><a href="technology-details.html?tech=azure">Azure</a></button>
-              <button class="technology-item" data-tech="gcp"><a href="technology-details.html?tech=gcp">GCP</a></button>
-              <button class="technology-item" data-tech="datascience"><a href="technology-details.html?tech=datascience">Data Science</a></button>
-              <button class="technology-item" data-tech="ml"><a href="technology-details.html?tech=ml">Machine Learning</a></button>
-              <button class="technology-item" data-tech="blockchain"><a href="technology-details.html?tech=blockchain">Blockchain</a></button>
+              <button class="technology-item active" data-tech="react"><a
+                  href="technology-details.html?tech=react">React JS</a></button>
+              <button class="technology-item" data-tech="flutter"><a
+                  href="technology-details.html?tech=flutter">Flutter</a></button>
+              <button class="technology-item" data-tech="python"><a href="technology-details.html?tech=python">Python
+                  (Django)</a></button>
+              <button class="technology-item" data-tech="node"><a
+                  href="technology-details.html?tech=node">Node.Js</a></button>
+              <button class="technology-item" data-tech="dotnet"><a
+                  href="technology-details.html?tech=dotnet">.NET</a></button>
+              <button class="technology-item" data-tech="reactnative"><a
+                  href="technology-details.html?tech=reactnative">React Native</a></button>
+              <button class="technology-item" data-tech="aws"><a
+                  href="technology-details.html?tech=aws">AWS</a></button>
+              <button class="technology-item" data-tech="azure"><a
+                  href="technology-details.html?tech=azure">Azure</a></button>
+              <button class="technology-item" data-tech="gcp"><a
+                  href="technology-details.html?tech=gcp">GCP</a></button>
+              <button class="technology-item" data-tech="datascience"><a
+                  href="technology-details.html?tech=datascience">Data Science</a></button>
+              <button class="technology-item" data-tech="ml"><a href="technology-details.html?tech=ml">Machine
+                  Learning</a></button>
+              <button class="technology-item" data-tech="blockchain"><a
+                  href="technology-details.html?tech=blockchain">Blockchain</a></button>
             </div>
           </div>
           <div class="technology-featured">
@@ -273,22 +324,30 @@
               <div class="tech-card-header">
                 <h3 class="tech-card-title">React JS</h3>
                 <div class="tech-icon">
-                  <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+                  <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="2" />
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
+                  </svg>
                 </div>
               </div>
-              <p class="tech-card-desc">Power your web app with a fast, interactive, and scalable frontend. Designed for seamless user experiences and business growth.</p>
+              <p class="tech-card-desc">Power your web app with a fast, interactive, and scalable frontend. Designed for
+                seamless user experiences and business growth.</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-
     <div class="mobile-menu">
       <div class="mobile-menu-content">
+
+        <!-- Home -->
         <div class="mobile-menu-item">
-          <button class="mobile-menu-link mobile-dropdown-toggle" onclick="toggleMobileDropdown('home-mobile')">
-            Home <span>›</span>
-          </button>
+          <div class="mobile-menu-row">
+            <a href="index.html" class="mobile-menu-label">Home</a>
+            <button class="mobile-arrow-btn" data-toggle="home-mobile"
+              onclick="toggleMobileDropdown('home-mobile')"><span>›</span></button>
+          </div>
           <div class="mobile-dropdown" id="home-mobile">
             <a href="about.html" class="mobile-dropdown-link">About Us</a>
             <a href="#" class="mobile-dropdown-link">Benefits</a>
@@ -298,39 +357,102 @@
             <a href="contact.html" class="mobile-dropdown-link">Contacts</a>
           </div>
         </div>
+
+        <!-- Services -->
         <div class="mobile-menu-item">
-          <button class="mobile-menu-link mobile-dropdown-toggle" onclick="toggleMobileDropdown('services-mobile')">
-            Services <span>›</span>
-          </button>
+          <div class="mobile-menu-row">
+            <a href="services.html" class="mobile-menu-label">Services</a>
+            <button class="mobile-arrow-btn" data-toggle="services-mobile"
+              onclick="toggleMobileDropdown('services-mobile')"><span>›</span></button>
+          </div>
           <div class="mobile-dropdown" id="services-mobile">
-            <a href="services.html?id=1" class="mobile-dropdown-link">Web Development</a>
-            <a href="services.html?id=2" class="mobile-dropdown-link">App Development</a>
-            <a href="services.html?id=3" class="mobile-dropdown-link">Desktop & Cross-Platform Apps</a>
-            <a href="services.html?id=4" class="mobile-dropdown-link">Cloud & DevOps</a>
-            <a href="services.html?id=5" class="mobile-dropdown-link">Networking & Infrastructure</a>
-            <a href="services.html?id=6" class="mobile-dropdown-link">Database & Data Engineering</a>
-            <a href="services.html?id=7" class="mobile-dropdown-link">Product & UX Design</a>
-            <a href="services.html?id=8" class="mobile-dropdown-link">Custom Software & Integrations</a>
-            <a href="services.html?id=9" class="mobile-dropdown-link">Automation & Integration</a>
+            <div class="mobile-services-header">
+              <span class="mobile-services-dot"></span>
+              Development
+            </div>
+            <div class="mobile-services-grid">
+              <a href="service/detail.html?id=1" class="mobile-dropdown-link">Web Development</a>
+              <a href="service/detail.html?id=2" class="mobile-dropdown-link">Mobile Development</a>
+              <a href="service/detail.html?id=2" class="mobile-dropdown-link">iOS Development</a>
+              <a href="service/detail.html?id=2" class="mobile-dropdown-link">Android Development</a>
+              <a href="service/detail.html?id=3" class="mobile-dropdown-link">Cross-Platform Development</a>
+              <a href="service/detail.html?id=3" class="mobile-dropdown-link">MVP Development</a>
+              <a href="service/detail.html?id=6" class="mobile-dropdown-link">Big Data</a>
+              <a href="service/detail.html?id=3" class="mobile-dropdown-link">Discovery Phase</a>
+              <a href="service/detail.html?id=7" class="mobile-dropdown-link">UI UX Design</a>
+              <a href="service/detail.html?id=7" class="mobile-dropdown-link">Product Development</a>
+              <a href="service/detail.html?id=9" class="mobile-dropdown-link">AI &amp; ML</a>
+              <a href="service/detail.html?id=9" class="mobile-dropdown-link">QA</a>
+              <a href="service/detail.html?id=9" class="mobile-dropdown-link">AI Agent Development</a>
+              <a href="service/detail.html?id=8" class="mobile-dropdown-link">Software Technical Audit</a>
+            </div>
           </div>
         </div>
+
+        <!-- Industries -->
         <div class="mobile-menu-item">
-          <button class="mobile-menu-link mobile-dropdown-toggle" onclick="toggleMobileDropdown('industries-mobile')">
-            Industries <span>›</span>
-          </button>
+          <div class="mobile-menu-row">
+            <a href="industries.html" class="mobile-menu-label">Industries</a>
+            <button class="mobile-arrow-btn" data-toggle="industries-mobile"
+              onclick="toggleMobileDropdown('industries-mobile')"><span>›</span></button>
+          </div>
           <div class="mobile-dropdown" id="industries-mobile">
-            <a href="industries.html?id=healthcare" class="mobile-dropdown-link">Healthcare</a>
-            <a href="industries.html?id=education" class="mobile-dropdown-link">Education</a>
-            <a href="industries.html?id=real-estate" class="mobile-dropdown-link">Real Estate</a>
-            <a href="industries.html?id=blockchain" class="mobile-dropdown-link">Blockchain</a>
-            <a href="industries.html?id=fintech" class="mobile-dropdown-link">Fintech</a>
-            <a href="industries.html?id=logistics" class="mobile-dropdown-link">Logistics</a>
+            <a href="industries.html?id=healthcare" class="mobile-dropdown-link mobile-industry-link">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                </path>
+              </svg>
+              Healthcare
+            </a>
+            <a href="industries.html?id=education" class="mobile-dropdown-link mobile-industry-link">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg>
+              Education
+            </a>
+            <a href="industries.html?id=real-estate" class="mobile-dropdown-link mobile-industry-link">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+              Real Estate
+            </a>
+            <a href="industries.html?id=blockchain" class="mobile-dropdown-link mobile-industry-link">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path
+                  d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                </path>
+              </svg>
+              Blockchain
+            </a>
+            <a href="industries.html?id=fintech" class="mobile-dropdown-link mobile-industry-link">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <line x1="12" y1="1" x2="12" y2="23"></line>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+              Fintech
+            </a>
+            <a href="industries.html?id=logistics" class="mobile-dropdown-link mobile-industry-link">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M1 3h15v13H1z"></path>
+                <path d="M16 8h4l3 3v5h-7V8z"></path>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+              Logistics
+            </a>
           </div>
         </div>
+
+        <!-- Technologies -->
         <div class="mobile-menu-item">
-          <button class="mobile-menu-link mobile-dropdown-toggle" onclick="toggleMobileDropdown('technologies-mobile')">
-            Technologies <span>›</span>
-          </button>
+          <div class="mobile-menu-row">
+            <a href="technologies.html" class="mobile-menu-label">Technologies</a>
+            <button class="mobile-arrow-btn" data-toggle="technologies-mobile"
+              onclick="toggleMobileDropdown('technologies-mobile')"><span>›</span></button>
+          </div>
           <div class="mobile-dropdown" id="technologies-mobile">
             <a href="technology-details.html?tech=react" class="mobile-dropdown-link">React JS</a>
             <a href="technology-details.html?tech=flutter" class="mobile-dropdown-link">Flutter</a>
@@ -346,14 +468,41 @@
             <a href="technology-details.html?tech=blockchain" class="mobile-dropdown-link">Blockchain</a>
           </div>
         </div>
+
+        <!-- Locations -->
         <div class="mobile-menu-item">
-          <a href="portfolio.html" class="mobile-menu-link">Portfolio</a>
+          <div class="mobile-menu-row">
+            <a href="location.html" class="mobile-menu-label">Locations</a>
+            <button class="mobile-arrow-btn" data-toggle="locations-mobile"
+              onclick="toggleMobileDropdown('locations-mobile')"><span>›</span></button>
+          </div>
+          <div class="mobile-dropdown" id="locations-mobile">
+            <a href="location.html?state=alabama" class="mobile-dropdown-link">Alabama</a>
+            <a href="location.html?state=alaska" class="mobile-dropdown-link">Alaska</a>
+            <a href="location.html?state=arizona" class="mobile-dropdown-link">Arizona</a>
+            <a href="location.html?state=california" class="mobile-dropdown-link">California</a>
+            <a href="location.html?state=colorado" class="mobile-dropdown-link">Colorado</a>
+            <a href="location.html?state=florida" class="mobile-dropdown-link">Florida</a>
+            <a href="location.html?state=georgia" class="mobile-dropdown-link">Georgia</a>
+            <a href="location.html?state=illinois" class="mobile-dropdown-link">Illinois</a>
+            <a href="location.html?state=new-york" class="mobile-dropdown-link">New York</a>
+            <a href="location.html?state=texas" class="mobile-dropdown-link">Texas</a>
+            <a href="location.html" class="mobile-dropdown-link" style="color:#00e6fb;">View All States →</a>
+          </div>
         </div>
+
+        <!-- Portfolio -->
         <div class="mobile-menu-item">
-          <button class="btn-donate" style="display: block; width: 100%; margin-top: 1rem;" onclick="window.location.href='contact.html'">
+          <a href="portfolio.html" class="mobile-menu-label" style="padding: 0.9rem 0.25rem;">Portfolio</a>
+        </div>
+
+        <!-- Book a Meet -->
+        <div class="mobile-menu-item mobile-book-item">
+          <button class="mobile-book-btn" onclick="window.location.href='contact.html'">
             Book a meet
           </button>
         </div>
+
       </div>
     </div>
   </nav>
