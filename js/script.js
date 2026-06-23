@@ -50,7 +50,7 @@ function getCardPosition(index) {
 }
 
 function updateTestimonialPositions() {
-  const cards = document.querySelectorAll('.testimonial-card');
+  const cards = document.querySelectorAll('.testimonials .testimonial-card');
   cards.forEach((card, index) => {
     const position = getCardPosition(index);
     card.setAttribute('data-position', position);
@@ -228,7 +228,17 @@ function initServiceCardRouting() {
 // Mobile Dropdown Toggle - For mobile menu
 function toggleMobileDropdown(dropdownId) {
   const dropdown = document.getElementById(dropdownId);
-  if (dropdown) {
-    dropdown.classList.toggle('active');
+  if (!dropdown) return;
+
+  const isNowOpen = !dropdown.classList.contains('active');
+  dropdown.classList.toggle('active', isNowOpen);
+
+  // Toggle 'open' on the parent .mobile-menu-row for arrow rotation & color
+  const arrowBtn = document.querySelector(`[data-toggle="${dropdownId}"]`);
+  if (arrowBtn) {
+    const row = arrowBtn.closest('.mobile-menu-row');
+    if (row) row.classList.toggle('open', isNowOpen);
   }
 }
+
+
