@@ -272,11 +272,22 @@ class Navigation {
   }
 }
 
+function setupBookMeetButtons() {
+  document.querySelectorAll('.btn-donate, .mobile-book-btn').forEach(btn => {
+    btn.removeAttribute('onclick');
+    btn.addEventListener('click', () => {
+      window.open('https://calendly.com/solvevare', '_blank');
+    });
+  });
+}
+
 // Initialize navigation when DOM is ready
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', () => {
     new Navigation();
+    setupBookMeetButtons();
   });
 } else {
   new Navigation();
+  setupBookMeetButtons();
 }

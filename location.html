@@ -65,7 +65,7 @@
 
     body.location-page .location-summary {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 1rem;
       max-width: 760px;
       margin: 0 auto 2.2rem;
@@ -929,10 +929,7 @@
             <span class="location-summary-number" id="summary-cities">--</span>
             <span class="location-summary-label">Featured cities</span>
           </div>
-          <div class="location-summary-item">
-            <span class="location-summary-number" id="summary-services">--</span>
-            <span class="location-summary-label">Services per city</span>
-          </div>
+
         </div>
 
         <!-- Breadcrumb -->
@@ -1017,7 +1014,6 @@
           const breadcrumb = document.getElementById('loc-breadcrumb');
           document.getElementById('summary-states').textContent = stateNames.length;
           document.getElementById('summary-cities').textContent = cities.length;
-          document.getElementById('summary-services').textContent = services.length;
 
           const fmt = n => n >= 1000000 ? (n/1000000).toFixed(1)+'M' : n >= 1000 ? (n/1000).toFixed(1)+'K' : String(n);
 
@@ -1040,7 +1036,7 @@
               const row = document.createElement('div');
               row.className = 'city-row';
               row.dataset.slug = c.slug;
-              row.innerHTML = `<span class="city-row-name">${c.name}</span><span class="city-row-pop">${c.population ? fmt(c.population) : '—'}</span>`;
+              row.innerHTML = `<span class="city-row-name">${c.name}</span>${c.population ? '<span class="city-row-pop">' + fmt(c.population) + '</span>' : ''}`;
               row.addEventListener('click', () => { window.location.href = `locations/${c.state_slug}-in-${c.slug}.html`; });
               modalBody.appendChild(row);
             });
@@ -1066,12 +1062,12 @@
 
             card.innerHTML = `
               <div class="state-name-row">${state}${abbr ? ' (' + abbr + ')' : ''}</div>
-              <div class="state-meta-row">${stateCities.length} ${stateCities.length === 1 ? 'City' : 'Cities'}&nbsp;&nbsp;${fmt(totalPop)} Population</div>
+              <div class="state-meta-row">${stateCities.length} ${stateCities.length === 1 ? 'City' : 'Cities'}${totalPop > 0 ? '&nbsp;&nbsp;' + fmt(totalPop) + ' Population' : ''}</div>
               <div class="city-rows-list">
                 ${first5.map(c => `
                   <div class="city-row" data-slug="${c.slug}">
                     <span class="city-row-name">${c.name}</span>
-                    <span class="city-row-pop">${c.population ? fmt(c.population) : '—'}</span>
+                    ${c.population ? '<span class="city-row-pop">' + fmt(c.population) + '</span>' : ''}
                   </div>`).join('')}
                 ${stateCities.length > 5 ? `<button class="show-more-btn" data-state="${state}">View All Cities</button>` : ''}
               </div>`;
