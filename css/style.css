@@ -4152,3 +4152,37 @@ svg#github-filters {
   max-height: 300px;
   padding: 0 1.5rem 1.25rem;
 }
+
+
+/* ===== MOBILE RESPONSIVE FIX: Service Cards ===== */
+@media (max-width: 767px) {
+  .services-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem;
+  }
+  .service-card {
+    min-height: auto !important;
+    height: auto !important;
+    padding: 1.5rem !important;
+    justify-content: flex-start !important;
+  }
+  .service-card-left,
+  .service-card-right {
+    justify-content: flex-start !important;
+  }
+  .service-content-wrapper {
+    position: static !important;
+    bottom: auto !important;
+    left: auto !important;
+    max-width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .service-card-center .service-icon-wrapper {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    margin-bottom: 1rem;
+  }
+}
