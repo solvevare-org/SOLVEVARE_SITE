@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /server/
+Disallow: /includes/
+Disallow: /technology-test.html
+Disallow: /technology-test-links.html
+Disallow: /home.html
+Disallow: /location2.html
+
+Sitemap: https://www.solvevare.com/sitemap.xml

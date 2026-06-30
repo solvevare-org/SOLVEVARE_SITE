@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Home -->
+  <url>
+    <loc>https://www.solvevare.com/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Main Pages -->
+  <url>
+    <loc>https://www.solvevare.com/about</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.solvevare.com/contact</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.solvevare.com/blog</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.solvevare.com/portfolio</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.solvevare.com/technologies</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.solvevare.com/industries</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.solvevare.com/locations</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Services -->
+  <url>
+    <loc>https://www.solvevare.com/services</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.solvevare.com/service-web-development</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.solvevare.com/service-app-development</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.solvevare.com/service-custom-software</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.solvevare.com/service-cloud-devops</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.solvevare.com/service-ux-design</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.solvevare.com/service-database</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.solvevare.com/service-automation</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.solvevare.com/service-desktop-apps</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.solvevare.com/service-networking</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Legal Pages -->
+  <url>
+    <loc>https://www.solvevare.com/privacy-policy</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.solvevare.com/terms-of-service</loc>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>
