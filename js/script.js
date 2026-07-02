@@ -90,45 +90,7 @@ function initTestimonials() {
   updateTestimonialPositions();
 }
 
-// Contact Form Handling
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-  contactForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    
-    const formData = {
-      name: document.getElementById('name').value,
-      email: document.getElementById('email').value,
-      phone: document.getElementById('phone').value,
-      source: document.getElementById('source').value,
-      interest: document.getElementById('interest').value,
-      message: document.getElementById('message').value
-    };
 
-    const submitBtn = contactForm.querySelector('.submit-btn');
-    const originalText = submitBtn.textContent;
-    submitBtn.textContent = 'Sending...';
-    submitBtn.disabled = true;
-
-    try {
-      // Simulate form submission (replace with actual API call)
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      alert('Message sent successfully! We will get back to you soon.');
-      contactForm.reset();
-      submitBtn.textContent = 'Message Sent!';
-      
-      setTimeout(() => {
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-      }, 2000);
-    } catch (error) {
-      alert('Failed to send message. Please try again.');
-      submitBtn.textContent = originalText;
-      submitBtn.disabled = false;
-    }
-  });
-}
 
 // Smooth Scroll for Anchor Links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
