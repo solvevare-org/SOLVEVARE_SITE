@@ -3,7 +3,24 @@ Disallow: /server/
 Disallow: /includes/
 Disallow: /technology-test.html
 Disallow: /technology-test-links.html
-Disallow: /home.html
-Disallow: /location2.html
 
 Sitemap: https://www.solvevare.com/sitemap.xml
+
+# AI Crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+# LLMs context file
+# https://www.solvevare.com/llms.txt

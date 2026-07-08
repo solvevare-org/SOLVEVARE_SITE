@@ -1,9 +1,1 @@
-async function loadComponent(id, file) {
-  const response = await fetch(file);
-  const data = await response.text();
-
-  document.getElementById(id).innerHTML = data;
-}
-
-loadComponent("navbar", "./components/navbar.html");
-loadComponent("footer", "./components/footer.html");
+async function loadComponent(n,o){const t=await fetch(o),e=await t.text();document.getElementById(n).innerHTML=e}loadComponent("navbar","./components/navbar.html"),loadComponent("footer","./components/footer.html");

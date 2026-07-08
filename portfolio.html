@@ -10,6 +10,13 @@
   <meta name="author" content="Solvevare" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <meta name="theme-color" content="#0B1220" />
+  <meta name="color-scheme" content="dark" />
+  
+  <!-- AI Crawler & Bot Compatibility -->
+  <meta name="googlebot" content="index,follow,max-image-preview:large" />
+  <meta name="bingbot" content="index,follow,max-image-preview:large" />
+  
+  <!-- Canonical & Open Graph -->
   <link rel="canonical" href="https://www.solvevare.com/portfolio.html" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Solvevare" />
@@ -18,20 +25,47 @@
   <meta property="og:description" content="Browse Solvevare's portfolio of 500+ successful projects across web, mobile, AI, and more." />
   <meta property="og:url" content="https://www.solvevare.com/portfolio.html" />
   <meta property="og:image" content="https://www.solvevare.com/assets/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Our Portfolio - Solvevare" />
+  <meta name="twitter:description" content="Browse Solvevare's portfolio of 500+ successful projects across web, mobile, AI, and more." />
   <meta name="twitter:image" content="https://www.solvevare.com/assets/og-image.jpg" />
+  
+  <!-- Preconnect & DNS Prefetch for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://images.pexels.com">
+  <link rel="preconnect" href="https://calendly.com" crossorigin>
+  
+  <!-- Font Preload for Critical Font Weights -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
+  
+  <!-- Critical CSS Inline for Above-the-Fold Content -->
+  <style>
+    :root{--sv-blue:#1E88E5;--sv-cyan:#00e6fb;--sv-purple:#9C27B0;--bg-black:#000000;--bg-dark:#0a0e14;--text-white:#FFFFFF;--text-gray:#9CA3AF}*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto'sans-serif;background-color:var(--bg-black);color:var(--text-white);line-height:1.6}h1{font-weight:700;color:var(--text-white)}h2{font-weight:700;color:var(--text-white)}nav{background:rgba(0,0,0,0.8);backdrop-filter:blur(10px);position:sticky;top:0;z-index:1000}main{max-width:1400px;margin:0 auto;padding:0 1rem}
+  </style>
+  
+  <!-- Main CSS Files -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/navigation.css">
   <link rel="stylesheet" href="css/portfolio.css">
   <link rel="stylesheet" href="css/back-to-top.css">
-  <link rel="icon" href="assets/favicon.png">
+  
+  <!-- Data Scripts (Async for Non-Critical) -->
+  <script src="js/industriesData.js" async></script>
+  <script src="js/technologiesData.js" async></script>
+  
+  <!-- Deferred Scripts for Enhanced Performance -->
+  <script src="js/navigation.js" defer></script>
   <script src="js/script.js" defer></script>
   <script src="js/back-to-top.js" defer></script>
-  <script src="js/industriesData.js"></script>
-  <script src="js/technologiesData.js"></script>
-  <script src="js/navigation.js" defer></script>
-  <script src="js/locations-nav.js"></script>
+  <script src="js/locations-nav.js" defer></script>
 
 </head>
 
@@ -374,7 +408,7 @@
 
     <!-- Background Video -->
     <div class="hero-video-wrapper">
-      <video autoplay muted loop playsinline class="hero-video">
+      <video autoplay muted loop playsinline class="hero-video" preload="metadata" poster="assets/3d-background-blue-6016x3384-11033.jpg">
         <source src="assets/295547.mp4" type="video/mp4">
       </video>
 

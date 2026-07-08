@@ -1,69 +1,127 @@
-﻿﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta property="og:image" content="https://www.solvevare.com/assets/og-image.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <meta name="twitter:image" content="https://www.solvevare.com/assets/og-image.jpg" />
-
-  <meta name="twitter:title" content="{{brand}} in {{city}}, {{state}}" />
-
-  <meta name="description"
-    content="{{brand}} proudly serves customers in {{city}}, {{state}}, {{country}}. Contact us at {{email}} for reliable support, professional services, and business solutions in your area." />
-
-  <meta name="author" content="{{brand}}" />
-
-  <meta name="theme-color" content="#0B1220" />
-
-  <meta property="og:site_name" content="Solvevare" />
-
-  <meta property="og:locale" content="en_US" />
-
-  <meta name="keywords"
-    content="{{brand}}, {{city}}, {{state}}, {{country}}, local business {{city}}, trusted business {{state}}, {{brand}} {{city}}" />
-
-  <meta property="og:type" content="website" />
-
-  <meta property="og:title" content="{{brand}} in {{city}}, {{state}}" />
-
-  <meta property="og:description" content="{{brand}} serving {{city}}, {{state}}, {{country}}" />
-
-  <meta property="og:url" content="https://www.solvevare.com/locations/{{state_slug}}-in-{{city_slug}}.html" />
-
-  <meta name="robots" content="index,follow,max-image-preview:large" />
-
-
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{brand}} | Serving {{city}}, {{state}} | Trusted Local Business</title>
   <meta name="description"
     content="{{brand}} serves customers in {{city}}, {{state}}, {{country}}. Contact us at {{email}} for professional solutions and local support." />
+  <meta name="keywords"
+    content="{{brand}}, {{city}}, {{state}}, {{country}}, local business {{city}}, trusted business {{state}}, {{brand}} {{city}}" />
+  <meta name="author" content="Solvevare" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="theme-color" content="#0B1220" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="googlebot" content="index,follow,max-image-preview:large" />
+  <meta name="bingbot" content="index,follow,max-image-preview:large" />
   <meta name="mpc-slug" content="{{brand}}-in-{{city_slug}}" />
+
+  <!-- Canonical -->
   <link rel="canonical" href="https://www.solvevare.com/locations/{{state_slug}}-in-{{city_slug}}.html" />
 
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Solvevare" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="{{brand}} in {{city}}, {{state}}" />
+  <meta property="og:description" content="{{brand}} serving {{city}}, {{state}}, {{country}}" />
+  <meta property="og:url" content="https://www.solvevare.com/locations/{{state_slug}}-in-{{city_slug}}.html" />
+  <meta property="og:image" content="https://www.solvevare.com/assets/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{brand}} in {{city}}, {{state}}" />
+  <meta name="twitter:description" content="{{brand}} serving {{city}}, {{state}}, {{country}}" />
+  <meta name="twitter:image" content="https://www.solvevare.com/assets/og-image.jpg" />
 
+  <!-- Preconnect & DNS Prefetch -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://images.pexels.com">
+  <link rel="preconnect" href="https://calendly.com" crossorigin>
+
+  <!-- Font Loading -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"></noscript>
+
+  <!-- Favicon -->
+  <link rel="icon" href="../assets/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../assets/favicon.png">
+
+  <!-- Critical CSS -->
+  <style>
+    :root{--sv-blue:#1E88E5;--sv-cyan:#00e6fb;--bg-black:#000000;--text-white:#FFFFFF;--text-gray:#9CA3AF}
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth;max-width:100%;overflow-x:hidden}
+    body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background-color:var(--bg-black);color:var(--text-white);line-height:1.6;-webkit-font-smoothing:antialiased;max-width:100%;overflow-x:hidden}
+    a{text-decoration:none;color:inherit}
+    nav{background:rgba(0,0,0,0.8);backdrop-filter:blur(10px);position:sticky;top:0;z-index:1000;border-bottom:1px solid rgba(255,255,255,0.05)}
+    .nav-container{max-width:1400px;margin:0 auto;padding:0 1rem;display:flex;align-items:center;justify-content:space-between;height:4rem}
+    .hero{position:relative;min-height:100vh;display:flex;align-items:center;background-color:var(--bg-black);padding-top:2.5rem}
+    .hero-video-container{margin:0 auto;width:98%;border-radius:40px;overflow:hidden;position:relative;min-height:78vh;margin-top:1.5rem}
+    .hero-video{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:1}
+    .hero-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.2));z-index:2}
+    .hero-content{position:relative;z-index:10;max-width:50rem;width:100%;padding:1.5rem;padding-top:3rem}
+    .skip-link{position:absolute;left:-9999px;top:0;z-index:9999;padding:0.5rem 1rem;background:#1E88E5;color:#fff;font-weight:600;border-radius:0 0 4px 4px}
+    .skip-link:focus{left:0}
+  </style>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/navigation.css">
   <link rel="stylesheet" href="../css/back-to-top.css">
   <link rel="stylesheet" href="../css/animations.css">
-  <link rel="icon" href="../assets/favicon.png">
-  <script src="../js/industriesData.js"></script>
-  <script src="../js/technologiesData.js"></script>
-  <script src="../js/mpc-router.js"></script>
+
+  <!-- Data Scripts -->
+  <script src="../js/industriesData.js" async></script>
+  <script src="../js/technologiesData.js" async></script>
+  <script src="../js/mpc-router.js" defer></script>
+
+  <!-- Deferred Scripts -->
   <script src="../js/navigation.js" defer></script>
   <script src="../js/script.js" defer></script>
   <script src="../js/back-to-top.js" defer></script>
   <script src="../js/animations.js" defer></script>
   <script src="../js/scroll-animations.js" defer></script>
   <script src="../js/components.js" defer></script>
-  <script src="../js/locations-nav.js"></script>
+  <script src="../js/locations-nav.js" defer></script>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Solvevare",
+    "url": "https://www.solvevare.com",
+    "logo": "https://www.solvevare.com/assets/og-image.jpg",
+    "description": "Solvevare provides professional software development, web development, app development, cloud & DevOps, and custom software solutions in {{city}}, {{state}}.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "{{city}}",
+      "addressRegion": "{{state}}",
+      "addressCountry": "US"
+    },
+    "telephone": "+1-661-548-4013",
+    "email": "info@solvevare.com",
+    "areaServed": {
+      "@type": "City",
+      "name": "{{city}}"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/solvevare",
+      "https://github.com/solvevare-org"
+    ]
+  }
+  </script>
 </head>
 
 <body>
-  <nav>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav aria-label="Main navigation" role="navigation">
     <div class="nav-container">
       <div class="nav-left">
         <a href="../index.html" class="nav-link" id="HOME" data-dropdown="home">
@@ -83,7 +141,7 @@
         </a>
       </div>
 
-      <button class="mobile-menu-btn" aria-label="Toggle menu" id="mobile-menu-btn">
+      <button class="mobile-menu-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu" id="mobile-menu-btn" type="button">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
           stroke-linecap="round">
           <line x1="3" y1="6" x2="21" y2="6" />
@@ -93,7 +151,7 @@
       </button>
 
       <a href="../index.html" class="nav-logo">
-        <img src="../assets/favicon.png" alt="Solvevare Logo">
+        <img src="../assets/favicon.png" alt="Solvevare Logo" width="48" height="48" loading="eager">
       </a>
 
       <div class="nav-right">
@@ -378,15 +436,15 @@
       </div>
     </div>
 
-    <div class="mobile-menu">
+    <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
       <div class="mobile-menu-content">
 
         <!-- Home -->
         <div class="mobile-menu-item">
           <div class="mobile-menu-row">
             <a href="../index.html" class="mobile-menu-label">Home</a>
-            <button class="mobile-arrow-btn" data-toggle="home-mobile"
-              onclick="toggleMobileDropdown('home-mobile')"><span>›</span></button>
+            <button class="mobile-arrow-btn" data-toggle="home-mobile" aria-label="Toggle Home submenu" aria-expanded="false" aria-controls="home-mobile" type="button"
+              onclick="toggleMobileDropdown('home-mobile')"><span aria-hidden="true">›</span></button>
           </div>
           <div class="mobile-dropdown" id="home-mobile">
             <a href="../about.html" class="mobile-dropdown-link">About Us</a>
@@ -402,8 +460,8 @@
         <div class="mobile-menu-item">
           <div class="mobile-menu-row">
             <a href="../services.html" class="mobile-menu-label">Services</a>
-            <button class="mobile-arrow-btn" data-toggle="services-mobile"
-              onclick="toggleMobileDropdown('services-mobile')"><span>›</span></button>
+            <button class="mobile-arrow-btn" data-toggle="services-mobile" aria-label="Toggle Services submenu" aria-expanded="false" aria-controls="services-mobile" type="button"
+              onclick="toggleMobileDropdown('services-mobile')"><span aria-hidden="true">›</span></button>
           </div>
           <div class="mobile-dropdown" id="services-mobile">
             <div class="mobile-services-header">
@@ -433,8 +491,8 @@
         <div class="mobile-menu-item">
           <div class="mobile-menu-row">
             <a href="../industries.html" class="mobile-menu-label">Industries</a>
-            <button class="mobile-arrow-btn" data-toggle="industries-mobile"
-              onclick="toggleMobileDropdown('industries-mobile')"><span>›</span></button>
+            <button class="mobile-arrow-btn" data-toggle="industries-mobile" aria-label="Toggle Industries submenu" aria-expanded="false" aria-controls="industries-mobile" type="button"
+              onclick="toggleMobileDropdown('industries-mobile')"><span aria-hidden="true">›</span></button>
           </div>
           <div class="mobile-dropdown" id="industries-mobile">
             <a href="../industries.html?id=healthcare" class="mobile-dropdown-link mobile-industry-link">
@@ -490,8 +548,8 @@
         <div class="mobile-menu-item">
           <div class="mobile-menu-row">
             <a href="../technologies.html" class="mobile-menu-label">Technologies</a>
-            <button class="mobile-arrow-btn" data-toggle="technologies-mobile"
-              onclick="toggleMobileDropdown('technologies-mobile')"><span>›</span></button>
+            <button class="mobile-arrow-btn" data-toggle="technologies-mobile" aria-label="Toggle Technologies submenu" aria-expanded="false" aria-controls="technologies-mobile" type="button"
+              onclick="toggleMobileDropdown('technologies-mobile')"><span aria-hidden="true">›</span></button>
           </div>
           <div class="mobile-dropdown" id="technologies-mobile">
             <a href="../technology-details.html?tech=react" class="mobile-dropdown-link">React JS</a>
@@ -513,8 +571,8 @@
         <div class="mobile-menu-item">
           <div class="mobile-menu-row">
             <a href="../location.html" class="mobile-menu-label">Locations</a>
-            <button class="mobile-arrow-btn" data-toggle="locations-mobile"
-              onclick="toggleMobileDropdown('locations-mobile')"><span>›</span></button>
+            <button class="mobile-arrow-btn" data-toggle="locations-mobile" aria-label="Toggle Locations submenu" aria-expanded="false" aria-controls="locations-mobile" type="button"
+              onclick="toggleMobileDropdown('locations-mobile')"><span aria-hidden="true">›</span></button>
           </div>
           <div class="mobile-dropdown" id="locations-mobile">
             <a href="../location.html?state=alabama" class="mobile-dropdown-link">Alabama</a>
@@ -564,7 +622,7 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-video-container">
-      <video class="hero-video" autoplay muted playsinline>
+      <video class="hero-video" autoplay muted playsinline preload="metadata" poster="../assets/3d-background-blue-6016x3384-11033.jpg">
         <source src="../assets/Diagonal_Tile_Animation_Abstract_flowing_metallic_shapes_with_neon_blue_-JXeluF1.mp4"
           type="video/mp4">
       </video>

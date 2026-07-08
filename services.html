@@ -9,7 +9,13 @@
   <meta name="author" content="Solvevare" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <meta name="theme-color" content="#0B1220" />
-  <link rel="canonical" href="https://www.solvevare.com/services.html" />
+  <meta name="color-scheme" content="dark" />
+  
+  <!-- AI Crawler & Bot Compatibility -->
+  <meta name="googlebot" content="index,follow,max-image-preview:large" />
+  <meta name="bingbot" content="index,follow,max-image-preview:large" />
+  
+  <!-- Canonical & Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Solvevare" />
   <meta property="og:locale" content="en_US" />
@@ -17,21 +23,77 @@
   <meta property="og:description" content="Explore Solvevare's full range of IT services â€” web, app, cloud, design, and more." />
   <meta property="og:url" content="https://www.solvevare.com/services.html" />
   <meta property="og:image" content="https://www.solvevare.com/assets/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Our Services - Solvevare" />
+  <meta name="twitter:description" content="Web development, app development, cloud & DevOps, design, database engineering, and automation solutions." />
   <meta name="twitter:image" content="https://www.solvevare.com/assets/og-image.jpg" />
+  
+  <!-- Preconnect & DNS Prefetch for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://images.pexels.com">
+  <link rel="preconnect" href="https://calendly.com" crossorigin>
+  
+  <!-- Font Preload for Critical Font Weights -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
+  
+  <!-- Critical CSS Inline for Above-the-Fold Content -->
+  <style>
+    :root{--sv-blue:#1E88E5;--sv-cyan:#00e6fb;--sv-purple:#9C27B0;--bg-black:#000000;--bg-dark:#0a0e14;--text-white:#FFFFFF;--text-gray:#9CA3AF;--text-5xl:3rem;--text-3xl:1.875rem;--text-2xl:1.5rem;--text-xl:1.25rem;--text-lg:1.125rem;--text-md:1rem;--text-sm:0.875rem;--text-xs:0.75rem;--sp-2:8px;--sp-3:12px;--sp-4:16px;--sp-6:24px;--sp-8:32px;--sp-12:48px;--sp-16:64px;--sp-20:80px;--radius-lg:40px;--radius-md:10px;--radius-sm:6px}*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth;max-width:100%;overflow-x:hidden}body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;background-color:var(--bg-black);color:var(--text-white);line-height:1.6;font-size:var(--text-md);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;max-width:100%;overflow-x:hidden}h1{font-size:var(--text-5xl);font-weight:700;line-height:1.167;color:var(--text-white);letter-spacing:-0.01562em}h2{font-size:2.25rem;font-weight:700;line-height:1.2;color:var(--text-white)}h3{font-size:var(--text-3xl);font-weight:600;line-height:1.2}p{font-size:var(--text-md);line-height:1.6;color:rgba(255,255,255,0.9)}a{text-decoration:none;color:inherit;transition:all .3s ease}nav{background:rgba(0,0,0,0.8);backdrop-filter:blur(10px);position:sticky;top:0;z-index:1000;border-bottom:1px solid rgba(255,255,255,0.05)}.nav-container{max-width:1400px;margin:0 auto;padding:0 1rem;display:flex;align-items:center;justify-content:space-between;height:4rem}main{max-width:1400px;margin:0 auto;padding:0 1rem}
+  </style>
+  
+  <!-- Main CSS Files with Defer Strategy -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/navigation.css">
   <link rel="stylesheet" href="css/back-to-top.css">
-  <link rel="icon" href="assets/favicon.png">
-  <script src="js/locations-nav.js"></script>
+  
+  <!-- Data Scripts (Async for Non-Critical) -->
+  <script src="js/industriesData.js" async></script>
+  <script src="js/technologiesData.js" async></script>
+  
+  <!-- Deferred Scripts for Enhanced Performance -->
+  <script src="js/navigation.js" defer></script>
   <script src="js/script.js" defer></script>
   <script src="js/back-to-top.js" defer></script>
-  <script src="js/industriesData.js"></script>
-  <script src="js/technologiesData.js"></script>
-  <script src="js/navigation.js" defer></script>
-  <script src="js/locations-nav.js"></script>
-</head>
+  <script src="js/locations-nav.js" defer></script>
+  
+  <!-- Structured Data for AI Crawlers -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Solvevare",
+    "url": "https://www.solvevare.com",
+    "logo": "https://www.solvevare.com/assets/og-image.jpg",
+    "description": "Solvevare is a software development company delivering web development, app development, cloud & DevOps, and custom software solutions.",
+    "sameAs": [
+      "https://www.facebook.com/solvevare",
+      "https://www.twitter.com/solvevare",
+      "https://www.linkedin.com/company/solvevare"
+    ],
+    "contact": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Support",
+      "telephone": "+1-661-548-4013",
+      "email": "info@solvevare.com"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Business Ave",
+      "addressLocality": "Casper",
+      "addressRegion": "WY",
+      "postalCode": "82601",
+      "addressCountry": "US"
+    }
+  }
+  </script>
 <body>
   <!-- Navigation with Mega Menus -->
   
@@ -520,7 +582,7 @@
   <!-- Hero Section with Video Background -->
   <section class="services-page-hero">
     <div class="services-hero-video">
-      <video autoplay loop muted playsinline>
+      <video autoplay loop muted playsinline preload="metadata" poster="assets/3d-background-blue-6016x3384-11033.jpg">
         <source src="assets/295547.mp4" type="video/mp4">
       </video>
       <div class="services-hero-overlay"></div>
