@@ -1,0 +1,190 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Solvevare</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #F9F9F7;
+      color: #1A1A1A;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      padding: 28px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #1A1A1A;
+    }
+
+    .nav-cta {
+      font-size: 14px;
+      font-weight: 500;
+      color: #1A1A1A;
+      text-decoration: none;
+      padding: 10px 22px;
+      border: 1px solid #D0D0D0;
+      border-radius: 100px;
+      transition: all 0.2s;
+    }
+
+    .nav-cta:hover {
+      background: #1A1A1A;
+      color: #F9F9F7;
+      border-color: #1A1A1A;
+    }
+
+    .hero {
+      max-width: 780px;
+      margin: 60px auto 0;
+      padding: 0 24px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 54px);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+      color: #1A1A1A;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      font-size: 17px;
+      font-weight: 400;
+      color: #6B6B6B;
+      line-height: 1.7;
+      max-width: 520px;
+      margin: 0 auto 48px;
+    }
+
+    .video-wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 24px;
+      aspect-ratio: 16/9;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #E8E8E5;
+      box-shadow: 0 2px 40px rgba(0,0,0,0.08);
+      position: relative;
+    }
+
+    .video-wrap video,
+    .video-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    .video-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: #999;
+      font-size: 14px;
+    }
+
+    .play-btn {
+      width: 56px;
+      height: 56px;
+      background: #1A1A1A;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .play-btn svg { margin-left: 3px; }
+
+    .cta-block {
+      text-align: center;
+      padding: 72px 24px 100px;
+    }
+
+    .cta-block p {
+      font-size: 16px;
+      color: #6B6B6B;
+      margin-bottom: 28px;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: #1A1A1A;
+      color: #F9F9F7;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 16px 40px;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .cta-btn:hover { opacity: 0.8; }
+
+    footer {
+      text-align: center;
+      padding: 28px;
+      border-top: 1px solid #E8E8E5;
+      font-size: 13px;
+      color: #AAAAAA;
+    }
+
+    @media (max-width: 600px) {
+      nav { padding: 20px 20px; }
+      .hero h1 { font-size: 30px; }
+    }
+    #logo{
+      text-decoration: none;
+
+    }
+
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a id="logo" href="https://www.solvevare.com" class="logo">Solvevare</a>
+    <a href="https://calendly.com/solvevare" class="nav-cta">Get in Touch</a>
+  </nav>
+
+  <div class="hero">
+    <h1>One system. Every contract. Every order.</h1>
+    <p>Watch to see how it works — then let's talk about what it could do for your business.</p>
+  </div>
+
+  <div class="video-wrap">
+    <video controls src="https://solvevare-videos.s3.us-east-2.amazonaws.com/2026-07-10+05-57-08.mp4"></video>
+  </div>
+
+  <div class="cta-block" id="contact">
+    <p>Ready to see how this fits your operation?</p>
+    <a href="https://calendly.com/solvevare/" class="cta-btn">Book a Walkthrough</a>
+  </div>
+
+  <footer>© 2026 Solvevare &nbsp;·&nbsp; www.solvevare.com</footer>
+
+</body>
+</html>
