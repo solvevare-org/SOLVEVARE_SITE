@@ -16,9 +16,9 @@ function walkDir(dir) {
             try {
                 let content = fs.readFileSync(filePath, 'utf8');
                 
-                // Remove the corrupted <span>â€º</span>
+                // Remove the corrupted <span>€º</span>
                 const originalLength = content.length;
-                content = content.replace(/<span>â€º<\/span>/g, '');
+                content = content.replace(/<span>€º<\/span>/g, '');
                 
                 if (content.length !== originalLength) {
                     fs.writeFileSync(filePath, content, 'utf8');
