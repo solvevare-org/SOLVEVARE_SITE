@@ -32,16 +32,17 @@
   <meta name="twitter:image" content="https://www.solvevare.com/assets/og-image.jpg" />
   
   <!-- Preconnect & DNS Prefetch for Performance -->
-  <link rel="preload" as="image" href="assets/hero-bg-768.webp" media="(max-width:767px)" type="image/webp">
-  <link rel="preload" as="image" href="assets/hero-bg-1920.webp" media="(min-width:768px)" type="image/webp">
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="dns-prefetch" href="https://images.pexels.com">
-  <link rel="preconnect" href="https://calendly.com" crossorigin>
-  
-  <!-- Font Preload for Critical Font Weights -->
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"></noscript>
+  <link rel="dns-prefetch" href="https://calendly.com">
+
+  <!-- LCP: preload hero video poster so it is discoverable in initial HTML -->
+  <link rel="preload" as="image" href="assets/hero-video-compressed-poster.webp" type="image/webp" fetchpriority="high">
+
+  <!-- Google Fonts: non-render-blocking async load -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap"></noscript>
   
   <!-- Favicon -->
   <link rel="icon" href="assets/favicon-opt.png" type="image/png">
@@ -52,12 +53,15 @@
     :root{--sv-blue:#1E88E5;--sv-cyan:#00e6fb;--sv-purple:#9C27B0;--bg-black:#000000;--bg-dark:#0a0e14;--text-white:#FFFFFF;--text-gray:#9CA3AF;--text-5xl:3rem;--text-3xl:1.875rem;--text-2xl:1.5rem;--text-xl:1.25rem;--text-lg:1.125rem;--text-md:1rem;--text-sm:0.875rem;--text-xs:0.75rem;--sp-2:8px;--sp-3:12px;--sp-4:16px;--sp-6:24px;--sp-8:32px;--sp-12:48px;--sp-16:64px;--sp-20:80px;--radius-lg:40px;--radius-md:10px;--radius-sm:6px}*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth;max-width:100%;overflow-x:hidden}body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;background-color:var(--bg-black);color:var(--text-white);line-height:1.6;font-size:var(--text-md);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;max-width:100%;overflow-x:hidden}h1{font-size:var(--text-5xl);font-weight:700;line-height:1.167;color:var(--text-white);letter-spacing:-0.01562em}h2{font-size:2.25rem;font-weight:700;line-height:1.2;color:var(--text-white)}h3{font-size:var(--text-3xl);font-weight:600;line-height:1.2}p{font-size:var(--text-md);line-height:1.6;color:rgba(255,255,255,0.9)}a{text-decoration:none;color:inherit;transition:all .3s ease}nav{background:rgba(0,0,0,0.8);backdrop-filter:blur(10px);position:sticky;top:0;z-index:1000;border-bottom:1px solid rgba(255,255,255,0.05)}.nav-container{max-width:1400px;margin:0 auto;padding:0 1rem;display:flex;align-items:center;justify-content:space-between;height:4rem}.hero{position:relative;min-height:100vh;display:flex;align-items:center;background-color:var(--bg-black);padding-top:2.5rem}.hero-video-container{margin:0 auto;width:98%;border-radius:var(--radius-lg);overflow:hidden;position:relative;min-height:78vh;margin-top:1.5rem}.hero-video{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:1}.hero-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.2));z-index:2}.hero-content{position:relative;z-index:10;max-width:50rem;width:100%;padding:1.5rem;padding-top:3rem;transform:translateY(-1rem)}.hero-content h1{font-size:3rem;font-weight:700;line-height:1.167;color:#fff;margin-bottom:1.5rem;letter-spacing:-0.01562em}@media (min-width:768px){.nav-container{height:4.5rem}.hero-content{padding:1.5rem;padding-top:4rem;margin-left:1rem;transform:translateY(-1.5rem)}}@media (min-width:1024px){.hero-content{padding:1.5rem;padding-top:5rem;margin-left:2rem;transform:translateY(-2rem)}}
   </style>
   
-  <!-- Main CSS Files with Defer Strategy -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/navigation.css">
-  <link rel="stylesheet" href="css/back-to-top.css">
-  <link rel="stylesheet" href="css/animations.css">
-  <link rel="stylesheet" href="css/contact.css">
+  <!-- Non-critical CSS loaded asynchronously to eliminate render-blocking -->
+  <link rel="preload" as="style" href="css/style.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/style.css"></noscript>
+  <link rel="preload" as="style" href="css/navigation.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/navigation.css"></noscript>
+  <link rel="preload" as="style" href="css/back-to-top.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/back-to-top.css"></noscript>
+  <link rel="preload" as="style" href="css/contact.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/contact.css"></noscript>
   
   <!-- Data Scripts (Async for Non-Critical) -->
   <script src="js/industriesData.js" async></script>
@@ -67,7 +71,6 @@
   <script src="js/navigation.js" defer></script>
   <script src="js/script.js" defer></script>
   <script src="js/back-to-top.js" defer></script>
-  <script src="js/animations.js" defer></script>
   <script src="js/scroll-animations.js" defer></script>
   <script src="js/locations-nav.js" defer></script>
   
@@ -599,7 +602,7 @@
   <main id="main-content">
   <section class="hero" aria-label="Hero">
     <div class="hero-video-container">
-      <video class="hero-video" autoplay muted playsinline aria-hidden="true" preload="metadata" poster="assets/hero-video-compressed-poster.webp">
+      <video class="hero-video" autoplay muted playsinline aria-hidden="true" preload="auto" poster="assets/hero-video-compressed-poster.webp" fetchpriority="high">
         <source src="assets/hero-video-mobile.mp4" type="video/mp4" media="(max-width:767px)">
         <source src="assets/hero-video-compressed.mp4" type="video/mp4">
       </video>
