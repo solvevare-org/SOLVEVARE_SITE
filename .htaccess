@@ -1,0 +1,117 @@
+# ============================================================
+# Solvevare - Apache .htaccess
+# Optimized for Lighthouse Mobile Performance 95+
+# ============================================================
+
+Options -Indexes
+ServerSignature Off
+
+# ── HTTPS Redirect ───────────────────────────────────────────
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# www redirect
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# ── WebP Serving (serve .webp if browser supports + file exists) ─
+RewriteCond %{HTTP_ACCEPT} image/webp
+RewriteCond %{REQUEST_FILENAME} \.(jpe?g|png)$
+RewriteCond %{REQUEST_FILENAME}\.webp -f
+RewriteRule ^(.+)\.(jpe?g|png)$ $1.$2.webp [T=image/webp,L]
+
+# ── Gzip Compression ─────────────────────────────────────────
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/css
+    AddOutputFilterByType DEFLATE application/javascript text/javascript
+    AddOutputFilterByType DEFLATE application/json application/ld+json
+    AddOutputFilterByType DEFLATE image/svg+xml font/woff font/woff2
+    AddOutputFilterByType DEFLATE text/xml application/xml
+</IfModule>
+
+# ── Browser Caching ───────────────────────────────────────────
+<IfModule mod_expires.c>
+    ExpiresActive On
+
+    # HTML - 1 hour
+    ExpiresByType text/html                         "access plus 1 hour"
+
+    # CSS & JS - 1 year
+    ExpiresByType text/css                          "access plus 1 year"
+    ExpiresByType application/javascript            "access plus 1 year"
+    ExpiresByType text/javascript                   "access plus 1 year"
+
+    # Images - 1 year
+    ExpiresByType image/webp                        "access plus 1 year"
+    ExpiresByType image/avif                        "access plus 1 year"
+    ExpiresByType image/jpeg                        "access plus 1 year"
+    ExpiresByType image/jpg                         "access plus 1 year"
+    ExpiresByType image/png                         "access plus 1 year"
+    ExpiresByType image/gif                         "access plus 1 year"
+    ExpiresByType image/svg+xml                     "access plus 1 year"
+    ExpiresByType image/x-icon                      "access plus 1 year"
+    ExpiresByType image/vnd.microsoft.icon          "access plus 1 year"
+
+    # Video - 1 year
+    ExpiresByType video/mp4                         "access plus 1 year"
+    ExpiresByType video/webm                        "access plus 1 year"
+
+    # Fonts - 1 year
+    ExpiresByType font/woff                         "access plus 1 year"
+    ExpiresByType font/woff2                        "access plus 1 year"
+    ExpiresByType application/font-woff             "access plus 1 year"
+    ExpiresByType application/font-woff2            "access plus 1 year"
+
+    # Data
+    ExpiresByType application/json                  "access plus 1 day"
+    ExpiresByType application/ld+json               "access plus 1 day"
+    ExpiresByType text/xml                          "access plus 1 day"
+    ExpiresByType application/xml                   "access plus 1 day"
+</IfModule>
+
+# ── Cache-Control Headers ─────────────────────────────────────
+<IfModule mod_headers.c>
+    # Immutable for versioned assets (CSS/JS/images/video/fonts)
+    <FilesMatch "\.(css|js|webp|avif|jpg|jpeg|png|gif|svg|ico|mp4|webm|woff|woff2|ttf|eot)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+
+    # HTML: short cache
+    <FilesMatch "\.html$">
+        Header set Cache-Control "public, max-age=3600, must-revalidate"
+    </FilesMatch>
+
+    # Vary: Accept for images (WebP negotiation)
+    <FilesMatch "\.(jpg|jpeg|png)$">
+        Header append Vary Accept
+    </FilesMatch>
+
+    # Security headers
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+
+    # Remove ETags (use Cache-Control instead)
+    Header unset ETag
+</IfModule>
+
+# ── Disable ETags ─────────────────────────────────────────────
+FileETag None
+
+# ── MIME Types for WebP/AVIF ──────────────────────────────────
+<IfModule mod_mime.c>
+    AddType image/webp .webp
+    AddType image/avif .avif
+    AddType font/woff2 .woff2
+    AddType font/woff  .woff
+    AddType video/mp4  .mp4
+</IfModule>
+
+# ── Block sensitive directories ───────────────────────────────
+<IfModule mod_rewrite.c>
+    RewriteRule ^server/ - [F,L]
+    RewriteRule ^includes/ - [F,L]
+    RewriteRule ^technology-test - [F,L]
+</IfModule>
