@@ -31,17 +31,15 @@
   <meta name="twitter:description" content="Transform your ideas into digital success with expert software solutions." />
   <meta name="twitter:image" content="https://www.solvevare.com/assets/og-image.jpg" />
   
-  <!-- Preconnect only to origins used on initial load -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- DNS prefetch for third-party origins used on page -->
   <link rel="dns-prefetch" href="https://images.pexels.com">
 
   <!-- LCP resource: preload poster with high priority so browser discovers it immediately -->
   <link rel="preload" as="image" href="assets/hero-video-compressed-poster.webp" type="image/webp" fetchpriority="high">
 
-  <!-- Google Fonts: async, trimmed to only weights actually used -->
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap"></noscript>
+  <!-- Local fonts: preload critical weights to eliminate CDN round-trip and reduce LCP delay -->
+  <link rel="preload" as="font" href="assets/fonts/inter-latin.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="assets/fonts/playfair-700-latin.woff2" type="font/woff2" crossorigin>
   
   <!-- Favicon -->
   <link rel="icon" href="assets/favicon-opt.png" type="image/png">
@@ -91,11 +89,15 @@
     .hero-content h1{font-size:3rem;font-weight:700;line-height:1.167;color:#fff;margin-bottom:1.5rem;letter-spacing:-.01562em}
     .hero-badge{font-size:.75rem;letter-spacing:.1em;font-weight:500;color:rgba(255,255,255,.8);margin-bottom:1rem}
     .hero-content p{font-size:1rem;color:rgba(255,255,255,.9);margin-bottom:2rem;line-height:1.625}
-    /* Prevent invisible text flash before fonts load */
-    h1,h2,h3,h4,p,a,button,span{font-display:swap}
+    /* font-display:optional on h1 prevents CLS from font-swap layout shift.
+       The preloaded woff2 will be available before first paint so no swap occurs. */
+    @font-face{font-family:'Inter';font-style:normal;font-weight:400 700;font-display:optional;src:url('assets/fonts/inter-latin.woff2') format('woff2')}
+    @font-face{font-family:'Playfair Display';font-style:normal;font-weight:700;font-display:optional;src:url('assets/fonts/playfair-700-latin.woff2') format('woff2')}
   </style>
   
   <!-- Non-critical CSS: async load via preload/onload — eliminates render-blocking -->
+  <link rel="preload" as="style" href="css/fonts.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/fonts.css"></noscript>
   <link rel="preload" as="style" href="css/style.css" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="css/style.css"></noscript>
   <link rel="preload" as="style" href="css/navigation.css" onload="this.onload=null;this.rel='stylesheet'">
