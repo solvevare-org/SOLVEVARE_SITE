@@ -4,7 +4,7 @@ Disallow: /includes/
 Disallow: /technology-test.html
 Disallow: /technology-test-links.html
 
-Sitemap: https://www.solvevare.com/sitemap.xml
+Sitemap: https://www.solvevare.com/sitemap-index.xml
 
 # AI Crawlers
 User-agent: GPTBot
@@ -17,9 +17,6 @@ User-agent: anthropic-ai
 Allow: /
 
 User-agent: PerplexityBot
-Allow: /
-
-User-agent: Googlebot
 Allow: /
 
 # LLMs context file

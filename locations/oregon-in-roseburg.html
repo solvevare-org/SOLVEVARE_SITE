@@ -47,8 +47,8 @@
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"></noscript>
 
   <!-- Favicon -->
-  <link rel="icon" href="../assets/favicon.png" type="image/png">
-  <link rel="apple-touch-icon" href="../assets/favicon.png">
+  <link rel="icon" href="../assets/favicon-opt.png" type="image/png">
+  <link rel="apple-touch-icon" href="../assets/favicon-opt.png">
 
   <!-- Critical CSS -->
   
@@ -100,6 +100,39 @@
     ]
   }
   </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.solvevare.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Locations",
+        "item": "https://www.solvevare.com/location.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Oregon",
+        "item": "https://www.solvevare.com/location.html#oregon"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Roseburg, Oregon",
+        "item": "https://www.solvevare.com/locations/oregon-in-roseburg.html"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <nav aria-label="Main navigation" role="navigation">
@@ -132,7 +165,7 @@
       </button>
 
       <a href="../index.html" class="nav-logo">
-        <img src="../assets/favicon.png" alt="Solvevare Logo" width="48" height="48" loading="eager">
+        <img src="../assets/favicon-opt.png" alt="Solvevare Logo" width="48" height="48" loading="eager">
       </a>
 
       <div class="nav-right">
@@ -601,6 +634,7 @@
   </svg>
 
   <!-- Hero Section -->
+
   <section class="hero">
     <div class="hero-video-container">
       <video class="hero-video" autoplay muted playsinline preload="metadata" poster="../assets/3d-background-blue-6016x3384-11033.jpg">
@@ -1780,7 +1814,7 @@
             </svg>
           </button>
           <div class="faq-answer">
-            Pricing depends on requirements. Contact Solvevare for a custom quote.
+            You can reach Solvevare by email at info@solvevare.com or by phone at +1 (661) 548-4013. We respond to all inquiries within one business day.
           </div>
         </div>
 
@@ -1931,8 +1965,8 @@
     <div class="footer-bottom">
       <p>© 2026 Solvevare. All rights reserved.</p>
       <div class="footer-bottom-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
+        <a href="../privacy-policy.html">Privacy Policy</a>
+        <a href="../terms-of-service.html">Terms of Service</a>
       </div>
     </div>
   </footer>
