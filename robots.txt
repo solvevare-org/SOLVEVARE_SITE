@@ -5,6 +5,7 @@ Disallow: /technology-test.html
 Disallow: /technology-test-links.html
 
 Sitemap: https://www.solvevare.com/sitemap-index.xml
+Sitemap: https://www.solvevare.com/sitemap.xml
 
 # AI Crawlers
 User-agent: GPTBot
