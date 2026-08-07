@@ -4,21 +4,100 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Web Development Services | Solvevare</title>
-  <meta name="description" content="Responsive, production-grade web development by Solvevare. SPAs, performance optimization, accessibility and secure APIs built with React, Next.js and Node.js." />
+  <title>Web Development Services | Custom Web Apps & Responsive Websites</title>
+  <meta name="description" content="Professional web development services. Custom web apps, responsive websites, e-commerce platforms & more. Scalable, secure & high-performance solutions." />
+  <meta name="keywords" content="web development services, custom web applications, React development, Next.js, SPA development, responsive web design" />
+  <meta name="author" content="Solvevare" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="googlebot" content="index,follow,max-image-preview:large" />
+  <meta name="bingbot" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://www.solvevare.com/service-web-development.html" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Solvevare" />
-  <meta property="og:title" content="Web Development Services | Solvevare" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="Web Development Services | Custom Web Apps & SPAs | Solvevare" />
   <meta property="og:description" content="Responsive, production-grade web development by Solvevare. SPAs, performance optimization, accessibility and secure APIs built with React, Next.js and Node.js." />
   <meta property="og:url" content="https://www.solvevare.com/service-web-development.html" />
   <meta property="og:image" content="https://www.solvevare.com/assets/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Web Development Services | Solvevare" />
+  <meta name="twitter:description" content="Responsive, production-grade web development. SPAs, performance optimization, accessibility and secure APIs built with React, Next.js and Node.js." />
   <meta name="twitter:image" content="https://www.solvevare.com/assets/og-image.jpg" />
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://images.pexels.com">
+  <link rel="icon" href="assets/favicon-opt.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/favicon-opt.png">
+  <link rel="preload" as="style" href="css/style.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/style.css"></noscript>
+  <link rel="preload" as="style" href="css/navigation.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/navigation.css"></noscript>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Web Development Services",
+    "description": "Responsive, production-grade web applications and SPAs built with modern frameworks. Performance optimization, accessibility, and secure APIs for reliable production systems.",
+    "provider": {
+      "@type": "Organization",
+      "name": "Solvevare",
+      "url": "https://www.solvevare.com"
+    },
+    "serviceType": "Web Development",
+    "areaServed": "US",
+    "url": "https://www.solvevare.com/service-web-development.html",
+    "offers": {
+      "@type": "Offer",
+      "description": "Custom web application development, SPA development, performance optimization"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What web development technologies does Solvevare use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Solvevare builds web applications using React, Next.js, Vue.js, TypeScript, Node.js, Express, MongoDB, and PostgreSQL — chosen based on your project's performance and scalability requirements."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take to build a custom web application?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A typical web application takes 6–16 weeks depending on complexity. Simple sites take 4–6 weeks, while complex SPAs or enterprise platforms can take 3–6 months."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you build mobile-responsive websites?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. All Solvevare web projects are built mobile-first and tested across all screen sizes and browsers to ensure a consistent, high-quality experience."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.solvevare.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.solvevare.com/services.html"},
+      {"@type": "ListItem", "position": 3, "name": "Web Development", "item": "https://www.solvevare.com/service-web-development.html"}
+    ]
+  }
+  </script>
   <style>
     .service-detail-hero {
       padding-top: 150px;
@@ -439,77 +518,189 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="service-detail-hero">
+  <main id="main-content">
+  <section class="service-detail-hero" aria-label="Web Development Services">
     <div class="service-hero-content">
       <div class="service-hero-text">
-        <h1>
-          <span class="gradient-text">Web Development</span>
-        </h1>
-        <p>Responsive, production-grade web applications and SPAs built with modern frameworks. We deliver performance
-          optimization, accessibility, and secure APIs for reliable production systems.</p>
-        <button class="btn-primary">Get Started</button>
+        <h1><span class="gradient-text">Web Development</span></h1>
+        <p>Responsive, production-grade web applications and SPAs built with modern frameworks. We deliver performance optimization, accessibility, and secure APIs for reliable production systems.</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem;">
+          <a href="contact.html" class="btn-primary">Get a Free Quote</a>
+          <a href="portfolio.html" class="btn-view-all">See Our Work</a>
+        </div>
       </div>
       <div class="service-hero-image">
-        <div
-          style="width: 100%; height: 400px; background: linear-gradient(135deg, rgba(0, 188, 212, 0.2), rgba(156, 39, 176, 0.2)); border-radius: 12px;">
+        <div style="width:100%;height:400px;background:linear-gradient(135deg,rgba(0,188,212,0.2),rgba(156,39,176,0.2));border-radius:12px;display:flex;align-items:center;justify-content:center;">
+          <div style="text-align:center;padding:2rem;">
+            <div style="font-size:3rem;margin-bottom:1rem;">🌐</div>
+            <p style="color:var(--sv-cyan);font-weight:600;">500+ Web Projects Delivered</p>
+            <p style="color:rgba(255,255,255,0.7);font-size:0.9rem;">React • Next.js • Node.js • TypeScript</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Details Section -->
+  <!-- Why Choose Section -->
   <section class="service-details-section">
     <div class="container">
       <div class="section-header">
         <h2>Why Choose Our Web Development Services?</h2>
-        <p>We combine cutting-edge technology with proven expertise</p>
+        <p>We combine cutting-edge technology with 10+ years of proven expertise to deliver web applications that perform, scale, and convert.</p>
       </div>
-
       <div class="service-benefits">
         <div class="benefit-card">
           <h3>Performance First</h3>
-          <p>Lightning-fast load times and optimized performance across all devices and browsers.</p>
+          <p>We target Core Web Vitals scores of 90+ on every project — optimizing LCP, CLS, and INP so your users get sub-2s load times on mobile and desktop.</p>
         </div>
         <div class="benefit-card">
-          <h3>Responsive Design</h3>
-          <p>Beautiful interfaces that work perfectly on desktop, tablet, and mobile devices.</p>
+          <h3>Mobile-First Responsive</h3>
+          <p>Every interface is designed and tested mobile-first across 15+ device sizes and all major browsers — no layout breaks, no compromises.</p>
         </div>
         <div class="benefit-card">
-          <h3>Secure & Scalable</h3>
-          <p>Enterprise-grade security and architecture that grows with your business.</p>
+          <h3>Secure & Scalable Architecture</h3>
+          <p>We build with OWASP security standards, JWT authentication, rate limiting, and cloud-native architectures that scale from 100 to 1M+ users without rewrites.</p>
         </div>
         <div class="benefit-card">
-          <h3>SEO Optimized</h3>
-          <p>Built with SEO best practices to ensure maximum visibility in search engines.</p>
+          <h3>SEO-Ready from Day One</h3>
+          <p>Semantic HTML, structured data, server-side rendering, and Core Web Vitals optimization built in — not bolted on after launch.</p>
         </div>
         <div class="benefit-card">
-          <h3>Accessibility</h3>
-          <p>WCAG compliant interfaces that are accessible to all users.</p>
+          <h3>WCAG 2.1 Accessibility</h3>
+          <p>Full keyboard navigation, ARIA labels, color contrast compliance, and screen reader testing — so your app works for every user.</p>
         </div>
         <div class="benefit-card">
-          <h3>Ongoing Support</h3>
-          <p>24/7 support and maintenance to keep your application running smoothly.</p>
+          <h3>Ongoing Support & Maintenance</h3>
+          <p>Post-launch support plans with SLA-backed response times, security patches, dependency updates, and performance monitoring.</p>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div style="margin-top: 4rem; text-align: center;">
-        <h2 style="margin-bottom: 2rem;">Technologies We Use</h2>
-        <p style="color: var(--text-gray); margin-bottom: 1rem;">React • Next.js • Vue.js • TypeScript • Node.js •
-          Express • MongoDB • PostgreSQL</p>
+  <!-- Process Section -->
+  <section style="background:linear-gradient(to bottom,#050509,#071022);padding:5rem 2rem;">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Web Development Process</h2>
+        <p>A structured 5-phase process that eliminates surprises and delivers on time.</p>
+      </div>
+      <div class="service-benefits" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));">
+        <div class="benefit-card" style="border-color:rgba(30,136,229,0.4);">
+          <h3 style="color:#1E88E5;">01 — Discovery</h3>
+          <p>Requirements gathering, technical audit, architecture planning, and project scoping with fixed-price estimates.</p>
+        </div>
+        <div class="benefit-card" style="border-color:rgba(0,188,212,0.4);">
+          <h3 style="color:var(--sv-cyan);">02 — Design</h3>
+          <p>Wireframes, UI design in Figma, design system creation, and client approval before a single line of code is written.</p>
+        </div>
+        <div class="benefit-card" style="border-color:rgba(156,39,176,0.4);">
+          <h3 style="color:#9C27B0;">03 — Development</h3>
+          <p>Agile sprints with weekly demos, code reviews, automated testing, and a staging environment for your review.</p>
+        </div>
+        <div class="benefit-card" style="border-color:rgba(30,136,229,0.4);">
+          <h3 style="color:#1E88E5;">04 — QA & Testing</h3>
+          <p>Cross-browser testing, performance audits, security scanning, accessibility checks, and load testing before launch.</p>
+        </div>
+        <div class="benefit-card" style="border-color:rgba(0,188,212,0.4);">
+          <h3 style="color:var(--sv-cyan);">05 — Launch & Support</h3>
+          <p>Zero-downtime deployment, post-launch monitoring, and a 30-day warranty period with free bug fixes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technologies Section -->
+  <section style="background:#0b0e12;padding:4rem 2rem;">
+    <div class="container">
+      <div class="section-header">
+        <h2>Technologies We Use</h2>
+        <p>We choose the right tool for your project — not the trendiest one.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;max-width:1000px;margin:2rem auto;">
+        <div class="benefit-card" style="text-align:center;">
+          <h3 style="font-size:1rem;">Frontend</h3>
+          <p style="font-size:0.875rem;">React, Next.js, Vue.js, TypeScript, Tailwind CSS</p>
+        </div>
+        <div class="benefit-card" style="text-align:center;">
+          <h3 style="font-size:1rem;">Backend</h3>
+          <p style="font-size:0.875rem;">Node.js, Express, NestJS, Python (Django/FastAPI)</p>
+        </div>
+        <div class="benefit-card" style="text-align:center;">
+          <h3 style="font-size:1rem;">Database</h3>
+          <p style="font-size:0.875rem;">PostgreSQL, MongoDB, Redis, Supabase, Firebase</p>
+        </div>
+        <div class="benefit-card" style="text-align:center;">
+          <h3 style="font-size:1rem;">Cloud & DevOps</h3>
+          <p style="font-size:0.875rem;">AWS, Vercel, Docker, GitHub Actions, Cloudflare</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section style="background:linear-gradient(to bottom,#071022,#0b0e12);padding:5rem 2rem;">
+    <div class="container" style="max-width:800px;">
+      <div class="section-header">
+        <h2>Frequently Asked Questions</h2>
+        <p>Answers to the most common questions about our web development services.</p>
+      </div>
+      <div style="margin-top:2rem;display:flex;flex-direction:column;gap:1.5rem;">
+        <div class="benefit-card">
+          <h3 style="font-size:1.05rem;margin-bottom:0.75rem;">What web development technologies does Solvevare use?</h3>
+          <p>We build web applications using React, Next.js, Vue.js, TypeScript, Node.js, Express, MongoDB, and PostgreSQL — chosen based on your project's performance and scalability requirements.</p>
+        </div>
+        <div class="benefit-card">
+          <h3 style="font-size:1.05rem;margin-bottom:0.75rem;">How long does it take to build a custom web application?</h3>
+          <p>A typical web application takes 6–16 weeks depending on complexity. Simple sites take 4–6 weeks, while complex SPAs or enterprise platforms can take 3–6 months. We provide a detailed timeline after the discovery phase.</p>
+        </div>
+        <div class="benefit-card">
+          <h3 style="font-size:1.05rem;margin-bottom:0.75rem;">Do you build mobile-responsive websites?</h3>
+          <p>Yes. All Solvevare web projects are built mobile-first and tested across all screen sizes and browsers to ensure a consistent, high-quality experience on every device.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section style="background:#050509;padding:4rem 2rem;">
+    <div class="container">
+      <div class="section-header">
+        <h2>Related Services</h2>
+        <p>Web development works best when paired with these complementary services.</p>
+      </div>
+      <div class="service-benefits" style="grid-template-columns:repeat(auto-fit,minmax(250px,1fr));">
+        <a href="service-app-development.html" class="benefit-card" style="text-decoration:none;display:block;">
+          <h3>App Development</h3>
+          <p>Extend your web platform with native iOS and Android apps built on the same backend.</p>
+          <span style="color:var(--sv-cyan);font-size:0.875rem;">Learn more →</span>
+        </a>
+        <a href="service-ux-design.html" class="benefit-card" style="text-decoration:none;display:block;">
+          <h3>Product & UX Design</h3>
+          <p>Research-driven UI/UX design that ensures your web app converts visitors into customers.</p>
+          <span style="color:var(--sv-cyan);font-size:0.875rem;">Learn more →</span>
+        </a>
+        <a href="service-cloud-devops.html" class="benefit-card" style="text-decoration:none;display:block;">
+          <h3>Cloud & DevOps</h3>
+          <p>Deploy and scale your web application on AWS, Azure, or GCP with CI/CD pipelines.</p>
+          <span style="color:var(--sv-cyan);font-size:0.875rem;">Learn more →</span>
+        </a>
       </div>
     </div>
   </section>
 
   <!-- CTA Section -->
-  <section
-    style="background: linear-gradient(135deg, rgba(0, 188, 212, 0.1), rgba(156, 39, 176, 0.1)); padding: 4rem 2rem; text-align: center;">
-    <div class="container">
-      <h2 style="margin-bottom: 1rem;">Ready to Build Something Amazing?</h2>
-      <p style="color: var(--text-gray); margin-bottom: 2rem;">Let's discuss your project requirements and create a
-        tailored solution.</p>
-      <button class="btn-primary">Book a Consultation</button>
+  <section style="background:linear-gradient(135deg,rgba(0,188,212,0.1),rgba(156,39,176,0.1));padding:5rem 2rem;text-align:center;">
+    <div class="container" style="max-width:700px;">
+      <h2 style="margin-bottom:1rem;">Ready to Build Your Web Application?</h2>
+      <p style="color:var(--text-gray);margin-bottom:0.75rem;">Tell us about your project and get a free technical consultation and estimate within 24 hours.</p>
+      <p style="color:rgba(255,255,255,0.5);font-size:0.875rem;margin-bottom:2rem;">500+ projects delivered • 98% client satisfaction • 10+ years experience</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="contact.html" class="btn-primary">Book a Free Consultation</a>
+        <a href="portfolio.html" class="btn-view-all">View Our Portfolio</a>
+      </div>
     </div>
   </section>
+  </main>
 
   <!-- Footer -->
   <footer>

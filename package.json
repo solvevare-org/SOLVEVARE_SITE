@@ -1,16 +1,63 @@
 {
-  "dependencies": {
-    "dotenv": "^17.4.2",
-    "nodemailer": "^8.0.7"
+  "name": "solvevare-seo-optimization",
+  "version": "1.0.0",
+  "description": "Comprehensive SEO optimization suite for Solvevare website - 5 phases of automated optimization",
+  "main": "run-all-phases.js",
+  "scripts": {
+    "start": "node run-all-phases.js",
+    "phase1": "node phase1-seo-fix.js",
+    "phase2": "node phase2-onpage-seo.js",
+    "phase3": "node phase3-technical-seo.js",
+    "phase4": "node phase4-content-optimization.js",
+    "phase5": "node phase5-link-building.js",
+    "validate": "node validate-seo.js",
+    "monitor": "node monitor-seo.js",
+    "optimize": "node optimize-performance.js",
+    "all": "npm run phase1 && npm run phase2 && npm run phase3 && npm run phase4 && npm run phase5 && npm run validate && npm run optimize && npm run monitor"
   },
-  "devDependencies": {
-    "clean-css-cli": "^5.6.3",
-    "ffmpeg-static": "^5.3.0",
-    "fluent-ffmpeg": "^2.1.3",
-    "http-server": "^14.1.1",
-    "lighthouse": "^13.4.0",
-    "purgecss": "^8.0.0",
-    "sharp": "^0.35.3",
-    "terser": "^5.49.0"
-  }
+  "keywords": [
+    "seo",
+    "optimization",
+    "schema",
+    "meta-tags",
+    "performance",
+    "link-building",
+    "content-optimization",
+    "technical-seo",
+    "structured-data",
+    "web-development"
+  ],
+  "author": "Solvevare",
+  "license": "MIT",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/solvevare/seo-optimization-suite.git"
+  },
+  "bugs": {
+    "url": "https://github.com/solvevare/seo-optimization-suite/issues"
+  },
+  "homepage": "https://github.com/solvevare/seo-optimization-suite#readme",
+  "dependencies": {},
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "files": [
+    "phase1-seo-fix.js",
+    "phase2-onpage-seo.js",
+    "phase3-technical-seo.js",
+    "phase4-content-optimization.js",
+    "phase5-link-building.js",
+    "run-all-phases.js",
+    "validate-seo.js",
+    "monitor-seo.js",
+    "optimize-performance.js",
+    "seo-config.js",
+    "README-SEO.md",
+    "QUICK-START.md",
+    "SUMMARY.md",
+    "MANIFEST.md",
+    "package.json"
+  ]
 }

@@ -1,0 +1,451 @@
+/* ============================================
+   ULTRA-PREMIUM SEO SECTIONS STYLING
+   ============================================ */
+
+.seo-content {
+  position: relative;
+  background: linear-gradient(135deg, rgba(11, 18, 32, 0.95) 0%, rgba(15, 25, 45, 0.98) 50%, rgba(11, 18, 32, 0.95) 100%);
+  padding: 6rem 0;
+  overflow: hidden;
+}
+
+.seo-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(30, 136, 229, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(0, 230, 251, 0.06) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.seo-content .container {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ============================================
+   HEADINGS - PREMIUM STYLING
+   ============================================ */
+
+.seo-content h2 {
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 3.5rem 0 1.5rem 0;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  position: relative;
+  animation: slideInUp 0.8s ease-out;
+}
+
+.seo-content h2:first-child {
+  margin-top: 0;
+}
+
+.seo-content h2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -12px;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #1E88E5 0%, #00e6fb 100%);
+  border-radius: 2px;
+  animation: expandWidth 0.8s ease-out 0.2s backwards;
+}
+
+.seo-content h3 {
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  font-weight: 600;
+  margin: 2.5rem 0 1rem 0;
+  color: #ffffff;
+  letter-spacing: -0.3px;
+  animation: slideInUp 0.8s ease-out;
+}
+
+/* ============================================
+   PARAGRAPHS - PREMIUM STYLING
+   ============================================ */
+
+.seo-content p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #c9d1e0;
+  margin: 1.25rem 0;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.seo-content p strong {
+  color: #00e6fb;
+  font-weight: 600;
+  text-shadow: 0 0 20px rgba(0, 230, 251, 0.3);
+}
+
+/* ============================================
+   LISTS - PREMIUM STYLING
+   ============================================ */
+
+.seo-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.seo-content li {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #c9d1e0;
+  margin: 1.25rem 0;
+  padding: 1rem 1.5rem;
+  position: relative;
+  animation: slideInLeft 0.8s ease-out;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  background: linear-gradient(135deg, rgba(30, 136, 229, 0.05) 0%, rgba(0, 230, 251, 0.03) 100%);
+  border-left: 3px solid transparent;
+  border-image: linear-gradient(180deg, #1E88E5 0%, #00e6fb 100%) 1;
+  border-radius: 4px;
+}
+
+.seo-content li:hover {
+  color: #ffffff;
+  transform: translateX(0.5rem);
+  background: linear-gradient(135deg, rgba(30, 136, 229, 0.12) 0%, rgba(0, 230, 251, 0.08) 100%);
+  box-shadow: 0 8px 24px rgba(0, 230, 251, 0.15);
+}
+
+.seo-content li::before {
+  display: none;
+}
+
+.seo-content li strong {
+  color: #00e6fb;
+  font-weight: 600;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes expandWidth {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60px;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(0, 230, 251, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(0, 230, 251, 0.6);
+    transform: scale(1.1);
+  }
+}
+
+/* ============================================
+   STAGGER ANIMATIONS FOR MULTIPLE ELEMENTS
+   ============================================ */
+
+.seo-content h2:nth-of-type(1) {
+  animation-delay: 0s;
+}
+
+.seo-content h2:nth-of-type(2) {
+  animation-delay: 0.1s;
+}
+
+.seo-content h2:nth-of-type(3) {
+  animation-delay: 0.2s;
+}
+
+.seo-content h2:nth-of-type(4) {
+  animation-delay: 0.3s;
+}
+
+.seo-content h2:nth-of-type(5) {
+  animation-delay: 0.4s;
+}
+
+.seo-content h2:nth-of-type(6) {
+  animation-delay: 0.5s;
+}
+
+.seo-content h3:nth-of-type(1) {
+  animation-delay: 0.15s;
+}
+
+.seo-content h3:nth-of-type(2) {
+  animation-delay: 0.25s;
+}
+
+.seo-content h3:nth-of-type(3) {
+  animation-delay: 0.35s;
+}
+
+.seo-content h3:nth-of-type(4) {
+  animation-delay: 0.45s;
+}
+
+.seo-content h3:nth-of-type(5) {
+  animation-delay: 0.55s;
+}
+
+.seo-content h3:nth-of-type(6) {
+  animation-delay: 0.65s;
+}
+
+.seo-content p:nth-of-type(1) {
+  animation-delay: 0.05s;
+}
+
+.seo-content p:nth-of-type(2) {
+  animation-delay: 0.1s;
+}
+
+.seo-content p:nth-of-type(3) {
+  animation-delay: 0.15s;
+}
+
+.seo-content p:nth-of-type(4) {
+  animation-delay: 0.2s;
+}
+
+.seo-content p:nth-of-type(5) {
+  animation-delay: 0.25s;
+}
+
+.seo-content p:nth-of-type(6) {
+  animation-delay: 0.3s;
+}
+
+.seo-content p:nth-of-type(7) {
+  animation-delay: 0.35s;
+}
+
+.seo-content p:nth-of-type(8) {
+  animation-delay: 0.4s;
+}
+
+.seo-content p:nth-of-type(9) {
+  animation-delay: 0.45s;
+}
+
+.seo-content p:nth-of-type(10) {
+  animation-delay: 0.5s;
+}
+
+.seo-content li:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.seo-content li:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.seo-content li:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.seo-content li:nth-child(4) {
+  animation-delay: 0.25s;
+}
+
+.seo-content li:nth-child(5) {
+  animation-delay: 0.3s;
+}
+
+.seo-content li:nth-child(6) {
+  animation-delay: 0.35s;
+}
+
+.seo-content li:nth-child(7) {
+  animation-delay: 0.4s;
+}
+
+.seo-content li:nth-child(8) {
+  animation-delay: 0.45s;
+}
+
+.seo-content li:nth-child(9) {
+  animation-delay: 0.5s;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+  .seo-content {
+    padding: 4rem 0;
+  }
+
+  .seo-content .container {
+    padding: 0 1.5rem;
+  }
+
+  .seo-content h2 {
+    font-size: 1.5rem;
+    margin: 2.5rem 0 1rem 0;
+  }
+
+  .seo-content h3 {
+    font-size: 1.25rem;
+    margin: 2rem 0 0.75rem 0;
+  }
+
+  .seo-content p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .seo-content li {
+    font-size: 1rem;
+    padding: 0.75rem 1.25rem;
+  }
+
+  .seo-content li:hover {
+    transform: translateX(0.5rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .seo-content {
+    padding: 3rem 0;
+  }
+
+  .seo-content .container {
+    padding: 0 1rem;
+  }
+
+  .seo-content h2 {
+    font-size: 1.35rem;
+    margin: 2rem 0 0.75rem 0;
+  }
+
+  .seo-content h2::before {
+    width: 40px;
+  }
+
+  .seo-content h3 {
+    font-size: 1.1rem;
+    margin: 1.5rem 0 0.5rem 0;
+  }
+
+  .seo-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 1rem 0;
+  }
+
+  .seo-content li {
+    font-size: 0.95rem;
+    padding: 0.65rem 1rem;
+  }
+
+  .seo-content li:hover {
+    transform: translateX(0.5rem);
+  }
+}
+
+/* ============================================
+   SCROLL ANIMATION TRIGGER
+   ============================================ */
+
+.seo-content.in-view h2,
+.seo-content.in-view h3,
+.seo-content.in-view p,
+.seo-content.in-view li {
+  animation-play-state: running;
+}
+
+/* ============================================
+   DARK MODE ENHANCEMENTS
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+  .seo-content {
+    background: linear-gradient(135deg, rgba(11, 18, 32, 0.98) 0%, rgba(15, 25, 45, 0.99) 50%, rgba(11, 18, 32, 0.98) 100%);
+  }
+
+  .seo-content p {
+    color: #d1dce8;
+  }
+
+  .seo-content li {
+    color: #d1dce8;
+  }
+
+  .seo-content li:hover {
+    color: #ffffff;
+  }
+}
+
+/* ============================================
+   REDUCED MOTION SUPPORT
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .seo-content h2,
+  .seo-content h3,
+  .seo-content p,
+  .seo-content li {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .seo-content li {
+    transition: none;
+  }
+
+  .seo-content li::before {
+    animation: none;
+  }
+}
