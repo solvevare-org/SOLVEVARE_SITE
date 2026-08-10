@@ -36,12 +36,7 @@
   <meta name="twitter:description" content="Solvevare serving Parker City, Indiana, USA" />
   <meta name="twitter:image" content="https://www.solvevare.com/assets/og-image.jpg" />
 
-  <!-- Preconnect & DNS Prefetch -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="dns-prefetch" href="https://images.pexels.com">
-  <link rel="preconnect" href="https://calendly.com" crossorigin>
-    <!-- DNS prefetch for third-party origins used on page -->
+  <!-- DNS prefetch for third-party origins used on page -->
   <link rel="dns-prefetch" href="https://images.pexels.com">
 
   <!-- LCP resource: preload poster with high priority so browser discovers it immediately -->
@@ -55,28 +50,22 @@
   <link rel="icon" href="../assets/favicon-opt.png" type="image/png">
   <link rel="apple-touch-icon" href="../assets/favicon-opt.png">
 
-  <!-- Font Loading -->
-  <link rel="preload" as="style"
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-    onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap">
-  </noscript>
 
-  <!-- Favicon -->
-  <link rel="icon" href="../assets/hero-video-compressed-poster.webp" type="image/png">
-  <link rel="apple-touch-icon" href="../assets/favicon-opt.png">
 
-  <!-- Critical CSS -->
+  <!-- Critical CSS: only what is needed to render above-the-fold without FOUC -->
   
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/navigation.css">
-  <link rel="stylesheet" href="../css/back-to-top.css">
-  <link rel="stylesheet" href="../css/animations.css">
-  <link rel="stylesheet" href="../css/seo-sections-premium.css">
+  <!-- Non-critical CSS: async load via preload/onload — eliminates render-blocking -->
+  <link rel="preload" as="style" href="../css/style.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="../css/style.css"></noscript>
+  <link rel="preload" as="style" href="../css/navigation.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="../css/navigation.css"></noscript>
+  <link rel="preload" as="style" href="../css/back-to-top.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="../css/back-to-top.css"></noscript>
+  <link rel="preload" as="style" href="../css/animations.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="../css/animations.css"></noscript>
+  <link rel="preload" as="style" href="../css/seo-sections-premium.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="../css/seo-sections-premium.css"></noscript>
 
   <!-- Data Scripts -->
   <script src="../js/industriesData.js" async></script>
@@ -377,7 +366,10 @@
             <h3 class="case-study-title">Web App for Printing Customized 3D Models for Surgery Supply</h3>
             <p class="case-study-desc">Responsive web app for managing 3D printing workflow via 3D viewer.</p>
             <div class="case-study-image">
-              <img src="../assets/Screenshot 2025-12-15 203923.png" alt="Healthcare Case Study">
+              <picture>
+                <source srcset="../assets/case-study-healthcare.webp" type="image/webp">
+                <img src="../assets/Screenshot 2025-12-15 203923.png" alt="Healthcare Case Study" width="400" height="267" loading="lazy" decoding="async">
+              </picture>
             </div>
             <a href="#" class="case-study-link">View Case Study <span>→</span></a>
           </div>
@@ -697,41 +689,77 @@
         <div class="logos-scroll">
           <!-- First set of logos -->
           <div class="logo-item">
-            <img src="../assets/logos/AWS_logo.png" alt="AWS">
+            <picture>
+              <source srcset="../assets/logos/AWS_logo.webp" type="image/webp">
+              <img src="../assets/logos/AWS_logo.png" alt="AWS" width="120" height="60" loading="lazy" decoding="async">
+            </picture>
           </div>
           <div class="logo-item">
-            <img src="../assets/logos/Cloudflare_logo.png" alt="Cloudflare">
+            <picture>
+              <source srcset="../assets/logos/Cloudflare_logo.webp" type="image/webp">
+              <img src="../assets/logos/Cloudflare_logo.png" alt="Cloudflare" width="120" height="60" loading="lazy" decoding="async">
+            </picture>
           </div>
           <div class="logo-item">
-            <img src="../assets/logos/googlecloud_logo.png" alt="Google Cloud" style="transform: scale(2);">
+            <picture>
+              <source srcset="../assets/logos/googlecloud_logo.webp" type="image/webp">
+              <img src="../assets/logos/googlecloud_logo.png" alt="Google Cloud" style="transform: scale(2);" width="120" height="60" loading="lazy" decoding="async">
+            </picture>
           </div>
           <div class="logo-item">
-            <img src="../assets/logos/Azure_logo.png" alt="Azure" style="transform: scale(1.5);">
+            <picture>
+              <source srcset="../assets/logos/Azure_logo.webp" type="image/webp">
+              <img src="../assets/logos/Azure_logo.png" alt="Azure" style="transform: scale(1.5);" width="120" height="60" loading="lazy" decoding="async">
+            </picture>
           </div>
           <div class="logo-item">
-            <img src="../assets/logos/Supabase.png" alt="Supabase" style="transform: scale(1.8);">
+            <picture>
+              <source srcset="../assets/logos/Supabase.webp" type="image/webp">
+              <img src="../assets/logos/Supabase.png" alt="Supabase" style="transform: scale(1.8);" width="120" height="60" loading="lazy" decoding="async">
+            </picture>
           </div>
           <div class="logo-item">
-            <img src="../assets/logos/Firebase_logo.png" alt="Firebase">
+            <picture>
+              <source srcset="../assets/logos/Firebase_logo.webp" type="image/webp">
+              <img src="../assets/logos/Firebase_logo.png" alt="Firebase" width="120" height="60" loading="lazy" decoding="async">
+            </picture>
           </div>
           <!-- Duplicate set for infinite scroll -->
           <div class="logo-item">
-            <img src="../assets/logos/AWS_logo.png" alt="AWS">
+            <picture>
+              <source srcset="../assets/logos/AWS_logo.webp" type="image/webp">
+              <img src="../assets/logos/AWS_logo.png" alt="AWS" width="120" height="60" loading="lazy" decoding="async">
+            </picture>
           </div>
           <div class="logo-item">
-            <img src="../assets/logos/Cloudflare_logo.png" alt="Cloudflare">
+            <picture>
+              <source srcset="../assets/logos/Cloudflare_logo.webp" type="image/webp">
+              <img src="../assets/logos/Cloudflare_logo.png" alt="Cloudflare" width="120" height="60" loading="lazy" decoding="async">
+            </picture>
           </div>
           <div class="logo-item">
-            <img src="../assets/logos/googlecloud_logo.png" alt="Google Cloud" style="transform: scale(2);">
+            <picture>
+              <source srcset="../assets/logos/googlecloud_logo.webp" type="image/webp">
+              <img src="../assets/logos/googlecloud_logo.png" alt="Google Cloud" style="transform: scale(2);" width="120" height="60" loading="lazy" decoding="async">
+            </picture>
           </div>
           <div class="logo-item">
-            <img src="../assets/logos/Azure_logo.png" alt="Azure" style="transform: scale(1.5);">
+            <picture>
+              <source srcset="../assets/logos/Azure_logo.webp" type="image/webp">
+              <img src="../assets/logos/Azure_logo.png" alt="Azure" style="transform: scale(1.5);" width="120" height="60" loading="lazy" decoding="async">
+            </picture>
           </div>
           <div class="logo-item">
-            <img src="../assets/logos/Supabase.png" alt="Supabase" style="transform: scale(1.8);">
+            <picture>
+              <source srcset="../assets/logos/Supabase.webp" type="image/webp">
+              <img src="../assets/logos/Supabase.png" alt="Supabase" style="transform: scale(1.8);" width="120" height="60" loading="lazy" decoding="async">
+            </picture>
           </div>
           <div class="logo-item">
-            <img src="../assets/logos/Firebase_logo.png" alt="Firebase">
+            <picture>
+              <source srcset="../assets/logos/Firebase_logo.webp" type="image/webp">
+              <img src="../assets/logos/Firebase_logo.png" alt="Firebase" width="120" height="60" loading="lazy" decoding="async">
+            </picture>
           </div>
         </div>
       </div>
@@ -982,7 +1010,7 @@
 
     <!-- Right Side - Content -->
     <div class="uiverse-right">
-      <div class="uiverse-badge"
+      <div class="uiverse-badge">
         <span>Version Control</span>
       </div>
       <h2>
@@ -1152,7 +1180,11 @@
             <div class="portfolio-glow"></div>
             <div class="portfolio-card-inner">
               <div class="portfolio-image">
-                <img src="../assets/Screenshot 2025-12-15 203923.png" alt="Ticketing System">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="../assets/portfolio-ticketing-mobile.webp" type="image/webp">
+                  <source srcset="../assets/portfolio-ticketing.webp" type="image/webp">
+                  <img src="../assets/Screenshot 2025-12-15 203923.png" alt="Ticketing system web application for support ticket management and tracking" width="600" height="400" loading="lazy" decoding="async">
+                </picture>
                 <div class="portfolio-gradient-overlay portfolio-gradient-blue"></div>
                 <div class="portfolio-dark-overlay"></div>
                 <div class="portfolio-hover-icon">
@@ -1188,7 +1220,11 @@
             <div class="portfolio-glow"></div>
             <div class="portfolio-card-inner">
               <div class="portfolio-image">
-                <img src="../assets/Screenshot 2025-12-15 213248.png" alt="NORIGHTWAY">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="../assets/portfolio-norightway-mobile.webp" type="image/webp">
+                  <source srcset="../assets/portfolio-norightway.webp" type="image/webp">
+                  <img src="../assets/Screenshot 2025-12-15 213248.png" alt="NORIGHTWAY full stack e-commerce platform with modern web design" width="600" height="400" loading="lazy" decoding="async">
+                </picture>
                 <div class="portfolio-gradient-overlay portfolio-gradient-cyan"></div>
                 <div class="portfolio-dark-overlay"></div>
                 <div class="portfolio-hover-icon">
@@ -1225,7 +1261,11 @@
             <div class="portfolio-glow"></div>
             <div class="portfolio-card-inner">
               <div class="portfolio-image">
-                <img src="../assets/Screenshot 2025-12-15 225523.png" alt="Chem Publishers">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="../assets/portfolio-chem-mobile.webp" type="image/webp">
+                  <source srcset="../assets/portfolio-chem.webp" type="image/webp">
+                  <img src="../assets/Screenshot 2025-12-15 225523.png" alt="Chem Publishers scientific research and chemistry publishing platform" width="600" height="400" loading="lazy" decoding="async">
+                </picture>
                 <div class="portfolio-gradient-overlay portfolio-gradient-purple"></div>
                 <div class="portfolio-dark-overlay"></div>
                 <div class="portfolio-hover-icon">
@@ -1296,7 +1336,7 @@
                   <div class="testimonial-avatar-glow"></div>
                   <img
                     src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop"
-                    alt="Sarah Mitchell" class="testimonial-avatar">
+                    alt="Sarah Mitchell" class="testimonial-avatar" width="150" height="150" loading="lazy" decoding="async">
                 </div>
                 <div class="testimonial-info">
                   <h4>Sarah Mitchell</h4>
@@ -1340,7 +1380,7 @@
                   <div class="testimonial-avatar-glow"></div>
                   <img
                     src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop"
-                    alt="Marcus Johnson" class="testimonial-avatar">
+                    alt="Marcus Johnson" class="testimonial-avatar" width="150" height="150" loading="lazy" decoding="async">
                 </div>
                 <div class="testimonial-info">
                   <h4>Marcus Johnson</h4>
@@ -1384,7 +1424,7 @@
                   <div class="testimonial-avatar-glow"></div>
                   <img
                     src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop"
-                    alt="Thomas Wright" class="testimonial-avatar">
+                    alt="Thomas Wright" class="testimonial-avatar" width="150" height="150" loading="lazy" decoding="async">
                 </div>
                 <div class="testimonial-info">
                   <h4>Thomas Wright</h4>
@@ -1428,7 +1468,7 @@
                   <div class="testimonial-avatar-glow"></div>
                   <img
                     src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop"
-                    alt="Emily Chen" class="testimonial-avatar">
+                    alt="Emily Chen" class="testimonial-avatar" width="150" height="150" loading="lazy" decoding="async">
                 </div>
                 <div class="testimonial-info">
                   <h4>Emily Chen</h4>
@@ -1472,7 +1512,7 @@
                   <div class="testimonial-avatar-glow"></div>
                   <img
                     src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop"
-                    alt="Olivia Martinez" class="testimonial-avatar">
+                    alt="Olivia Martinez" class="testimonial-avatar" width="150" height="150" loading="lazy" decoding="async">
                 </div>
                 <div class="testimonial-info">
                   <h4>Olivia Martinez</h4>
