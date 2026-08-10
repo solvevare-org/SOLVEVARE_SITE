@@ -37,12 +37,7 @@
   <meta name="twitter:description" content="{{brand}} serving {{city}}, {{state}}, {{country}}" />
   <meta name="twitter:image" content="https://www.solvevare.com/assets/og-image.jpg" />
 
-  <!-- Preconnect & DNS Prefetch -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="dns-prefetch" href="https://images.pexels.com">
-  <link rel="preconnect" href="https://calendly.com" crossorigin>
-    <!-- DNS prefetch for third-party origins used on page -->
+  <!-- DNS prefetch for third-party origins used on page -->
   <link rel="dns-prefetch" href="https://images.pexels.com">
 
   <!-- LCP resource: preload poster with high priority so browser discovers it immediately -->
@@ -56,146 +51,64 @@
   <link rel="icon" href="../assets/favicon-opt.png" type="image/png">
   <link rel="apple-touch-icon" href="../assets/favicon-opt.png">
 
-  <!-- Font Loading -->
-  <link rel="preload" as="style"
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-    onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap">
-  </noscript>
 
-  <!-- Favicon -->
-  <link rel="icon" href="../assets/hero-video-compressed-poster.webp" type="image/png">
-  <link rel="apple-touch-icon" href="../assets/favicon-opt.png">
 
-  <!-- Critical CSS -->
+  <!-- Critical CSS: only what is needed to render above-the-fold without FOUC -->
   <style>
-    :root {
-      --sv-blue: #1E88E5;
-      --sv-cyan: #00e6fb;
-      --bg-black: #000000;
-      --text-white: #FFFFFF;
-      --text-gray: #9CA3AF
+    :root{--sv-blue:#1E88E5;--sv-cyan:#00e6fb;--sv-purple:#9C27B0;--bg-black:#000;--text-white:#fff;--text-5xl:3rem;--text-3xl:1.875rem;--text-md:1rem;--radius-lg:40px}
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth;max-width:100%;overflow-x:hidden}
+    body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background-color:#000;color:#fff;line-height:1.6;font-size:1rem;-webkit-font-smoothing:antialiased;max-width:100%;overflow-x:hidden}
+    a{text-decoration:none;color:inherit}
+    nav{position:fixed;top:.5rem;left:0;right:0;z-index:1000;background:transparent;transition:all .3s ease}
+    nav.scrolled,nav.dropdown-open{top:0;background:rgba(0,0,0,.95);backdrop-filter:blur(10px)}
+    .nav-container{max-width:94%;width:94%;margin:0 auto;padding:1.25rem 2rem;display:flex;align-items:center;justify-content:space-between;height:80px}
+    .nav-left{display:none}
+    @media(min-width:768px){.nav-left{display:flex;align-items:center;gap:2rem}}
+    .nav-logo{position:absolute;left:50%;transform:translateX(-50%);display:flex;align-items:center;z-index:10}
+    .nav-logo img{height:3.5rem;width:3.5rem}
+    @media(min-width:768px){.nav-logo img{height:5rem;width:5rem}}
+    .nav-right{display:flex;align-items:center;gap:1rem;z-index:10}
+    .mobile-menu-btn{display:flex;background:0 0;border:0;color:#fff;cursor:pointer;padding:.5rem;align-items:center;justify-content:center}
+    @media(min-width:768px){.mobile-menu-btn{display:none}}
+    .mega-menu{display:none}
+    .mobile-menu{display:none;max-height:0;overflow:hidden}
+    .mobile-menu.active{display:block;max-height:100vh}
+    @media(max-width:767px){
+      .nav-container{padding:.85rem 1.25rem;height:auto;min-height:64px;display:grid;grid-template-columns:48px 1fr 48px;align-items:center}
+      .mobile-menu-btn{display:flex!important;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:8px;width:40px;height:40px;grid-column:1}
+      .nav-logo{position:static;transform:none;grid-column:2;justify-content:center}
+      .nav-logo img{height:3rem;width:3rem}
+      .nav-right{grid-column:3;justify-content:flex-end}
+      .btn-donate,.nav-left{display:none!important}
+      nav{top:0!important}
     }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box
-    }
-
-    html {
-      scroll-behavior: smooth;
-      max-width: 100%;
-      overflow-x: hidden
-    }
-
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      background-color: var(--bg-black);
-      color: var(--text-white);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      max-width: 100%;
-      overflow-x: hidden
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit
-    }
-
-    nav {
-      background: rgba(0, 0, 0, 0.8);
-      backdrop-filter: blur(10px);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05)
-    }
-
-    .nav-container {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 0 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 4rem
-    }
-
-    .hero {
-      position: relative;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      background-color: var(--bg-black);
-      padding-top: 2.5rem
-    }
-
-    .hero-video-container {
-      margin: 0 auto;
-      width: 98%;
-      border-radius: 40px;
-      overflow: hidden;
-      position: relative;
-      min-height: 78vh;
-      margin-top: 1.5rem
-    }
-
-    .hero-video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: 1
-    }
-
-    .hero-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2));
-      z-index: 2
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 10;
-      max-width: 50rem;
-      width: 100%;
-      padding: 1.5rem;
-      padding-top: 3rem
-    }
-
-    .skip-link {
-      position: absolute;
-      left: -9999px;
-      top: 0;
-      z-index: 9999;
-      padding: 0.5rem 1rem;
-      background: #1E88E5;
-      color: #fff;
-      font-weight: 600;
-      border-radius: 0 0 4px 4px
-    }
-
-    .skip-link:focus {
-      left: 0
-    }
+    .hero{position:relative;min-height:100vh;display:flex;align-items:center;background-color:#000;padding-top:2.5rem}
+    .hero-video-container{margin:0 auto;width:98%;border-radius:var(--radius-lg);overflow:hidden;position:relative;min-height:78vh;margin-top:1.5rem}
+    @media(min-width:768px){.hero-video-container{width:96%;margin-top:2rem}}
+    @media(min-width:1024px){.hero-video-container{width:94%;margin-top:2.5rem}}
+    .hero-video{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:1}
+    .hero-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.2));z-index:2}
+    .hero-content{position:relative;z-index:10;max-width:50rem;width:100%;display:flex;flex-direction:column;align-items:flex-start;padding:3rem 1.5rem 1.5rem;transform:translateY(-1rem)}
+    @media(min-width:768px){.hero-content{padding:4rem 1.5rem 1.5rem;margin-left:1rem;transform:translateY(-1.5rem)}}
+    @media(min-width:1024px){.hero-content{padding:5rem 1.5rem 1.5rem;margin-left:2rem;transform:translateY(-2rem)}}
+    .skip-link{position:absolute;left:-9999px;top:0;z-index:9999;padding:.5rem 1rem;background:#1E88E5;color:#fff;font-weight:600;border-radius:0 0 4px 4px}
+    .skip-link:focus{left:0}
+    @font-face{font-family:'Inter';font-style:normal;font-weight:400 700;font-display:optional;src:url('../assets/fonts/inter-latin.woff2') format('woff2')}
+    @font-face{font-family:'Playfair Display';font-style:normal;font-weight:700;font-display:optional;src:url('../assets/fonts/playfair-700-latin.woff2') format('woff2')}
   </style>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/navigation.css">
-  <link rel="stylesheet" href="../css/back-to-top.css">
-  <link rel="stylesheet" href="../css/animations.css">
-  <link rel="stylesheet" href="../css/seo-sections-premium.css">
+  <!-- Non-critical CSS: async load via preload/onload — eliminates render-blocking -->
+  <link rel="preload" as="style" href="../css/style.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="../css/style.css"></noscript>
+  <link rel="preload" as="style" href="../css/navigation.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="../css/navigation.css"></noscript>
+  <link rel="preload" as="style" href="../css/back-to-top.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="../css/back-to-top.css"></noscript>
+  <link rel="preload" as="style" href="../css/animations.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="../css/animations.css"></noscript>
+  <link rel="preload" as="style" href="../css/seo-sections-premium.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="../css/seo-sections-premium.css"></noscript>
 
   <!-- Data Scripts -->
   <script src="../js/industriesData.js" async></script>
@@ -498,7 +411,10 @@
             <h3 class="case-study-title">Web App for Printing Customized 3D Models for Surgery Supply</h3>
             <p class="case-study-desc">Responsive web app for managing 3D printing workflow via 3D viewer.</p>
             <div class="case-study-image">
-              <img src="../assets/Screenshot 2025-12-15 203923.png" alt="Healthcare Case Study">
+              <picture>
+                <source srcset="../assets/case-study-healthcare.webp" type="image/webp">
+                <img src="../assets/Screenshot 2025-12-15 203923.png" alt="Healthcare Case Study" width="400" height="267" loading="lazy" decoding="async">
+              </picture>
             </div>
             <a href="#" class="case-study-link">View Case Study <span>→</span></a>
           </div>
@@ -818,41 +734,77 @@
         <div class="logos-scroll">
           <!-- First set of logos -->
           <div class="logo-item">
-            <img src="../assets/logos/AWS_logo.png" alt="AWS">
+            <picture>
+              <source srcset="../assets/logos/AWS_logo.webp" type="image/webp">
+              <img src="../assets/logos/AWS_logo.png" alt="AWS" width="120" height="60" loading="lazy" decoding="async">
+            </picture>
           </div>
           <div class="logo-item">
-            <img src="../assets/logos/Cloudflare_logo.png" alt="Cloudflare">
+            <picture>
+              <source srcset="../assets/logos/Cloudflare_logo.webp" type="image/webp">
+              <img src="../assets/logos/Cloudflare_logo.png" alt="Cloudflare" width="120" height="60" loading="lazy" decoding="async">
+            </picture>
           </div>
           <div class="logo-item">
-            <img src="../assets/logos/googlecloud_logo.png" alt="Google Cloud" style="transform: scale(2);">
+            <picture>
+              <source srcset="../assets/logos/googlecloud_logo.webp" type="image/webp">
+              <img src="../assets/logos/googlecloud_logo.png" alt="Google Cloud" style="transform: scale(2);" width="120" height="60" loading="lazy" decoding="async">
+            </picture>
           </div>
           <div class="logo-item">
-            <img src="../assets/logos/Azure_logo.png" alt="Azure" style="transform: scale(1.5);">
+            <picture>
+              <source srcset="../assets/logos/Azure_logo.webp" type="image/webp">
+              <img src="../assets/logos/Azure_logo.png" alt="Azure" style="transform: scale(1.5);" width="120" height="60" loading="lazy" decoding="async">
+            </picture>
           </div>
           <div class="logo-item">
-            <img src="../assets/logos/Supabase.png" alt="Supabase" style="transform: scale(1.8);">
+            <picture>
+              <source srcset="../assets/logos/Supabase.webp" type="image/webp">
+              <img src="../assets/logos/Supabase.png" alt="Supabase" style="transform: scale(1.8);" width="120" height="60" loading="lazy" decoding="async">
+            </picture>
           </div>
           <div class="logo-item">
-            <img src="../assets/logos/Firebase_logo.png" alt="Firebase">
+            <picture>
+              <source srcset="../assets/logos/Firebase_logo.webp" type="image/webp">
+              <img src="../assets/logos/Firebase_logo.png" alt="Firebase" width="120" height="60" loading="lazy" decoding="async">
+            </picture>
           </div>
           <!-- Duplicate set for infinite scroll -->
           <div class="logo-item">
-            <img src="../assets/logos/AWS_logo.png" alt="AWS">
+            <picture>
+              <source srcset="../assets/logos/AWS_logo.webp" type="image/webp">
+              <img src="../assets/logos/AWS_logo.png" alt="AWS" width="120" height="60" loading="lazy" decoding="async">
+            </picture>
           </div>
           <div class="logo-item">
-            <img src="../assets/logos/Cloudflare_logo.png" alt="Cloudflare">
+            <picture>
+              <source srcset="../assets/logos/Cloudflare_logo.webp" type="image/webp">
+              <img src="../assets/logos/Cloudflare_logo.png" alt="Cloudflare" width="120" height="60" loading="lazy" decoding="async">
+            </picture>
           </div>
           <div class="logo-item">
-            <img src="../assets/logos/googlecloud_logo.png" alt="Google Cloud" style="transform: scale(2);">
+            <picture>
+              <source srcset="../assets/logos/googlecloud_logo.webp" type="image/webp">
+              <img src="../assets/logos/googlecloud_logo.png" alt="Google Cloud" style="transform: scale(2);" width="120" height="60" loading="lazy" decoding="async">
+            </picture>
           </div>
           <div class="logo-item">
-            <img src="../assets/logos/Azure_logo.png" alt="Azure" style="transform: scale(1.5);">
+            <picture>
+              <source srcset="../assets/logos/Azure_logo.webp" type="image/webp">
+              <img src="../assets/logos/Azure_logo.png" alt="Azure" style="transform: scale(1.5);" width="120" height="60" loading="lazy" decoding="async">
+            </picture>
           </div>
           <div class="logo-item">
-            <img src="../assets/logos/Supabase.png" alt="Supabase" style="transform: scale(1.8);">
+            <picture>
+              <source srcset="../assets/logos/Supabase.webp" type="image/webp">
+              <img src="../assets/logos/Supabase.png" alt="Supabase" style="transform: scale(1.8);" width="120" height="60" loading="lazy" decoding="async">
+            </picture>
           </div>
           <div class="logo-item">
-            <img src="../assets/logos/Firebase_logo.png" alt="Firebase">
+            <picture>
+              <source srcset="../assets/logos/Firebase_logo.webp" type="image/webp">
+              <img src="../assets/logos/Firebase_logo.png" alt="Firebase" width="120" height="60" loading="lazy" decoding="async">
+            </picture>
           </div>
         </div>
       </div>
@@ -1103,7 +1055,7 @@
 
     <!-- Right Side - Content -->
     <div class="uiverse-right">
-      <div class="uiverse-badge"
+      <div class="uiverse-badge">
         <span>Version Control</span>
       </div>
       <h2>
@@ -1273,7 +1225,11 @@
             <div class="portfolio-glow"></div>
             <div class="portfolio-card-inner">
               <div class="portfolio-image">
-                <img src="../assets/Screenshot 2025-12-15 203923.png" alt="Ticketing System">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="../assets/portfolio-ticketing-mobile.webp" type="image/webp">
+                  <source srcset="../assets/portfolio-ticketing.webp" type="image/webp">
+                  <img src="../assets/Screenshot 2025-12-15 203923.png" alt="Ticketing system web application for support ticket management and tracking" width="600" height="400" loading="lazy" decoding="async">
+                </picture>
                 <div class="portfolio-gradient-overlay portfolio-gradient-blue"></div>
                 <div class="portfolio-dark-overlay"></div>
                 <div class="portfolio-hover-icon">
@@ -1309,7 +1265,11 @@
             <div class="portfolio-glow"></div>
             <div class="portfolio-card-inner">
               <div class="portfolio-image">
-                <img src="../assets/Screenshot 2025-12-15 213248.png" alt="NORIGHTWAY">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="../assets/portfolio-norightway-mobile.webp" type="image/webp">
+                  <source srcset="../assets/portfolio-norightway.webp" type="image/webp">
+                  <img src="../assets/Screenshot 2025-12-15 213248.png" alt="NORIGHTWAY full stack e-commerce platform with modern web design" width="600" height="400" loading="lazy" decoding="async">
+                </picture>
                 <div class="portfolio-gradient-overlay portfolio-gradient-cyan"></div>
                 <div class="portfolio-dark-overlay"></div>
                 <div class="portfolio-hover-icon">
@@ -1346,7 +1306,11 @@
             <div class="portfolio-glow"></div>
             <div class="portfolio-card-inner">
               <div class="portfolio-image">
-                <img src="../assets/Screenshot 2025-12-15 225523.png" alt="Chem Publishers">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="../assets/portfolio-chem-mobile.webp" type="image/webp">
+                  <source srcset="../assets/portfolio-chem.webp" type="image/webp">
+                  <img src="../assets/Screenshot 2025-12-15 225523.png" alt="Chem Publishers scientific research and chemistry publishing platform" width="600" height="400" loading="lazy" decoding="async">
+                </picture>
                 <div class="portfolio-gradient-overlay portfolio-gradient-purple"></div>
                 <div class="portfolio-dark-overlay"></div>
                 <div class="portfolio-hover-icon">
@@ -1417,7 +1381,7 @@
                   <div class="testimonial-avatar-glow"></div>
                   <img
                     src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop"
-                    alt="Sarah Mitchell" class="testimonial-avatar">
+                    alt="Sarah Mitchell" class="testimonial-avatar" width="150" height="150" loading="lazy" decoding="async">
                 </div>
                 <div class="testimonial-info">
                   <h4>Sarah Mitchell</h4>
@@ -1461,7 +1425,7 @@
                   <div class="testimonial-avatar-glow"></div>
                   <img
                     src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop"
-                    alt="Marcus Johnson" class="testimonial-avatar">
+                    alt="Marcus Johnson" class="testimonial-avatar" width="150" height="150" loading="lazy" decoding="async">
                 </div>
                 <div class="testimonial-info">
                   <h4>Marcus Johnson</h4>
@@ -1505,7 +1469,7 @@
                   <div class="testimonial-avatar-glow"></div>
                   <img
                     src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop"
-                    alt="Thomas Wright" class="testimonial-avatar">
+                    alt="Thomas Wright" class="testimonial-avatar" width="150" height="150" loading="lazy" decoding="async">
                 </div>
                 <div class="testimonial-info">
                   <h4>Thomas Wright</h4>
@@ -1549,7 +1513,7 @@
                   <div class="testimonial-avatar-glow"></div>
                   <img
                     src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop"
-                    alt="Emily Chen" class="testimonial-avatar">
+                    alt="Emily Chen" class="testimonial-avatar" width="150" height="150" loading="lazy" decoding="async">
                 </div>
                 <div class="testimonial-info">
                   <h4>Emily Chen</h4>
@@ -1593,7 +1557,7 @@
                   <div class="testimonial-avatar-glow"></div>
                   <img
                     src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop"
-                    alt="Olivia Martinez" class="testimonial-avatar">
+                    alt="Olivia Martinez" class="testimonial-avatar" width="150" height="150" loading="lazy" decoding="async">
                 </div>
                 <div class="testimonial-info">
                   <h4>Olivia Martinez</h4>
