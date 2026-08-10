@@ -42,31 +42,152 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="dns-prefetch" href="https://images.pexels.com">
   <link rel="preconnect" href="https://calendly.com" crossorigin>
+    <!-- DNS prefetch for third-party origins used on page -->
+  <link rel="dns-prefetch" href="https://images.pexels.com">
+
+  <!-- LCP resource: preload poster with high priority so browser discovers it immediately -->
+  <link rel="preload" as="image" href="../assets/hero-video-compressed-poster.webp" type="image/webp" fetchpriority="high">
+
+  <!-- Local fonts: preload critical weights to eliminate CDN round-trip and reduce LCP delay -->
+  <link rel="preload" as="font" href="../assets/fonts/inter-latin.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="../assets/fonts/playfair-700-latin.woff2" type="font/woff2" crossorigin>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="../assets/favicon-opt.png" type="image/png">
+  <link rel="apple-touch-icon" href="../assets/favicon-opt.png">
 
   <!-- Font Loading -->
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"></noscript>
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap">
+  </noscript>
 
   <!-- Favicon -->
-  <link rel="icon" href="../assets/favicon.png" type="image/png">
-  <link rel="apple-touch-icon" href="../assets/favicon.png">
+  <link rel="icon" href="../assets/hero-video-compressed-poster.webp" type="image/png">
+  <link rel="apple-touch-icon" href="../assets/favicon-opt.png">
 
   <!-- Critical CSS -->
   <style>
-    :root{--sv-blue:#1E88E5;--sv-cyan:#00e6fb;--bg-black:#000000;--text-white:#FFFFFF;--text-gray:#9CA3AF}
-    *{margin:0;padding:0;box-sizing:border-box}
-    html{scroll-behavior:smooth;max-width:100%;overflow-x:hidden}
-    body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background-color:var(--bg-black);color:var(--text-white);line-height:1.6;-webkit-font-smoothing:antialiased;max-width:100%;overflow-x:hidden}
-    a{text-decoration:none;color:inherit}
-    nav{background:rgba(0,0,0,0.8);backdrop-filter:blur(10px);position:sticky;top:0;z-index:1000;border-bottom:1px solid rgba(255,255,255,0.05)}
-    .nav-container{max-width:1400px;margin:0 auto;padding:0 1rem;display:flex;align-items:center;justify-content:space-between;height:4rem}
-    .hero{position:relative;min-height:100vh;display:flex;align-items:center;background-color:var(--bg-black);padding-top:2.5rem}
-    .hero-video-container{margin:0 auto;width:98%;border-radius:40px;overflow:hidden;position:relative;min-height:78vh;margin-top:1.5rem}
-    .hero-video{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:1}
-    .hero-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.2));z-index:2}
-    .hero-content{position:relative;z-index:10;max-width:50rem;width:100%;padding:1.5rem;padding-top:3rem}
-    .skip-link{position:absolute;left:-9999px;top:0;z-index:9999;padding:0.5rem 1rem;background:#1E88E5;color:#fff;font-weight:600;border-radius:0 0 4px 4px}
-    .skip-link:focus{left:0}
+    :root {
+      --sv-blue: #1E88E5;
+      --sv-cyan: #00e6fb;
+      --bg-black: #000000;
+      --text-white: #FFFFFF;
+      --text-gray: #9CA3AF
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth;
+      max-width: 100%;
+      overflow-x: hidden
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background-color: var(--bg-black);
+      color: var(--text-white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      max-width: 100%;
+      overflow-x: hidden
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit
+    }
+
+    nav {
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05)
+    }
+
+    .nav-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 4rem
+    }
+
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background-color: var(--bg-black);
+      padding-top: 2.5rem
+    }
+
+    .hero-video-container {
+      margin: 0 auto;
+      width: 98%;
+      border-radius: 40px;
+      overflow: hidden;
+      position: relative;
+      min-height: 78vh;
+      margin-top: 1.5rem
+    }
+
+    .hero-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2));
+      z-index: 2
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      max-width: 50rem;
+      width: 100%;
+      padding: 1.5rem;
+      padding-top: 3rem
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      z-index: 9999;
+      padding: 0.5rem 1rem;
+      background: #1E88E5;
+      color: #fff;
+      font-weight: 600;
+      border-radius: 0 0 4px 4px
+    }
+
+    .skip-link:focus {
+      left: 0
+    }
   </style>
 
   <!-- CSS -->
@@ -118,8 +239,9 @@
   }
   </script>
 </head>
+
 <body>
-  
+
   <nav aria-label="Main navigation" role="navigation">
     <div class="nav-container">
       <div class="nav-left">
@@ -140,7 +262,8 @@
         </a>
       </div>
 
-      <button class="mobile-menu-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu" id="mobile-menu-btn" type="button">
+      <button class="mobile-menu-btn" aria-label="Open navigation menu" aria-expanded="false"
+        aria-controls="mobile-menu" id="mobile-menu-btn" type="button">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
           stroke-linecap="round">
           <line x1="3" y1="6" x2="21" y2="6" />
@@ -150,7 +273,7 @@
       </button>
 
       <a href="../index.html" class="nav-logo">
-        <img src="../assets/favicon.png" alt="Solvevare Logo" width="48" height="48" loading="eager">
+        <img src="../assets/favicon-opt.png alt="Solvevare Logo" width="48" height="48" loading="eager">
       </a>
 
       <div class="nav-right">
@@ -442,7 +565,8 @@
         <div class="mobile-menu-item">
           <div class="mobile-menu-row">
             <a href="../index.html" class="mobile-menu-label">Home</a>
-            <button class="mobile-arrow-btn" data-toggle="home-mobile" aria-label="Toggle Home submenu" aria-expanded="false" aria-controls="home-mobile" type="button"
+            <button class="mobile-arrow-btn" data-toggle="home-mobile" aria-label="Toggle Home submenu"
+              aria-expanded="false" aria-controls="home-mobile" type="button"
               onclick="toggleMobileDropdown('home-mobile')"><span aria-hidden="true">›</span></button>
           </div>
           <div class="mobile-dropdown" id="home-mobile">
@@ -459,7 +583,8 @@
         <div class="mobile-menu-item">
           <div class="mobile-menu-row">
             <a href="../services.html" class="mobile-menu-label">Services</a>
-            <button class="mobile-arrow-btn" data-toggle="services-mobile" aria-label="Toggle Services submenu" aria-expanded="false" aria-controls="services-mobile" type="button"
+            <button class="mobile-arrow-btn" data-toggle="services-mobile" aria-label="Toggle Services submenu"
+              aria-expanded="false" aria-controls="services-mobile" type="button"
               onclick="toggleMobileDropdown('services-mobile')"><span aria-hidden="true">›</span></button>
           </div>
           <div class="mobile-dropdown" id="services-mobile">
@@ -490,7 +615,8 @@
         <div class="mobile-menu-item">
           <div class="mobile-menu-row">
             <a href="../industries.html" class="mobile-menu-label">Industries</a>
-            <button class="mobile-arrow-btn" data-toggle="industries-mobile" aria-label="Toggle Industries submenu" aria-expanded="false" aria-controls="industries-mobile" type="button"
+            <button class="mobile-arrow-btn" data-toggle="industries-mobile" aria-label="Toggle Industries submenu"
+              aria-expanded="false" aria-controls="industries-mobile" type="button"
               onclick="toggleMobileDropdown('industries-mobile')"><span aria-hidden="true">›</span></button>
           </div>
           <div class="mobile-dropdown" id="industries-mobile">
@@ -547,7 +673,8 @@
         <div class="mobile-menu-item">
           <div class="mobile-menu-row">
             <a href="../technologies.html" class="mobile-menu-label">Technologies</a>
-            <button class="mobile-arrow-btn" data-toggle="technologies-mobile" aria-label="Toggle Technologies submenu" aria-expanded="false" aria-controls="technologies-mobile" type="button"
+            <button class="mobile-arrow-btn" data-toggle="technologies-mobile" aria-label="Toggle Technologies submenu"
+              aria-expanded="false" aria-controls="technologies-mobile" type="button"
               onclick="toggleMobileDropdown('technologies-mobile')"><span aria-hidden="true">›</span></button>
           </div>
           <div class="mobile-dropdown" id="technologies-mobile">
@@ -570,7 +697,8 @@
         <div class="mobile-menu-item">
           <div class="mobile-menu-row">
             <a href="../location.html" class="mobile-menu-label">Locations</a>
-            <button class="mobile-arrow-btn" data-toggle="locations-mobile" aria-label="Toggle Locations submenu" aria-expanded="false" aria-controls="locations-mobile" type="button"
+            <button class="mobile-arrow-btn" data-toggle="locations-mobile" aria-label="Toggle Locations submenu"
+              aria-expanded="false" aria-controls="locations-mobile" type="button"
               onclick="toggleMobileDropdown('locations-mobile')"><span aria-hidden="true">›</span></button>
           </div>
           <div class="mobile-dropdown" id="locations-mobile">
@@ -621,8 +749,9 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-video-container">
-      <video class="hero-video" autoplay muted playsinline preload="metadata" poster="../assets/3d-background-blue-6016x3384-11033.jpg">
-        <source src="../assets/Diagonal_Tile_Animation_Abstract_flowing_metallic_shapes_with_neon_blue_-JXeluF1.mp4"
+      <video class="hero-video" autoplay muted playsinline preload="metadata"
+        poster="../assets/hero-video-compressed-poster.webp">
+        <source src="../assets/hero-video-compressed.mp4"
           type="video/mp4">
       </video>
       <div class="hero-overlay"></div>
@@ -633,7 +762,10 @@
           Custom Software Development for {{city}}, {{state}} Businesses
         </h1>
         <p>
-          {{brand}} partners with enterprises, mid-market companies, and growth-stage startups across {{city}}, {{state}} to architect and deliver software solutions that solve complex business challenges. From legacy system modernization to cloud-native applications, we combine technical excellence with deep business understanding to drive measurable outcomes.
+          {{brand}} partners with enterprises, mid-market companies, and growth-stage startups across {{city}},
+          {{state}} to architect and deliver software solutions that solve complex business challenges. From legacy
+          system modernization to cloud-native applications, we combine technical excellence with deep business
+          understanding to drive measurable outcomes.
         </p>
 
         <div class="hero-services">
@@ -744,7 +876,10 @@
             </div>
             <div class="service-content">
               <h3>Web Development in {{city}}, {{state}}</h3>
-              <p>Professional web development services in {{city}}, {{state}}. We build responsive, production-grade web applications and SPAs with modern frameworks. Our {{city}} web development team delivers performance optimization, accessibility, SEO-friendly design, and secure APIs for reliable production systems serving {{state}} businesses.</p>
+              <p>Professional web development services in {{city}}, {{state}}. We build responsive, production-grade web
+                applications and SPAs with modern frameworks. Our {{city}} web development team delivers performance
+                optimization, accessibility, SEO-friendly design, and secure APIs for reliable production systems
+                serving {{state}} businesses.</p>
             </div>
           </div>
         </a>
@@ -761,7 +896,10 @@
           </div>
           <div class="service-content">
             <h3>App Development in {{city}}, {{state}}</h3>
-            <p>Expert app development services in {{city}}, {{state}}. We create native and cross-platform mobile applications for {{city}} businesses — from discovery to deployment. Our {{state}} app development team focuses on performant, maintainable architectures, offline-first UX, and platform native integrations for iOS and Android.</p>
+            <p>Expert app development services in {{city}}, {{state}}. We create native and cross-platform mobile
+              applications for {{city}} businesses — from discovery to deployment. Our {{state}} app development team
+              focuses on performant, maintainable architectures, offline-first UX, and platform native integrations for
+              iOS and Android.</p>
           </div>
         </a>
 
@@ -778,7 +916,10 @@
             </div>
             <div class="service-content">
               <h3>Cloud & DevOps Services in {{city}}, {{state}}</h3>
-              <p>Comprehensive cloud and DevOps services for {{city}}, {{state}} businesses. We provide cloud architecture, migration, infrastructure as code, CI/CD pipelines, containerization, and cost optimization across AWS, Azure, and GCP. Our {{city}} DevOps experts help {{state}} companies modernize infrastructure and improve deployment efficiency.</p>
+              <p>Comprehensive cloud and DevOps services for {{city}}, {{state}} businesses. We provide cloud
+                architecture, migration, infrastructure as code, CI/CD pipelines, containerization, and cost
+                optimization across AWS, Azure, and GCP. Our {{city}} DevOps experts help {{state}} companies modernize
+                infrastructure and improve deployment efficiency.</p>
             </div>
           </div>
         </a>
@@ -1607,152 +1748,201 @@
     </div>
   </section>
   <!-- Seo Section -->
-<section class="seo-content">
-  <div class="container">
+  <section class="seo-content">
+    <div class="container">
 
-    <h2>Why {{city}}, {{state}} Businesses Choose {{brand}} for Software Development</h2>
+      <h2>Why {{city}}, {{state}} Businesses Choose {{brand}} for Software Development</h2>
 
-    <p>
-      Building software is easy. Building software that solves real business problems, scales with your growth, and delivers measurable ROI is rare. {{brand}} works with {{city}}, {{state}} companies across industries—from healthcare and fintech to logistics and manufacturing—to architect solutions that transform how they operate, compete, and grow.
-    </p>
+      <p>
+        Building software is easy. Building software that solves real business problems, scales with your growth, and
+        delivers measurable ROI is rare. {{brand}} works with {{city}}, {{state}} companies across industries—from
+        healthcare and fintech to logistics and manufacturing—to architect solutions that transform how they operate,
+        compete, and grow.
+      </p>
 
-    <p>
-      Unlike generic development shops, we don't just write code. We start by understanding your business: your competitive challenges, operational constraints, growth ambitions, and technology landscape. This deep business context shapes every architectural decision, ensuring your software investment aligns with your strategic objectives.
-    </p>
+      <p>
+        Unlike generic development shops, we don't just write code. We start by understanding your business: your
+        competitive challenges, operational constraints, growth ambitions, and technology landscape. This deep business
+        context shapes every architectural decision, ensuring your software investment aligns with your strategic
+        objectives.
+      </p>
 
-    <h2>The {{city}}, {{state}} Business Technology Challenge</h2>
+      <h2>The {{city}}, {{state}} Business Technology Challenge</h2>
 
-    <p>
-      {{city}} and {{state}} businesses face a common dilemma: legacy systems that slow innovation, fragmented tools that waste time, and technology decisions that don't align with business strategy. Many companies struggle to find development partners who understand both technology AND business.
-    </p>
+      <p>
+        {{city}} and {{state}} businesses face a common dilemma: legacy systems that slow innovation, fragmented tools
+        that waste time, and technology decisions that don't align with business strategy. Many companies struggle to
+        find development partners who understand both technology AND business.
+      </p>
 
-    <p>
-      {{brand}} bridges this gap. Our team combines deep technical expertise with business acumen. We've helped {{city}} companies modernize outdated infrastructure, launch new digital products, automate critical workflows, and integrate disconnected systems—all while maintaining operational continuity and managing risk.
-    </p>
+      <p>
+        {{brand}} bridges this gap. Our team combines deep technical expertise with business acumen. We've helped
+        {{city}} companies modernize outdated infrastructure, launch new digital products, automate critical workflows,
+        and integrate disconnected systems—all while maintaining operational continuity and managing risk.
+      </p>
 
-    <h2>Enterprise Software Development Services for {{city}}, {{state}}</h2>
+      <h2>Enterprise Software Development Services for {{city}}, {{state}}</h2>
 
-    <h3>Web & Enterprise Applications</h3>
-    <p>
-      Modern web applications are the backbone of digital business. We architect responsive, scalable web platforms using React, Vue, Angular, and Node.js that handle complex workflows, real-time data, and thousands of concurrent users. Whether you need a customer portal, internal management system, or public-facing platform, we build applications that perform, scale, and adapt to your evolving business needs.
-    </p>
+      <h3>Web & Enterprise Applications</h3>
+      <p>
+        Modern web applications are the backbone of digital business. We architect responsive, scalable web platforms
+        using React, Vue, Angular, and Node.js that handle complex workflows, real-time data, and thousands of
+        concurrent users. Whether you need a customer portal, internal management system, or public-facing platform, we
+        build applications that perform, scale, and adapt to your evolving business needs.
+      </p>
 
-    <h3>Mobile-First Solutions for {{city}} Enterprises</h3>
-    <p>
-      Mobile isn't optional—it's essential. We develop native iOS and Android applications, plus cross-platform solutions using Flutter and React Native, that keep your teams connected and your customers engaged. From field service apps to customer-facing platforms, we build mobile solutions that work seamlessly across devices and networks.
-    </p>
+      <h3>Mobile-First Solutions for {{city}} Enterprises</h3>
+      <p>
+        Mobile isn't optional—it's essential. We develop native iOS and Android applications, plus cross-platform
+        solutions using Flutter and React Native, that keep your teams connected and your customers engaged. From field
+        service apps to customer-facing platforms, we build mobile solutions that work seamlessly across devices and
+        networks.
+      </p>
 
-    <h3>Cloud Architecture & Migration</h3>
-    <p>
-      Moving to the cloud isn't just about infrastructure—it's about unlocking agility, reducing costs, and improving reliability. {{brand}} helps {{city}}, {{state}} companies design cloud-native architectures on AWS, Azure, or Google Cloud. We manage complex migrations, optimize cloud spending, implement security best practices, and establish governance frameworks that scale with your business.
-    </p>
+      <h3>Cloud Architecture & Migration</h3>
+      <p>
+        Moving to the cloud isn't just about infrastructure—it's about unlocking agility, reducing costs, and improving
+        reliability. {{brand}} helps {{city}}, {{state}} companies design cloud-native architectures on AWS, Azure, or
+        Google Cloud. We manage complex migrations, optimize cloud spending, implement security best practices, and
+        establish governance frameworks that scale with your business.
+      </p>
 
-    <h3>DevOps & Continuous Delivery</h3>
-    <p>
-      Speed matters. We implement CI/CD pipelines, containerization, infrastructure-as-code, and automated testing that enable your teams to deploy faster, with confidence. Our DevOps expertise reduces deployment risk, improves system reliability, and frees your engineering teams to focus on innovation rather than firefighting.
-    </p>
+      <h3>DevOps & Continuous Delivery</h3>
+      <p>
+        Speed matters. We implement CI/CD pipelines, containerization, infrastructure-as-code, and automated testing
+        that enable your teams to deploy faster, with confidence. Our DevOps expertise reduces deployment risk, improves
+        system reliability, and frees your engineering teams to focus on innovation rather than firefighting.
+      </p>
 
-    <h3>Custom Software & System Integration</h3>
-    <p>
-      Off-the-shelf software rarely fits perfectly. We build custom solutions tailored to your specific workflows, integrated with your existing systems. From ERP implementations to CRM customizations to API-driven integrations, we connect your technology stack so data flows seamlessly and teams work efficiently.
-    </p>
+      <h3>Custom Software & System Integration</h3>
+      <p>
+        Off-the-shelf software rarely fits perfectly. We build custom solutions tailored to your specific workflows,
+        integrated with your existing systems. From ERP implementations to CRM customizations to API-driven
+        integrations, we connect your technology stack so data flows seamlessly and teams work efficiently.
+      </p>
 
-    <h3>Data & Analytics Platforms</h3>
-    <p>
-      Data is your competitive advantage—if you can access it, understand it, and act on it. We design and build data platforms that collect, process, and visualize business-critical information. From data warehouses to real-time analytics dashboards to machine learning models, we help {{city}} companies make faster, smarter decisions.
-    </p>
+      <h3>Data & Analytics Platforms</h3>
+      <p>
+        Data is your competitive advantage—if you can access it, understand it, and act on it. We design and build data
+        platforms that collect, process, and visualize business-critical information. From data warehouses to real-time
+        analytics dashboards to machine learning models, we help {{city}} companies make faster, smarter decisions.
+      </p>
 
-    <h2>How {{brand}} Works With {{city}}, {{state}} Companies</h2>
+      <h2>How {{brand}} Works With {{city}}, {{state}} Companies</h2>
 
-    <p>
-      Our engagement model is built on transparency, collaboration, and accountability:
-    </p>
+      <p>
+        Our engagement model is built on transparency, collaboration, and accountability:
+      </p>
 
-    <p>
-      <strong>Discovery & Strategy:</strong> We invest time understanding your business, technology landscape, competitive position, and strategic goals. This informs our technical recommendations and ensures alignment with your objectives.
-    </p>
+      <p>
+        <strong>Discovery & Strategy:</strong> We invest time understanding your business, technology landscape,
+        competitive position, and strategic goals. This informs our technical recommendations and ensures alignment with
+        your objectives.
+      </p>
 
-    <p>
-      <strong>Architecture & Planning:</strong> We design solutions that balance innovation with pragmatism. Our architects consider scalability, security, maintainability, and cost—not just immediate functionality.
-    </p>
+      <p>
+        <strong>Architecture & Planning:</strong> We design solutions that balance innovation with pragmatism. Our
+        architects consider scalability, security, maintainability, and cost—not just immediate functionality.
+      </p>
 
-    <p>
-      <strong>Agile Development:</strong> We work in sprints with regular demos, feedback loops, and course corrections. You stay informed, involved, and in control throughout development.
-    </p>
+      <p>
+        <strong>Agile Development:</strong> We work in sprints with regular demos, feedback loops, and course
+        corrections. You stay informed, involved, and in control throughout development.
+      </p>
 
-    <p>
-      <strong>Quality & Testing:</strong> Automated testing, code reviews, security scanning, and performance optimization are built into our process—not added at the end.
-    </p>
+      <p>
+        <strong>Quality & Testing:</strong> Automated testing, code reviews, security scanning, and performance
+        optimization are built into our process—not added at the end.
+      </p>
 
-    <p>
-      <strong>Deployment & Support:</strong> We manage deployments carefully, monitor systems closely, and provide ongoing support to ensure your software performs reliably in production.
-    </p>
+      <p>
+        <strong>Deployment & Support:</strong> We manage deployments carefully, monitor systems closely, and provide
+        ongoing support to ensure your software performs reliably in production.
+      </p>
 
-    <h2>Industries & Expertise</h2>
+      <h2>Industries & Expertise</h2>
 
-    <p>
-      {{brand}} has delivered solutions across diverse industries. This breadth of experience means we understand industry-specific challenges, compliance requirements, and best practices:
-    </p>
+      <p>
+        {{brand}} has delivered solutions across diverse industries. This breadth of experience means we understand
+        industry-specific challenges, compliance requirements, and best practices:
+      </p>
 
-    <ul>
-      <li><strong>Healthcare:</strong> HIPAA-compliant systems, telemedicine platforms, patient portals, EHR integrations</li>
-      <li><strong>Financial Services:</strong> Secure trading platforms, payment systems, compliance automation, fraud detection</li>
-      <li><strong>E-Commerce:</strong> High-performance platforms, inventory management, payment processing, customer analytics</li>
-      <li><strong>Manufacturing:</strong> Supply chain optimization, production scheduling, quality management, IoT integration</li>
-      <li><strong>Logistics:</strong> Route optimization, real-time tracking, warehouse management, customer visibility</li>
-      <li><strong>SaaS & Technology:</strong> Multi-tenant platforms, API-first architecture, scalable infrastructure, security</li>
-    </ul>
+      <ul>
+        <li><strong>Healthcare:</strong> HIPAA-compliant systems, telemedicine platforms, patient portals, EHR
+          integrations</li>
+        <li><strong>Financial Services:</strong> Secure trading platforms, payment systems, compliance automation, fraud
+          detection</li>
+        <li><strong>E-Commerce:</strong> High-performance platforms, inventory management, payment processing, customer
+          analytics</li>
+        <li><strong>Manufacturing:</strong> Supply chain optimization, production scheduling, quality management, IoT
+          integration</li>
+        <li><strong>Logistics:</strong> Route optimization, real-time tracking, warehouse management, customer
+          visibility</li>
+        <li><strong>SaaS & Technology:</strong> Multi-tenant platforms, API-first architecture, scalable infrastructure,
+          security</li>
+      </ul>
 
-    <h2>Technology Stack & Expertise</h2>
+      <h2>Technology Stack & Expertise</h2>
 
-    <p>
-      We're technology-agnostic—we recommend solutions based on your requirements, not our preferences. Our team has deep expertise across:
-    </p>
+      <p>
+        We're technology-agnostic—we recommend solutions based on your requirements, not our preferences. Our team has
+        deep expertise across:
+      </p>
 
-    <p>
-      <strong>Frontend:</strong> React, Vue, Angular, TypeScript, responsive design, accessibility
-    </p>
+      <p>
+        <strong>Frontend:</strong> React, Vue, Angular, TypeScript, responsive design, accessibility
+      </p>
 
-    <p>
-      <strong>Backend:</strong> Node.js, Python, Java, .NET, Go, microservices, API design
-    </p>
+      <p>
+        <strong>Backend:</strong> Node.js, Python, Java, .NET, Go, microservices, API design
+      </p>
 
-    <p>
-      <strong>Cloud:</strong> AWS, Azure, Google Cloud, Kubernetes, serverless, infrastructure-as-code
-    </p>
+      <p>
+        <strong>Cloud:</strong> AWS, Azure, Google Cloud, Kubernetes, serverless, infrastructure-as-code
+      </p>
 
-    <p>
-      <strong>Data:</strong> PostgreSQL, MongoDB, Redis, Elasticsearch, data warehouses, analytics platforms
-    </p>
+      <p>
+        <strong>Data:</strong> PostgreSQL, MongoDB, Redis, Elasticsearch, data warehouses, analytics platforms
+      </p>
 
-    <p>
-      <strong>DevOps:</strong> CI/CD, Docker, Kubernetes, monitoring, logging, security scanning
-    </p>
+      <p>
+        <strong>DevOps:</strong> CI/CD, Docker, Kubernetes, monitoring, logging, security scanning
+      </p>
 
-    <h2>Why {{city}}, {{state}} Companies Trust {{brand}}</h2>
+      <h2>Why {{city}}, {{state}} Companies Trust {{brand}}</h2>
 
-    <ul>
-      <li><strong>Business-First Approach:</strong> We understand that technology serves business strategy, not the reverse</li>
-      <li><strong>Proven Track Record:</strong> Hundreds of successful projects across industries and company sizes</li>
-      <li><strong>Technical Excellence:</strong> Expert engineers who stay current with technology trends and best practices</li>
-      <li><strong>Transparent Communication:</strong> Regular updates, honest assessments, and collaborative decision-making</li>
-      <li><strong>Scalable Solutions:</strong> We architect for growth—your software scales as your business grows</li>
-      <li><strong>Security & Compliance:</strong> Built-in security practices, compliance expertise, and risk management</li>
-      <li><strong>Long-Term Partnership:</strong> We provide ongoing support, maintenance, and optimization—not just delivery</li>
-    </ul>
+      <ul>
+        <li><strong>Business-First Approach:</strong> We understand that technology serves business strategy, not the
+          reverse</li>
+        <li><strong>Proven Track Record:</strong> Hundreds of successful projects across industries and company sizes
+        </li>
+        <li><strong>Technical Excellence:</strong> Expert engineers who stay current with technology trends and best
+          practices</li>
+        <li><strong>Transparent Communication:</strong> Regular updates, honest assessments, and collaborative
+          decision-making</li>
+        <li><strong>Scalable Solutions:</strong> We architect for growth—your software scales as your business grows
+        </li>
+        <li><strong>Security & Compliance:</strong> Built-in security practices, compliance expertise, and risk
+          management</li>
+        <li><strong>Long-Term Partnership:</strong> We provide ongoing support, maintenance, and optimization—not just
+          delivery</li>
+      </ul>
 
-    <h2>Ready to Transform Your Technology?</h2>
+      <h2>Ready to Transform Your Technology?</h2>
 
-    <p>
-      Whether you're modernizing legacy systems, launching a new digital product, scaling your infrastructure, or automating critical workflows, {{brand}} is ready to help. We've helped {{city}}, {{state}} companies across industries achieve their technology goals and drive business growth.
-    </p>
+      <p>
+        Whether you're modernizing legacy systems, launching a new digital product, scaling your infrastructure, or
+        automating critical workflows, {{brand}} is ready to help. We've helped {{city}}, {{state}} companies across
+        industries achieve their technology goals and drive business growth.
+      </p>
 
-    <p>
-      Let's discuss your challenges, explore solutions, and chart a path forward. Contact {{brand}} at {{email}} to schedule a consultation with our team.
-    </p>
+      <p>
+        Let's discuss your challenges, explore solutions, and chart a path forward. Contact {{brand}} at {{email}} to
+        schedule a consultation with our team.
+      </p>
 
-  </div>
-</section>
+    </div>
+  </section>
 
   <section class="seo-content">
     <div class="container">
@@ -1785,22 +1975,31 @@
       </p>
 
       <ul>
-        <li><strong>Web Development in {{city}}, {{state}}:</strong> Modern, responsive, SEO-friendly business websites and web applications.
+        <li><strong>Web Development in {{city}}, {{state}}:</strong> Modern, responsive, SEO-friendly business websites
+          and web applications.
         </li>
-        <li><strong>App Development in {{city}}, {{state}}:</strong> Native and cross-platform mobile applications for Android and iOS.</li>
-        <li><strong>Desktop & Cross-Platform Applications in {{city}}, {{state}}:</strong> Reliable desktop software built for Windows, macOS,
+        <li><strong>App Development in {{city}}, {{state}}:</strong> Native and cross-platform mobile applications for
+          Android and iOS.</li>
+        <li><strong>Desktop & Cross-Platform Applications in {{city}}, {{state}}:</strong> Reliable desktop software
+          built for Windows, macOS,
           and enterprise environments.</li>
-        <li><strong>Cloud & DevOps in {{city}}, {{state}}:</strong> Cloud migration, deployment automation, CI/CD pipelines, infrastructure
+        <li><strong>Cloud & DevOps in {{city}}, {{state}}:</strong> Cloud migration, deployment automation, CI/CD
+          pipelines, infrastructure
           optimization, and scalable hosting solutions.</li>
-        <li><strong>Networking & Infrastructure in {{city}}, {{state}}:</strong> Secure network architecture, system administration, server
+        <li><strong>Networking & Infrastructure in {{city}}, {{state}}:</strong> Secure network architecture, system
+          administration, server
           management, and IT infrastructure support.</li>
-        <li><strong>Database & Data Engineering in {{city}}, {{state}}:</strong> Database design, optimization, migration, reporting,
+        <li><strong>Database & Data Engineering in {{city}}, {{state}}:</strong> Database design, optimization,
+          migration, reporting,
           analytics, and data management solutions.</li>
-        <li><strong>Product & UX Design in {{city}}, {{state}}:</strong> User-focused interface design, wireframes, prototypes, and intuitive
+        <li><strong>Product & UX Design in {{city}}, {{state}}:</strong> User-focused interface design, wireframes,
+          prototypes, and intuitive
           digital experiences.</li>
-        <li><strong>Custom Software & Integrations in {{city}}, {{state}}:</strong> Tailor-made software, API integrations, CRM systems, ERP
+        <li><strong>Custom Software & Integrations in {{city}}, {{state}}:</strong> Tailor-made software, API
+          integrations, CRM systems, ERP
           integrations, and business automation.</li>
-        <li><strong>Automation & Integration in {{city}}, {{state}}:</strong> Workflow automation, AI-powered business processes, third-party
+        <li><strong>Automation & Integration in {{city}}, {{state}}:</strong> Workflow automation, AI-powered business
+          processes, third-party
           integrations, and productivity optimization.</li>
       </ul>
 
@@ -1834,11 +2033,16 @@
       <h2>Let's Build Something Great Together in {{city}}, {{state}}</h2>
 
       <p>
-        If you're searching for a trusted technology partner in {{city}}, {{state}}, {{brand}} is ready to help. Whether you need a new website, mobile application, cloud infrastructure, automation solution, custom software, database optimization, or digital transformation consulting, our team is here to deliver reliable results tailored to your business goals.
+        If you're searching for a trusted technology partner in {{city}}, {{state}}, {{brand}} is ready to help. Whether
+        you need a new website, mobile application, cloud infrastructure, automation solution, custom software, database
+        optimization, or digital transformation consulting, our team is here to deliver reliable results tailored to
+        your business goals.
       </p>
 
       <p>
-        Contact <strong>{{brand}}</strong> today at <strong>{{email}}</strong> to discuss your project, request a consultation, or learn how our technology solutions can help your business grow in {{city}}, {{state}}. Our {{city}} team is committed to delivering excellence and supporting your success.
+        Contact <strong>{{brand}}</strong> today at <strong>{{email}}</strong> to discuss your project, request a
+        consultation, or learn how our technology solutions can help your business grow in {{city}}, {{state}}. Our
+        {{city}} team is committed to delivering excellence and supporting your success.
       </p>
 
     </div>
@@ -1863,7 +2067,10 @@
             </svg>
           </button>
           <div class="faq-answer">
-            We provide comprehensive software development services in {{city}}, {{state}} including web development, mobile app development, cloud & DevOps, custom software solutions, database services, UI/UX design, and business automation. Our {{city}} team specializes in building scalable, secure solutions tailored to {{state}} businesses.
+            We provide comprehensive software development services in {{city}}, {{state}} including web development,
+            mobile app development, cloud & DevOps, custom software solutions, database services, UI/UX design, and
+            business automation. Our {{city}} team specializes in building scalable, secure solutions tailored to
+            {{state}} businesses.
           </div>
         </div>
 
@@ -1876,7 +2083,9 @@
             </svg>
           </button>
           <div class="faq-answer">
-            You can reach our {{city}}, {{state}} team at {{email}} or call us at +1 (661) 548-4013. We're available for consultations, project inquiries, and technical support. Contact us today to discuss your software development needs in {{city}}.
+            You can reach our {{city}}, {{state}} team at {{email}} or call us at +1 (661) 548-4013. We're available for
+            consultations, project inquiries, and technical support. Contact us today to discuss your software
+            development needs in {{city}}.
           </div>
         </div>
 
@@ -1889,7 +2098,9 @@
             </svg>
           </button>
           <div class="faq-answer">
-            Yes. We provide professional software development services throughout {{city}}, {{state}}, and nearby locations. Our {{state}} team serves businesses across the region with web development, app development, cloud solutions, and custom software services.
+            Yes. We provide professional software development services throughout {{city}}, {{state}}, and nearby
+            locations. Our {{state}} team serves businesses across the region with web development, app development,
+            cloud solutions, and custom software services.
           </div>
         </div>
 
@@ -1902,7 +2113,9 @@
             </svg>
           </button>
           <div class="faq-answer">
-            Project timelines vary depending on scope, complexity, and requirements. Our {{city}} development team provides detailed project estimates during the consultation phase. We work with {{state}} businesses to establish realistic timelines and maintain transparent communication throughout development.
+            Project timelines vary depending on scope, complexity, and requirements. Our {{city}} development team
+            provides detailed project estimates during the consultation phase. We work with {{state}} businesses to
+            establish realistic timelines and maintain transparent communication throughout development.
           </div>
         </div>
 
@@ -1915,7 +2128,9 @@
             </svg>
           </button>
           <div class="faq-answer">
-            Pricing depends on your specific requirements, project scope, and complexity. Our {{city}}, {{state}} team provides custom quotes tailored to your business needs. Contact {{brand}} for a detailed proposal and consultation on web development, app development, or other services.
+            Pricing depends on your specific requirements, project scope, and complexity. Our {{city}}, {{state}} team
+            provides custom quotes tailored to your business needs. Contact {{brand}} for a detailed proposal and
+            consultation on web development, app development, or other services.
           </div>
         </div>
 
@@ -1928,7 +2143,9 @@
             </svg>
           </button>
           <div class="faq-answer">
-            Yes. We provide comprehensive ongoing support, maintenance, and optimization services for {{city}}, {{state}} businesses. Our {{state}} team offers 24/7 technical support, bug fixes, updates, and performance monitoring to ensure your software continues running smoothly.
+            Yes. We provide comprehensive ongoing support, maintenance, and optimization services for {{city}},
+            {{state}} businesses. Our {{state}} team offers 24/7 technical support, bug fixes, updates, and performance
+            monitoring to ensure your software continues running smoothly.
           </div>
         </div>
       </div>

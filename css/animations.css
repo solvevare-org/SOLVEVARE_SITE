@@ -1,0 +1,5 @@
+/* animations.css */
+.animate-on-scroll{opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease}
+.animate-on-scroll.animated,.fade-in-up.animated,.fade-in.animated{opacity:1;transform:translateY(0)}
+.fade-in-up{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.fade-in{opacity:0;transition:opacity .6s ease}
