@@ -273,7 +273,7 @@
       </button>
 
       <a href="../index.html" class="nav-logo">
-        <img src="../assets/favicon-opt.png alt="Solvevare Logo" width="48" height="48" loading="eager">
+        <img src="../assets/favicon-opt.png" alt="Solvevare Logo" width="48" height="48" loading="eager">
       </a>
 
       <div class="nav-right">
@@ -726,6 +726,7 @@
           <button class="mobile-book-btn" onclick="window.location.href='../contact.html'">
             Book a meet
           </button>
+          
         </div>
 
       </div>
@@ -748,11 +749,11 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-video-container">
-      <video class="hero-video" autoplay muted playsinline preload="metadata"
+    <div class="hero-video-container"> 
+      <video class="hero-video" aria-hidden="true"   fetchpriority="high" autoplay muted playsinline preload="auto" 
         poster="../assets/hero-video-compressed-poster.webp">
-        <source src="../assets/hero-video-compressed.mp4"
-          type="video/mp4">
+        <source src="../assets/hero-video-compressed.mp4" type="video/mp4">
+        <track kind="captions" src="" label="English" srclang="en" default>
       </video>
       <div class="hero-overlay"></div>
 
@@ -784,7 +785,7 @@
           </p>
         </div>
 
-
+        <div>
         <a href="../portfolio.html" class="btn-primary">
           <span class="btn-icon-wrapper">
             <svg viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="btn-icon" width="10">
@@ -800,7 +801,11 @@
           </span>
           Our Work
         </a>
+        <a href="../contact.html#contact-section" class="btn-contact-us" data-no-calendly="true">Contact Us</a>
       </div>
+      </div>
+        
+        
     </div>
   </section>
 
@@ -932,6 +937,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>
         </a>
+        <a href="../contact.html#contact-section" class="btn-contact-us" data-no-calendly="true">Contact Us</a>
       </div>
     </div>
   </section>
@@ -968,7 +974,7 @@
                   d="M1 2.75A.75.75 0 0 1 1.75 2h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 2.75Zm0 5A.75.75 0 0 1 1.75 7h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 7.75ZM1.75 12h12.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1 0-1.5Z" />
               </svg>
             </div>
-            <a class="gh-icon" href="#">
+            <a class="gh-icon" href="https://github.com/solvevare-org" aria-label="Solvevare on GitHub">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path
                   d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.45,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
@@ -1097,7 +1103,7 @@
 
     <!-- Right Side - Content -->
     <div class="uiverse-right">
-      <div class="uiverse-badge">
+      <div class="uiverse-badge"
         <span>Version Control</span>
       </div>
       <h2>
@@ -1223,6 +1229,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>
         </a>
+        <a href="../contact.html#contact-section" class="btn-contact-us" data-no-calendly="true">Contact Us</a>
       </div>
 
       <div class="stats-card-wrapper">
@@ -1377,6 +1384,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>
         </a>
+        <a href="../contact.html#contact-section" class="btn-contact-us" data-no-calendly="true">Contact Us</a>
       </div>
     </div>
   </section>
