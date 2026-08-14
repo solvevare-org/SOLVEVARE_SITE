@@ -449,3 +449,16 @@
     animation: none;
   }
 }
+
+/* ── Nearby Locations Section ─────────────────────────────────────────────── */
+.nearby-locations{padding:4rem 0;background:#000}
+.nearby-locations .section-header{text-align:center;margin-bottom:2.5rem}
+.nearby-locations .section-header h2{font-size:clamp(1.5rem,3vw,2.25rem);color:#fff;margin-bottom:.75rem}
+.nearby-locations .section-header p{color:rgba(255,255,255,.65);max-width:600px;margin:0 auto}
+.nearby-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:1rem}
+.nearby-card{display:flex;flex-direction:column;gap:.25rem;padding:1.25rem 1rem;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:12px;text-decoration:none;color:#fff;transition:background .2s,border-color .2s,transform .2s}
+.nearby-card:hover{background:rgba(30,136,229,.12);border-color:rgba(30,136,229,.4);transform:translateY(-2px)}
+.nearby-city{font-weight:600;font-size:.95rem;color:#fff}
+.nearby-state{font-size:.8rem;color:rgba(255,255,255,.5)}
+.nearby-dist{font-size:.75rem;color:#00e6fb;margin-top:.25rem}
+@media(max-width:480px){.nearby-grid{grid-template-columns:repeat(2,1fr)}}

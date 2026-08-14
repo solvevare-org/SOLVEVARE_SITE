@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Enterprise Software Development in {{city}}, {{state}} | {{brand}}</title>
+  <title>Enterprise Software Development in {{city}}, {{state_sf}} | {{brand}}</title>
   <meta name="description"
-    content="{{brand}} delivers enterprise-grade software development, web applications, mobile apps, and cloud infrastructure solutions for businesses in {{city}}, {{state}}. Trusted by {{country}} companies for custom software, DevOps, and digital transformation. Get expert consultation today." />
-  <meta name="keywords"
+  content="{{brand}} builds custom software, web, mobile & cloud solutions for businesses in {{city}}, {{state_sf}}. Modernize, automate & scale with expert engineers." />
+    <meta name="keywords"
     content="software development {{city}}, web development {{state}}, app development {{city}}, cloud infrastructure, custom software solutions, DevOps services, digital transformation, enterprise software, mobile app development, technology consulting" />
   <meta name="author" content="Solvevare" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
@@ -123,34 +123,29 @@
   <script src="../js/scroll-animations.js" defer></script>
   <script src="../js/components.js" defer></script>
   <script src="../js/locations-nav.js" defer></script>
+  <script src="../js/nearby-widget.js" defer></script>
 
   <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Solvevare",
-    "url": "https://www.solvevare.com",
-    "logo": "https://www.solvevare.com/assets/og-image.jpg",
-    "description": "Solvevare is a leading software development company in {{city}}, {{state}} providing web development, mobile app development, cloud infrastructure, custom software, and digital transformation services to businesses.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "{{city}}",
-      "addressRegion": "{{state}}",
-      "addressCountry": "US"
-    },
-    "telephone": "+1-661-548-4013",
-    "email": "info@solvevare.com",
-    "areaServed": {
-      "@type": "City",
-      "name": "{{city}}"
-    },
-    "sameAs": [
-      "https://www.linkedin.com/company/solvevare",
-      "https://github.com/solvevare-org"
-    ]
-  }
-  </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Software Development Services in {{city}}, {{state}}",
+  "description": "{{brand}} provides custom software, web, mobile, cloud, and DevOps development services for businesses in {{city}}, {{state}}.",
+  "provider": {
+    "@id": "https://www.solvevare.com/#organization"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "{{city}}",
+    "containedInPlace": {
+      "@type": "State",
+      "name": "{{state}}"
+    }
+  },
+  "mainEntityOfPage": "https://www.solvevare.com/locations/{{state_slug}}-in-{{city_slug}}.html"
+}
+</script>
 </head>
 
 <body>
@@ -676,7 +671,7 @@
       <div class="hero-content">
         <p class="hero-badge">Enterprise Software Solutions</p>
         <h1>
-          Custom Software Development for {{city}}, {{state}} Businesses
+          Custom Software Development for {{city}}, {{state_sf}} Businesses
         </h1>
         <p>
           {{brand}} partners with enterprises, mid-market companies, and growth-stage startups across {{city}},
@@ -689,15 +684,24 @@
           <strong>Core Capabilities Serving {{city}}, {{state}}:</strong>
 
           <p class="hero-services-list">
-            Web & Enterprise Applications in {{city}}, {{state}} •
-            Mobile-First Solutions in {{city}}, {{state}} •
-            Cloud Architecture & Migration in {{city}}, {{state}} •
-            DevOps & Infrastructure in {{city}}, {{state}} •
-            Custom Software Engineering in {{city}}, {{state}} •
-            Data & Analytics Platforms in {{city}}, {{state}} •
-            UI/UX Design & Strategy in {{city}}, {{state}} •
-            System Integration in {{city}}, {{state}} •
-            Business Automation in {{city}}, {{state}}
+            Web & Enterprise Applications in {{city}}, {{state_sf
+}} •
+            Mobile-First Solutions in {{city}}, {{state_sf
+}} •
+            Cloud Architecture & Migration in {{city}}, {{state_sf
+}} •
+            DevOps & Infrastructure in {{city}}, {{state_sf
+}} •
+            Custom Software Engineering in {{city}}, {{state_sf
+}} •
+            Data & Analytics Platforms in {{city}}, {{state_sf
+}} •
+            UI/UX Design & Strategy in {{city}}, {{state_sf
+}} •
+            System Integration in {{city}}, {{state_sf
+}} •
+            Business Automation in {{city}}, {{state_sf
+}}
           </p>
         </div>
 
@@ -2134,6 +2138,27 @@
       });
     });
   </script>
+
+  <!-- Nearby Locations Section -->
+  <section id="nearby-locations-section" class="nearby-locations">
+    <div class="container">
+      <div class="section-header">
+        <h2>Nearby Locations We Serve</h2>
+        <p>{{brand}} provides software development services to businesses across {{state}} and surrounding areas.</p>
+      </div>
+      <div class="nearby-grid">
+        <!-- populated by nearby-widget.js -->
+      </div>
+      <div class="text-center mt-4">
+        <a href="../location.html" class="btn-view-all">
+          View All Locations
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer>
